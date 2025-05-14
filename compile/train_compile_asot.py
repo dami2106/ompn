@@ -23,7 +23,7 @@ flags.DEFINE_integer('compile_train_steps', default=4000, help='train steps')
 flags.DEFINE_integer('compile_eval_freq', default=20, help='evaluation frequency')
 flags.DEFINE_float('compile_lr', default=0.001, help='learning rate')
 flags.DEFINE_integer('compile_batch_size', default=64, help='learning rate')
-flags.DEFINE_integer('compile_max_segs', default=8, help='num of segment')
+flags.DEFINE_integer('compile_max_segs', default=7, help='num of segment')
 flags.DEFINE_integer('compile_skills', default=5, help='num of skills')
 flags.DEFINE_float('compile_beta_z', default=0.1, help='weight Z kl loss')
 flags.DEFINE_float('compile_beta_b', default=0.1, help='weight b kl loss')
@@ -31,6 +31,15 @@ flags.DEFINE_float('compile_prior_rate', default=3, help='possion distribution. 
 flags.DEFINE_enum('compile_latent', enum_values=['gaussian', 'concrete'], default='gaussian',
                   help='Latent type')
 
+
+
+def create_ordered_list(segments, order = [0, 1, 0, 2, 0, 3, 4]):
+    result = []
+    start = 0
+    for end, value in zip(segments, order):
+        result.extend([value] * (end - start))
+        start = end
+    return result
 
 
 def main(training_folder):
@@ -221,6 +230,7 @@ def main(training_folder):
         #     pred_truth += str(curr_label[-1]) * (lens - prev)
 
         pred_truth_list = [int(c) for c in pred_truth]
+        static_pred_list = create_ordered_list(buffer_bound)
         episode_data.append({
             'episode': ep,
             'length': lens,
@@ -229,9 +239,11 @@ def main(training_folder):
             'predicted_truths': pred_truth_list,
             'ground_truth': truths,
             'boundaries': bound,
+            'static_pred': static_pred_list
         })
 
         preds.append(pred_truth_list)
+        static_preds.append(static_pred_list)
 
     #Save the episode data to a file
     with open(os.path.join(training_folder, 'episode_data.pkl'), 'wb') as f:
@@ -253,11 +265,18 @@ def main(training_folder):
         print("--------------------------------------------------")
 
     clustering_metrics = get_all_metrics(preds, all_truths)
+    static_metrics = get_all_metrics(static_preds, all_truths)
 
 
     print("Clustering Results (ASOT):")
     print("----------------------------------")
     for name, val in clustering_metrics.items():
+        print(f"{name:<15}{val:.4f}")
+    print("----------------------------------\n")
+
+    print("Clustering Results (STATIC ASSUMPTION):")
+    print("----------------------------------")
+    for name, val in static_metrics.items():
         print(f"{name:<15}{val:.4f}")
     print("----------------------------------\n")
 
