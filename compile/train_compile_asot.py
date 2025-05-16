@@ -22,7 +22,7 @@ FLAGS = flags.FLAGS
 flags.DEFINE_integer('compile_train_steps', default=4000, help='train steps')
 flags.DEFINE_integer('compile_eval_freq', default=20, help='evaluation frequency')
 flags.DEFINE_float('compile_lr', default=0.001, help='learning rate')
-flags.DEFINE_integer('compile_batch_size', default=64, help='learning rate')
+flags.DEFINE_integer('compile_batch_size', default=256, help='learning rate')
 flags.DEFINE_integer('compile_max_segs', default=7, help='num of segment')
 flags.DEFINE_integer('compile_skills', default=5, help='num of skills')
 flags.DEFINE_float('compile_beta_z', default=0.1, help='weight Z kl loss')
@@ -30,22 +30,12 @@ flags.DEFINE_float('compile_beta_b', default=0.1, help='weight b kl loss')
 flags.DEFINE_float('compile_prior_rate', default=3, help='possion distribution. avg length of each seg')
 flags.DEFINE_enum('compile_latent', enum_values=['gaussian', 'concrete'], default='gaussian',
                   help='Latent type')
-
-
-
-def create_ordered_list(segments, order = [0, 1, 0, 2, 0, 3, 4]):
-    result = []
-    start = 0
-    for end, value in zip(segments, order):
-        result.extend([value] * (end - start))
-        start = end
-    return result
-
+flags.DEFINE_integer('compile_state_size', default=1087, help='State Space size')
+flags.DEFINE_integer('compile_action_size', default=16, help='Action Space size')
 
 def main(training_folder):
     print('Start compile...')
-    # first_env = gym.make(FLAGS.envs[0])
-    n_feature, action_size = 1087, 16
+    n_feature, action_size = FLAGS.compile_state_size, FLAGS.compile_action_size
     model = compile.CompILE(vec_size=n_feature,
                             hidden_size=FLAGS.hidden_size,
                             action_size=action_size,
@@ -61,18 +51,15 @@ def main(training_folder):
     # with open('experiment/compile_rGgNhBScvt/bot_best.pkl', "rb") as f:
     #     model = torch.load(f, map_location=torch.device("cpu"))  # or "cuda" as needed
 
-    # device = torch.device("cpu")
-    device = torch.device("cuda" if FLAGS.cuda else "cpu")
-    print("Model: ")
-    if FLAGS.cuda:
-        model = model.to(device)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
+    print("Model loaded to device: ", device)
 
-    print("Model loaded")
     optimizer = torch.optim.Adam(model.parameters(), lr=FLAGS.compile_lr)
 
     # Dataset
     dataloader = compile.Dataloader(env_names=FLAGS.envs,
-                                    val_ratio=0.2)
+                                    val_ratio=0.05)
     train_steps = 0
     writer = SummaryWriter(training_folder)
     train_iter = dataloader.train_iter(batch_size=FLAGS.compile_batch_size)
@@ -84,9 +71,10 @@ def main(training_folder):
     while train_steps < FLAGS.compile_train_steps:
         model.train()
         train_batch, train_lengths = train_iter.__next__()
-        if FLAGS.cuda:
-            train_batch.apply(lambda _t: _t.cuda())
-            train_lengths = train_lengths.cuda()
+
+        train_batch.apply(lambda _t: _t.to(device))
+        train_lengths = train_lengths.to(device)  
+
         train_outputs, _ = model.forward(train_batch, train_lengths)
 
         optimizer.zero_grad()
@@ -124,8 +112,7 @@ def main(training_folder):
     model = best_model
 
     model.eval()
-    if FLAGS.cuda:  
-        model = model.cuda()
+    model = model.to(device)
 
     all_z = []  # will hold arrays of shape (batch_size, latent_dim)
     all_sample_bs = []  # will hold arrays of shape (batch_size, T)
@@ -143,9 +130,12 @@ def main(training_folder):
                                                 batch_size=1,
                                                 shuffle=False,
                                                 epochs=1):
-        if FLAGS.cuda:
-            batch.apply(lambda t: t.cuda())
-            lengths = lengths.cuda()
+        # if FLAGS.cuda:
+        #     batch.apply(lambda t: t.cuda())
+        #     lengths = lengths.cuda()
+
+        batch.apply(lambda _t: _t.to(device))
+        lengths = lengths.to(device)  
 
         (_, extra_info) = model.forward(batch, lengths)
         b_samples = extra_info['segment']
@@ -191,7 +181,6 @@ def main(training_folder):
  
     episode_data = []
     preds = []
-    static_preds = []
 
     for ep, model_out in enumerate(zip(all_z, all_sample_bs, labels, all_lengths, all_actions, all_truths)):
         lat, bound, curr_label, lens, acts, truths  = model_out
@@ -231,11 +220,8 @@ def main(training_folder):
         #     pred_truth += str(curr_label[-1]) * (lens - prev)
 
         pred_truth_list = [int(c) for c in pred_truth]
-        static_pred_list = create_ordered_list(buffer_bound)
-
-        min_len = min(len(static_pred_list), lens)
-        static_pred_list = static_pred_list[:min_len]
-
+   
+    
         episode_data.append({
             'episode': ep,
             'length': lens,
@@ -243,13 +229,11 @@ def main(training_folder):
             'actions': acts.tolist(), #Remove actions padding 
             'predicted_truths': pred_truth_list,
             'ground_truth': truths,
-            'boundaries': bound,
-            'static_pred': static_pred_list
+            'boundaries': bound
         })
 
         preds.append(pred_truth_list)
-        static_preds.append(static_pred_list)
-
+ 
     #Save the episode data to a file
     with open(os.path.join(training_folder, 'episode_data.pkl'), 'wb') as f:
         torch.save(episode_data, f)
@@ -265,14 +249,11 @@ def main(training_folder):
         print("Episode: ", ep['episode'])
         print("Pred. Boundaries: ", ep['boundaries'].tolist())
         print("Predicted Truths: ", ep['predicted_truths'])
-        print("Static Pred:      ", ep['static_pred'])
         print("Ground Truth:     ", ep['ground_truth'].tolist())
         print("Actions:          ", ep['actions'])
         print("--------------------------------------------------")
 
     clustering_metrics = get_all_metrics(preds, all_truths)
-    static_metrics = get_all_metrics(static_preds, all_truths)
-
 
     print("Clustering Results (ASOT):")
     print("----------------------------------")
@@ -280,25 +261,21 @@ def main(training_folder):
         print(f"{name:<15}{val:.4f}")
     print("----------------------------------\n")
 
-    print("Clustering Results (STATIC ASSUMPTION):")
-    print("----------------------------------")
-    for name, val in static_metrics.items():
-        print(f"{name:<15}{val:.4f}")
-    print("----------------------------------\n")
 
 
-    print("Plotting results...")
-    pred_batch, gt_batch, mask = make_batch(preds, all_truths, pad_value=-1)
-    visualisation_dir = os.path.join(training_folder, 'visualisation')  
-    os.makedirs(visualisation_dir, exist_ok=True)
+    if not FLAGS.debug:
+        print("Plotting results...")
+        pred_batch, gt_batch, mask = make_batch(preds, all_truths, pad_value=-1)
+        visualisation_dir = os.path.join(training_folder, 'visualisation')  
+        os.makedirs(visualisation_dir, exist_ok=True)
 
-    for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
-        p, g, m = data_batch
-        fig = plot_segmentation_gt(g, p, m)
-    
-        #Sav it 
-        fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
-        plt.close(fig)
-    
-    print("Finished plotting results")
+        for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
+            p, g, m = data_batch
+            fig = plot_segmentation_gt(g, p, m)
+        
+            #Sav it 
+            fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
+            plt.close(fig)
+        
+        print("Finished plotting results")
 

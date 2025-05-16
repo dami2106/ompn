@@ -84,8 +84,26 @@ def setup_logging_and_exp_folder():
 def main(_):
     trainig_folder = setup_logging_and_exp_folder()
     # FLAGS.cuda = False
-    logging.info('Use Cuda: {}'.format(FLAGS.cuda))
+    # logging.info('Use Cuda: {}'.format(FLAGS.cuda))
     # logging.info('Current git SHA: ' + gym_psketch.CURR_VERSION)
+
+    flags.FLAGS.cuda = torch.cuda.is_available()
+
+    cuda_available = torch.cuda.is_available()
+    print(f"CUDA Available: {cuda_available}")
+
+    # Number of GPUs
+    gpu_count = torch.cuda.device_count()
+    print(f"Number of GPUs: {gpu_count}")
+
+    # Print details for each GPU
+    for i in range(gpu_count):
+        print(f"\nGPU {i}:")
+        print(f"  Name: {torch.cuda.get_device_name(i)}")
+        print(f"  Capability: {torch.cuda.get_device_capability(i)}")
+        print(f"  Memory Allocated: {torch.cuda.memory_allocated(i) / 1024**2:.2f} MB")
+        print(f"  Memory Reserved: {torch.cuda.memory_reserved(i) / 1024**2:.2f} MB")
+
 
     # save options
     fpath = os.path.join(trainig_folder, 'flagfile')
