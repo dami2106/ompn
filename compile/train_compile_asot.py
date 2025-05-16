@@ -231,6 +231,10 @@ def main(training_folder):
 
         pred_truth_list = [int(c) for c in pred_truth]
         static_pred_list = create_ordered_list(buffer_bound)
+
+        min_len = min(len(static_pred_list), lens)
+        static_pred_list = static_pred_list[:min_len]
+
         episode_data.append({
             'episode': ep,
             'length': lens,
@@ -260,7 +264,8 @@ def main(training_folder):
         print("Episode: ", ep['episode'])
         print("Pred. Boundaries: ", ep['boundaries'].tolist())
         print("Predicted Truths: ", ep['predicted_truths'])
-        print("Ground Truth:     ", ep['ground_truth'])
+        print("Static Pred:      ", ep['static_pred'])
+        print("Ground Truth:     ", ep['ground_truth'].tolist())
         print("Actions:          ", ep['actions'])
         print("--------------------------------------------------")
 
