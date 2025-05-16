@@ -61,7 +61,8 @@ def main(training_folder):
     # with open('experiment/compile_rGgNhBScvt/bot_best.pkl', "rb") as f:
     #     model = torch.load(f, map_location=torch.device("cpu"))  # or "cuda" as needed
 
-    device = torch.device("cpu")
+    # device = torch.device("cpu")
+    device = torch.device("cuda" if FLAGS.cuda else "cpu")
     print("Model: ")
     if FLAGS.cuda:
         model = model.to(device)

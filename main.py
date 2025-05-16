@@ -40,7 +40,7 @@ flags.DEFINE_enum('mode', default='IL', enum_values=['IL', 'demo', 'compile',
                                                      'taco'],
                   help='choosing between IL and baselines')
 flags.DEFINE_string('experiment', default=None, help='Name of experiment')
-flags.DEFINE_bool('cuda', default=False, help='Use cuda')
+flags.DEFINE_bool('cuda', default=True, help='Use cuda')
 flags.DEFINE_integer('procs', default=4, help='Number of process')
 
 
@@ -83,7 +83,7 @@ def setup_logging_and_exp_folder():
 
 def main(_):
     trainig_folder = setup_logging_and_exp_folder()
-    FLAGS.cuda = False
+    # FLAGS.cuda = False
     logging.info('Use Cuda: {}'.format(FLAGS.cuda))
     # logging.info('Current git SHA: ' + gym_psketch.CURR_VERSION)
 
