@@ -22,3 +22,5 @@ experiment/*
 *.out
 *.png
 zzz*
+
+Traces/
