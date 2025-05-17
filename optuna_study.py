@@ -18,13 +18,13 @@ def objective(trial, args):
     """Objective function to optimize hyperparameters"""
     # Define hyperparameter search space
     params = {
-        "compile_train_steps": trial.suggest_int("compile_train_steps", 500, 5000),
-        "compile_lr": trial.suggest_float("compile_lr", 1e-5, 1e-1, log=True),
+        "compile_train_steps": trial.suggest_categorical("compile_train_steps", [100, 500, 1000, 2500, 5000]),
+        "compile_lr": trial.suggest_categorical("compile_lr", [ 1e-4, 1e-3, 1e-2, 1e-1]),
         "compile_batch_size": trial.suggest_categorical("compile_batch_size", [64, 128, 256]),
-        "compile_beta_z": trial.suggest_float("compile_beta_z", 0.01, 1.0),
-        "compile_beta_b": trial.suggest_float("compile_beta_b", 0.01, 1.0),
-        "compile_prior_rate": trial.suggest_int("compile_prior_rate", 1, 15),
-        "hidden_size": trial.suggest_categorical("hidden_size", [32, 64, 128, 256, 512]),
+        "compile_beta_z": trial.suggest_categorical("compile_beta_z", [0.01, 0.1, 0.5, 1.0]),
+        "compile_beta_b": trial.suggest_categorical("compile_beta_b",[0.01, 0.1, 0.5, 1.0]),
+        "compile_prior_rate": trial.suggest_categorical("compile_prior_rate",[3, 10, 15]),
+        "hidden_size": trial.suggest_categorical("hidden_size", [ 64, 128, 256, 512]),
     }
 
 
