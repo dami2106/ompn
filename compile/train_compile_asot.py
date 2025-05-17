@@ -245,13 +245,13 @@ def main(training_folder):
     print("Saved model and episode data to: ", training_folder)
     print("Finished collecting segments")
 
-    for ep in episode_data:
-        print("Episode: ", ep['episode'])
-        print("Pred. Boundaries: ", ep['boundaries'].tolist())
-        print("Predicted Truths: ", ep['predicted_truths'])
-        print("Ground Truth:     ", ep['ground_truth'].tolist())
-        print("Actions:          ", ep['actions'])
-        print("--------------------------------------------------")
+    # for ep in episode_data:
+    #     print("Episode: ", ep['episode'])
+    #     print("Pred. Boundaries: ", ep['boundaries'].tolist())
+    #     print("Predicted Truths: ", ep['predicted_truths'])
+    #     print("Ground Truth:     ", ep['ground_truth'].tolist())
+    #     print("Actions:          ", ep['actions'])
+    #     print("--------------------------------------------------")
 
     clustering_metrics = get_all_metrics(preds, all_truths)
 
