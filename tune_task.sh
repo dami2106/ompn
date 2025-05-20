@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENVS="wsws_static_pixels"
+ENVS="wsws_static_symbolic"
 MAX_SEGS=4
 SKILLS=2
 

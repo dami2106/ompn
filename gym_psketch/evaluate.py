@@ -154,7 +154,7 @@ def evaluate_loop(bot, val_metrics, action_mode='greedy'):
 
 
 def get_use_ids(actions, env_name):
-    use_ids = (actions.reshape(-1) == Actions.USE.value).nonzero().view(-1).cpu().numpy()
+    use_ids = (actions.reshape(-1) == 4).nonzero().view(-1).cpu().numpy()
     if env_name is not None:
         if 'getgem' in env_name:
             use_ids = np.array(use_ids[:4].tolist() +

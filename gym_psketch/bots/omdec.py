@@ -23,7 +23,8 @@ class OMdecBase(ModelBot):
 
         self.actor = nn.Sequential(nn.Linear(3 * slot_size, action_size - 1))
         self.critic = nn.Sequential(nn.Linear(3 * slot_size, 1))
-        self.done_id = Actions.DONE.value
+        # self.done_id = Actions.DONE.value
+        self.done_id = 0
         self.memory_encoder = get_env_encoder(env_arch, slot_size)
 
     @property

@@ -12,12 +12,13 @@ from tensorboardX import SummaryWriter
 import numpy as np
 
 from gym_psketch.evaluate import evaluate_loop, parsing_loop
+from gym_psketch.visualize import distance2ctree, tree_to_str
 
 FLAGS = flags.FLAGS
 
 # Misc
 flags.DEFINE_bool('il_demo_from_model', default=False, help='Whether to use demo from bot')
-flags.DEFINE_integer('il_train_steps', default=5000, help='Trainig steps')
+flags.DEFINE_integer('il_train_steps', default=4000, help='Trainig steps')
 flags.DEFINE_integer('il_eval_freq', default=20, help='Evaluation frequency')
 flags.DEFINE_integer('il_save_freq', default=200, help='Save freq')
 flags.DEFINE_bool('il_no_done', default=False, help='Whether or not to use done during IL')
@@ -47,11 +48,16 @@ def run_batch(batch: DictList,
         stats: A DictList of bsz, mem_size
     """
     bsz, seqlen = batch.action.shape[0], batch.action.shape[1]
-    env_ids = batch.env_id[:, 0]
+    env_ids = batch.env_id[:, 0] #Shape is [batch_size] since we stack them for the batch 
     final_outputs = DictList({})
     mems = None
+    
+    # print("Env IDs: ", env_ids)
+    # print("Len of env_ids: ", len(env_ids))
     if bot.is_recurrent:
+        # print("Bot is recurrent")
         mems = bot.init_memory(env_ids=env_ids)
+
 
     for t in range(seqlen):
         curr_transition = batch[:, t]
@@ -67,10 +73,14 @@ def run_batch(batch: DictList,
                                                                      reduction='none',
                                                                      ignore_index=bot.done_id)
         else:
+            #We are here 
             final_output.ce_loss = torch.nn.functional.cross_entropy(input=logits, target=targets,
                                                                      reduction='none')
+            # print("dont ignore ", final_output.ce_loss)
         preds = logits.argmax(-1)
 
+        # print("Predictions: ", preds)
+        # print("Targets: ", targets)
         # print("Targets: ", targets) 
         # print("Preds: ", preds)
 
@@ -123,8 +133,8 @@ def evaluate_on_envs(bot, dataloader):
         for env_name in parsing_stats:
             parsing_stats[env_name].apply(lambda _t: np.mean(_t))
             val_metrics[env_name].update(parsing_stats[env_name])
-        logging.info('Get parsing result')
-        logging.info('\n' + '\n'.join(parsing_lines))
+        print('Get parsing result')
+        print('\n' + '\n'.join(parsing_lines))
 
     # evaluate on free run env
     val_metrics = evaluate_loop(bot, val_metrics)
@@ -137,7 +147,7 @@ def logging_metric(nb_frames, steps, metrics, writer, prefix):
         line = ['[{}][{}] steps={}'.format(prefix, env_name, steps)]
         for k, v in metric.items():
             line.append('{}: {:.4f}'.format(k, v))
-        logging.info('\t'.join(line))
+        print('\t'.join(line))
     mean_val_metric = DictList()
     for metric in metrics.values():
         mean_val_metric.append(metric)
@@ -156,35 +166,36 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
     train_stats = DictList()
     curr_best = 0
     while True:
-        print('Training steps: {}'.format(train_steps))
+        # print('Training steps: {}'.format(train_steps))
         if train_steps > FLAGS.il_train_steps:
-            logging.info('Reaching maximum steps')
+            print('Reaching maximum steps')
             break
 
         if train_steps % FLAGS.il_save_freq == 0:
             with open(os.path.join(training_folder, 'bot{}.pkl'.format(train_steps)), 'wb') as f:
                 torch.save(bot, f)
 
-        if train_steps % FLAGS.il_eval_freq == 0:
-            # testing on valid
-            val_metrics = evaluate_on_envs(bot, dataloader)
-            logging_metric(nb_frames, train_steps, val_metrics, writer, prefix='val')
+        # if train_steps % FLAGS.il_eval_freq == 0:
+        #     print('Evaluating...')
+        #     # testing on valid
+        #     val_metrics = evaluate_on_envs(bot, dataloader)
+        #     logging_metric(nb_frames, train_steps, val_metrics, writer, prefix='val')
 
-            # testing on test env
-            if test_dataloader is not None:
-                test_metrics = evaluate_on_envs(bot, test_dataloader)
-                logging_metric(nb_frames, train_steps, test_metrics, writer, prefix='test')
+        #     # testing on test env
+        #     if test_dataloader is not None:
+        #         test_metrics = evaluate_on_envs(bot, test_dataloader)
+        #         logging_metric(nb_frames, train_steps, test_metrics, writer, prefix='test')
 
-            avg_ret = [val_metrics[env_name]['ret'].item() for env_name in val_metrics]
-            avg_ret = np.mean(avg_ret)
+        #     avg_ret = [val_metrics[env_name]['ret'].item() for env_name in val_metrics]
+        #     avg_ret = np.mean(avg_ret)
 
-            if avg_ret > curr_best:
-                curr_best = avg_ret
-                logging.info('Save Best with return: {}'.format(avg_ret))
+        #     if avg_ret > curr_best:
+        #         curr_best = avg_ret
+        #         print('Save Best with return: {}'.format(avg_ret))
 
-                # Save the checkpoint
-                with open(os.path.join(training_folder, 'bot_best.pkl'), 'wb') as f:
-                    torch.save(bot, f)
+        #         # Save the checkpoint
+        #         with open(os.path.join(training_folder, 'bot_best.pkl'), 'wb') as f:
+        #             torch.save(bot, f)
 
         # Forward/Backward
         bot.train()
@@ -220,17 +231,51 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             for k, v in train_stats.items():
                 logger_str.append("{}: {:.4f}".format(k, v))
                 writer.add_scalar('train/' + k, v, global_step=nb_frames)
-            logging.info('\t'.join(logger_str))
+            print('\t'.join(logger_str))
             train_stats = DictList()
             writer.flush()
 
-        
+    # === APPENDED: extract and print skill IDs per episode ===
+    print("\nExtracting skill assignments across validation episodes...")
+    bot.eval()
+    for env_name in dataloader.env_names:
+        print(f"Environment: {env_name}")
+        val_iter = dataloader.val_iter(batch_size=1, env_names=[env_name])
+        for ep_idx, (batch, lengths) in enumerate(val_iter):
+            seq_len = lengths.item()
+            env_ids = batch.env_id[:, 0]
+            mems = bot.init_memory(env_ids)
+            actions = batch.action
+            skill_trace = []
+            for t in range(seq_len):
+                transition = batch[:, t]
+                with torch.no_grad():
+                    out = bot.forward(transition, transition.env_id, mems)
+                p_hat = out.p  # shape [1, nb_slots+1]
+                p_slots = p_hat[:, 1:]  # drop end logit
+                p_dist = torch.nn.functional.normalize(p_slots, dim=1)
+                skill_id = p_dist.argmax(dim=1).item()
+                skill_trace.append(skill_id)
+                mems = out.mems
+            print(f"  Episode {ep_idx}: skills : {skill_trace}")
+            print(f"  Episode {ep_idx}: actions: {actions.squeeze().tolist()}")
+            # Build and print parse tree based on skill assignments
+            depths = np.array(skill_trace[:-1])  # drop last step to match actions length - 1
+            action_seq = [str(a) for a in actions.squeeze().tolist()]
+            parse_tree = distance2ctree(depths, action_seq, False)
+            tree_str = tree_to_str(parse_tree)
+            print(f"  Episode {ep_idx}: tree: {tree_str[1:-1]}")
+            print("--------------------------")
+
+
+    
 
 
 def run(training_folder):
-    logging.info('Start IL...')
+    print('Start IL...')
     first_env = gym.make(FLAGS.envs[0])
     n_feature, action_size = first_env.n_features, first_env.n_actions
+    # n_feature, action_size = 1087, 17
     bot = bots.make(vec_size=n_feature,
                     action_size=action_size,
                     arch=FLAGS.arch,
@@ -239,19 +284,17 @@ def run(training_folder):
                     env_arch=FLAGS.env_arch)
     if FLAGS.cuda:
         bot = bot.cuda()
+
     params = [p for p in bot.parameters()]
     opt = torch.optim.Adam(params, lr=FLAGS.il_lr)
     print('Model: {}'.format(bot))
     dataloader = Dataloader(FLAGS.envs, FLAGS.il_val_ratio)
     print('Dataloader: {}'.format(dataloader))
 
-    # test dataloader
-    test_envs = set(FLAGS.test_envs) - set(FLAGS.envs)
-    test_dataloader = None if len(test_envs) == 0 else Dataloader(test_envs, FLAGS.il_val_ratio)
 
     try:
         print('Start training')
-        main_loop(bot, dataloader, opt, training_folder, test_dataloader)
+        main_loop(bot, dataloader, opt, training_folder, None)
     except KeyboardInterrupt:
         pass
 

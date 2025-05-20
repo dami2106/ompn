@@ -24,18 +24,22 @@ flags.DEFINE_list('test_envs', default=[], help='Extra test envs')
 flags.DEFINE_integer('max_steps', default=64, help='maximum environment steps')
 flags.DEFINE_integer('width', default=10, help='width of env')
 flags.DEFINE_integer('height', default=10, help='height of env')
+#MLP, LSTM are from the paper; OMSTACK is the OMPN arch
 flags.DEFINE_enum('arch', enum_values=['mlp', 'lstm', 'omstack'],
                   default='omstack', help='Architecture')
 flags.DEFINE_integer('eval_episodes', default=30, help='Evaluation episode number')
 
 # Model
 flags.DEFINE_integer('hidden_size', default=128, help='model hidden size')
+#Nb_slots is the number of levels in hierarchy 
 flags.DEFINE_integer('nb_slots', default=3, help='model hidden size')
+#env_arch is the amount of info we give the model about the env 
 flags.DEFINE_enum('env_arch', enum_values=['emb', 'sketch', 'noenv', 'grusketch'],
                   default='noenv', help='env encoder Architecture')
 
 # Misc
 flags.DEFINE_bool('debug', default=False, help='Flag for debug mode')
+#IL is OMPN
 flags.DEFINE_enum('mode', default='IL', enum_values=['IL', 'demo', 'compile',
                                                      'taco'],
                   help='choosing between IL and baselines')

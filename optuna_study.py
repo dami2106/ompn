@@ -88,7 +88,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, required=True, help='Path of the dataset to use')
-    parser.add_argument('--trials',  default=1500, type=int, help='nb of trials')
+    parser.add_argument('--trials',  default=500, type=int, help='nb of trials')
     parser.add_argument('--max-segs', default=10, type=int, help='max number of segments')
     parser.add_argument('--skills', default=5, type=int, help='number of skills')
     args = parser.parse_args()
