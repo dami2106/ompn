@@ -110,7 +110,7 @@ def main(training_folder):
 
     print("Training finished, start collecting segments")
 
-    model = best_model
+    model = best_model if best_model is not None else model
 
     model.eval()
     model = model.to(device)
@@ -204,7 +204,7 @@ def main(training_folder):
         assert lens == len(acts), "Length of actions and length of episode do not match"
         assert lens == len(truths), "Length of actions and length of truths do not match"
 
-
+        bound.sort()
         segments = []
         pred_truth = ""
         prev = 0
