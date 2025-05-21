@@ -16,6 +16,7 @@ import torch.nn.functional as F
 from sklearn.preprocessing import StandardScaler
 from visualisation import plot_segmentation_gt
 import matplotlib.pyplot as plt
+from sklearn.mixture import GaussianMixture
 import copy 
 
 FLAGS = flags.FLAGS
@@ -173,14 +174,29 @@ def main(training_folder):
 
     flat_z = all_z.reshape(-1, all_z.shape[-1])
     flat_z_scaled = StandardScaler().fit_transform(flat_z)
-    kmeans = KMeans(n_clusters=FLAGS.compile_skills, random_state=0).fit(flat_z_scaled)
-    labels = kmeans.labels_.reshape(all_sample_bs.shape)
-    del flat_z, flat_z_scaled
+    del flat_z
+
+    # Define and fit the GMM model
+    gmm = GaussianMixture(
+        n_components=FLAGS.compile_skills,
+        covariance_type='full',       # Allow full covariance to capture complex skill dependencies
+        reg_covar=1e-6,               # Small regularization to improve stability
+        n_init=5,                     # Multiple initializations for robustness
+        random_state=0
+    )
+    gmm.fit(flat_z_scaled)
+
+    # Predict the cluster labels and reshape
+    labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
+
+    # Clean up
+    del  flat_z_scaled
     print("Labels Shape", labels.shape)
-    print("Trained KMeans clustering model")
+    print("Trained Gaussian Mixture clustering model")
  
     episode_data = []
     preds = []
+    preds_static = []
 
     for ep, model_out in enumerate(zip(all_z, all_sample_bs, labels, all_lengths, all_actions, all_truths)):
         lat, bound, curr_label, lens, acts, truths  = model_out
@@ -220,19 +236,26 @@ def main(training_folder):
         #     pred_truth += str(curr_label[-1]) * (lens - prev)
 
         pred_truth_list = [int(c) for c in pred_truth]
-   
+
+        ground_truth_boundaries = truths[np.insert(truths[1:] != truths[:-1], 0, True)]
+
+        decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=ground_truth_boundaries, use_ids=bound)
+
+        
     
         episode_data.append({
             'episode': ep,
             'length': lens,
             'skill_info': segments,
             'actions': acts.tolist(), #Remove actions padding 
-            'predicted_truths': pred_truth_list,
+            'predicted_skills': pred_truth_list,
+            'predicted_skills_static': decoded_subtask.tolist(),
             'ground_truth': truths,
             'boundaries': bound
         })
 
         preds.append(pred_truth_list)
+        preds_static.append(decoded_subtask)
  
     #Save the episode data to a file
     with open(os.path.join(training_folder, 'episode_data.pkl'), 'wb') as f:
@@ -245,15 +268,17 @@ def main(training_folder):
     print("Saved model and episode data to: ", training_folder)
     print("Finished collecting segments")
 
-    # for ep in episode_data:
-    #     print("Episode: ", ep['episode'])
-    #     print("Pred. Boundaries: ", ep['boundaries'].tolist())
-    #     print("Predicted Truths: ", ep['predicted_truths'])
-    #     print("Ground Truth:     ", ep['ground_truth'].tolist())
-    #     print("Actions:          ", ep['actions'])
-    #     print("--------------------------------------------------")
+    for ep in episode_data:
+        print("Episode: ", ep['episode'])
+        print("Pred. Boundaries: ", ep['boundaries'].tolist())
+        print("Predicted Truths: ", ep['predicted_skills'])
+        print("Ground Truth:     ", ep['ground_truth'].tolist())
+        print("Predicted Static: ", ep['predicted_skills_static'])
+        print("Actions:          ", ep['actions'])
+        print("--------------------------------------------------")
 
     clustering_metrics = get_all_metrics(preds, all_truths)
+    static = get_all_metrics(preds_static, all_truths)
 
     print("Clustering Results (ASOT):")
     print("----------------------------------")
@@ -261,6 +286,12 @@ def main(training_folder):
         print(f"{name:<15}{val:.4f}")
     print("----------------------------------\n")
 
+
+    print("Clustering Results (OMPN STATIC):")
+    print("----------------------------------")
+    for name, val in static.items():
+        print(f"{name:<15}{val:.4f}")
+    print("----------------------------------\n")
 
 
     if not FLAGS.debug:
