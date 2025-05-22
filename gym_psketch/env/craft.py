@@ -21,7 +21,7 @@ __all__ = ['Actions', 'ID2ACTIONS', 'CraftWorld', 'CraftState', 'ACTION_VOCAB']
 #     DONE = 5
 
 class Actions(enum.Enum):
-    NOOP = 0         # Q
+    DONE = 0         # Q (previously NOOP)
     LEFT = 1         # A
     RIGHT = 2        # D
     UP = 3           # W
