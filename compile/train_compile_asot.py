@@ -10,14 +10,14 @@ import numpy as np
 import os
 from tensorboardX import SummaryWriter
 from sklearn.cluster import KMeans
-from metrics import * 
+from metrics import *
 from torch.nn.utils.rnn import pad_sequence
 import torch.nn.functional as F
 from sklearn.preprocessing import StandardScaler
 from visualisation import plot_segmentation_gt
 import matplotlib.pyplot as plt
 from sklearn.mixture import GaussianMixture
-import copy 
+import copy
 
 FLAGS = flags.FLAGS
 flags.DEFINE_integer('compile_train_steps', default=4000, help='train steps')
@@ -46,8 +46,8 @@ def main(training_folder):
                             beta_b=FLAGS.compile_beta_b,
                             beta_z=FLAGS.compile_beta_z,
                             prior_rate=FLAGS.compile_prior_rate)
-    
-    #Load in the model 
+
+    #Load in the model
     # 1. Load the pickled model
     # with open('experiment/compile_rGgNhBScvt/bot_best.pkl', "rb") as f:
     #     model = torch.load(f, map_location=torch.device("cpu"))  # or "cuda" as needed
@@ -74,7 +74,7 @@ def main(training_folder):
         train_batch, train_lengths = train_iter.__next__()
 
         train_batch.apply(lambda _t: _t.to(device))
-        train_lengths = train_lengths.to(device)  
+        train_lengths = train_lengths.to(device)
 
         train_outputs, _ = model.forward(train_batch, train_lengths)
 
@@ -136,7 +136,7 @@ def main(training_folder):
         #     lengths = lengths.cuda()
 
         batch.apply(lambda _t: _t.to(device))
-        lengths = lengths.to(device)  
+        lengths = lengths.to(device)
 
         (_, extra_info) = model.forward(batch, lengths)
         b_samples = extra_info['segment']
@@ -172,28 +172,29 @@ def main(training_folder):
     print("All Latents Shape", all_z.shape)
     print("All Boundaries Shape", all_sample_bs.shape)
 
-    flat_z = all_z.reshape(-1, all_z.shape[-1])
-    flat_z_scaled = StandardScaler().fit_transform(flat_z)
-    del flat_z
+    # flat_z = all_z.reshape(-1, all_z.shape[-1])
+    # flat_z_scaled = StandardScaler().fit_transform(flat_z)
+    # del flat_z
 
-    # Define and fit the GMM model
-    gmm = GaussianMixture(
-        n_components=FLAGS.compile_skills,
-        covariance_type='full',       # Allow full covariance to capture complex skill dependencies
-        reg_covar=1e-6,               # Small regularization to improve stability
-        n_init=5,                     # Multiple initializations for robustness
-        random_state=0
-    )
-    gmm.fit(flat_z_scaled)
+    # # Define and fit the GMM model
+    # gmm = GaussianMixture(
+    #     n_components=FLAGS.compile_skills,
+    #     covariance_type='full',       # Allow full covariance to capture complex skill dependencies
+    #     reg_covar=1e-6,               # Small regularization to improve stability
+    #     n_init=5,                     # Multiple initializations for robustness
+    #     random_state=0
+    # )
+    # gmm.fit(flat_z_scaled)
 
-    # Predict the cluster labels and reshape
-    labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
+    # # Predict the cluster labels and reshape
+    # labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
+    # del  flat_z_scaled
+    #
+    labels = np.zeros_like(all_sample_bs)
 
-    # Clean up
-    del  flat_z_scaled
     print("Labels Shape", labels.shape)
     print("Trained Gaussian Mixture clustering model")
- 
+
     episode_data = []
     preds = []
     preds_static = []
@@ -241,13 +242,13 @@ def main(training_folder):
 
         decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=ground_truth_boundaries, use_ids=bound)
 
-        
-    
+
+
         episode_data.append({
             'episode': ep,
             'length': lens,
             'skill_info': segments,
-            'actions': acts.tolist(), #Remove actions padding 
+            'actions': acts.tolist(), #Remove actions padding
             'predicted_skills': pred_truth_list,
             'predicted_skills_static': decoded_subtask.tolist(),
             'ground_truth': truths,
@@ -256,12 +257,12 @@ def main(training_folder):
 
         preds.append(pred_truth_list)
         preds_static.append(decoded_subtask)
- 
+
     #Save the episode data to a file
     with open(os.path.join(training_folder, 'episode_data.pkl'), 'wb') as f:
         torch.save(episode_data, f)
 
-    #Save the model 
+    #Save the model
     with open(os.path.join(training_folder, 'full_model.pkl'), 'wb') as f:
         torch.save(model, f)
 
@@ -280,11 +281,11 @@ def main(training_folder):
     clustering_metrics = get_all_metrics(preds, all_truths)
     static = get_all_metrics(preds_static, all_truths)
 
-    print("Clustering Results (ASOT):")
-    print("----------------------------------")
-    for name, val in clustering_metrics.items():
-        print(f"{name:<15}{val:.4f}")
-    print("----------------------------------\n")
+    # print("Clustering Results (ASOT):")
+    # print("----------------------------------")
+    # for name, val in clustering_metrics.items():
+    #     print(f"{name:<15}{val:.4f}")
+    # print("----------------------------------\n")
 
 
     print("Clustering Results (OMPN STATIC):")
@@ -297,16 +298,15 @@ def main(training_folder):
     if not FLAGS.debug:
         print("Plotting results...")
         pred_batch, gt_batch, mask = make_batch(preds, all_truths, pad_value=-1)
-        visualisation_dir = os.path.join(training_folder, 'visualisation')  
+        visualisation_dir = os.path.join(training_folder, 'visualisation')
         os.makedirs(visualisation_dir, exist_ok=True)
 
         for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
             p, g, m = data_batch
             fig = plot_segmentation_gt(g, p, m)
-        
-            #Sav it 
+
+            #Save it
             fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
             plt.close(fig)
-        
-        print("Finished plotting results")
 
+        print("Finished plotting results")
