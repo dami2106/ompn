@@ -102,7 +102,7 @@ class OMDecBot(OMdecBase):
         batch_size = env_ids.shape[0]
         device = env_ids.device
         first_slot = self.layernorm(self.memory_encoder(env_ids.long()))
-        init_m = nn.functional.pad(first_slot[:, None, :], [0, 0, 0, self.nb_slots - 1], value=0.)
+        init_m = nn.functional.pad(first_slot[:, None, :], [0, 0, 0, self.nb_slots - 1], value=0.).to(device)
         init_lc = torch.zeros_like(init_m, device=device)
         init_p = torch.zeros([batch_size, self.nb_slots], device=device)
         return torch.cat([init_m.reshape(batch_size, -1),
@@ -194,7 +194,7 @@ class OMStackBot(OMdecBase):
         batch_size = env_ids.shape[0]
         device = env_ids.device
         first_slot = self.layernorm(self.memory_encoder(env_ids.long()))
-        init_m = nn.functional.pad(first_slot[:, None, :], [0, 0, 0, self.nb_slots - 1], value=0.)
+        init_m = nn.functional.pad(first_slot[:, None, :], [0, 0, 0, self.nb_slots - 1], value=0.).to(device)
         #init_m = torch.zeros([batch_size, self.slot_size * self.nb_slots], device=device)
         init_p = torch.zeros([batch_size, self.nb_slots], device=device)
         return torch.cat([init_m.reshape(batch_size, -1),
@@ -270,7 +270,7 @@ class OMStackNoRecurrBot(OMdecBase):
         batch_size = env_ids.shape[0]
         device = env_ids.device
         first_slot = self.layernorm(self.memory_encoder(env_ids.long()))
-        init_m = nn.functional.pad(first_slot[:, None, :], [0, 0, 0, self.nb_slots - 1], value=0.)
+        init_m = nn.functional.pad(first_slot[:, None, :], [0, 0, 0, self.nb_slots - 1], value=0.).to(device)
         #init_m = torch.zeros([batch_size, self.slot_size * self.nb_slots], device=device)
         init_p = torch.zeros([batch_size, self.nb_slots], device=device)
         return torch.cat([init_m.reshape(batch_size, -1),

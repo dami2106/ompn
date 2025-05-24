@@ -18,7 +18,7 @@ FLAGS = flags.FLAGS
 
 # Misc
 flags.DEFINE_bool('il_demo_from_model', default=False, help='Whether to use demo from bot')
-flags.DEFINE_integer('il_train_steps', default=4000, help='Trainig steps')
+flags.DEFINE_integer('il_train_steps', default=300, help='Trainig steps')
 flags.DEFINE_integer('il_eval_freq', default=20, help='Evaluation frequency')
 flags.DEFINE_integer('il_save_freq', default=200, help='Save freq')
 flags.DEFINE_bool('il_no_done', default=False, help='Whether or not to use done during IL')
@@ -48,10 +48,10 @@ def run_batch(batch: DictList,
         stats: A DictList of bsz, mem_size
     """
     bsz, seqlen = batch.action.shape[0], batch.action.shape[1]
-    env_ids = batch.env_id[:, 0] #Shape is [batch_size] since we stack them for the batch 
+    env_ids = batch.env_id[:, 0] #Shape is [batch_size] since we stack them for the batch
     final_outputs = DictList({})
     mems = None
-    
+
     # print("Env IDs: ", env_ids)
     # print("Len of env_ids: ", len(env_ids))
     if bot.is_recurrent:
@@ -73,7 +73,7 @@ def run_batch(batch: DictList,
                                                                      reduction='none',
                                                                      ignore_index=bot.done_id)
         else:
-            #We are here 
+            #We are here
             final_output.ce_loss = torch.nn.functional.cross_entropy(input=logits, target=targets,
                                                                      reduction='none')
             # print("dont ignore ", final_output.ce_loss)
@@ -81,7 +81,7 @@ def run_batch(batch: DictList,
 
         # print("Predictions: ", preds)
         # print("Targets: ", targets)
-        # print("Targets: ", targets) 
+        # print("Targets: ", targets)
         # print("Preds: ", preds)
 
         final_output.acc = (preds == targets).float()
@@ -242,6 +242,9 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
         print(f"Environment: {env_name}")
         val_iter = dataloader.val_iter(batch_size=1, env_names=[env_name])
         for ep_idx, (batch, lengths) in enumerate(val_iter):
+            if FLAGS.cuda:
+                batch.apply(lambda _t: _t.cuda())
+                lengths = lengths.cuda()
             seq_len = lengths.item()
             env_ids = batch.env_id[:, 0]
             mems = bot.init_memory(env_ids)
@@ -259,6 +262,33 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 mems = out.mems
             print(f"  Episode {ep_idx}: skills : {skill_trace}")
             print(f"  Episode {ep_idx}: actions: {actions.squeeze().tolist()}")
+
+            # Extract predicted segments from skill trace
+            def extract_segments(skill_trace):
+                """Extract contiguous segments from skill trace.
+                Returns list of (start, end, skill_id) tuples."""
+                if not skill_trace:
+                    return []
+
+                segments = []
+                current_skill = skill_trace[0]
+                start_idx = 0
+
+                for i in range(1, len(skill_trace)):
+                    if skill_trace[i] != current_skill:
+                        # End of current segment
+                        segments.append((start_idx, i-1, current_skill))
+                        # Start new segment
+                        current_skill = skill_trace[i]
+                        start_idx = i
+
+                # Add final segment
+                segments.append((start_idx, len(skill_trace)-1, current_skill))
+                return segments
+
+            segments = extract_segments(skill_trace)
+            print(f"  Episode {ep_idx}: segments: {segments}")
+
             # Build and print parse tree based on skill assignments
             depths = np.array(skill_trace[:-1])  # drop last step to match actions length - 1
             action_seq = [str(a) for a in actions.squeeze().tolist()]
@@ -268,7 +298,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             print("--------------------------")
 
 
-    
+
 
 
 def run(training_folder):
