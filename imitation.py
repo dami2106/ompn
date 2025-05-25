@@ -10,15 +10,18 @@ import time
 from typing import Dict
 from tensorboardX import SummaryWriter
 import numpy as np
+import random
 
-from gym_psketch.evaluate import evaluate_loop, parsing_loop
+from gym_psketch.evaluate import evaluate_loop, parsing_loop, get_boundaries, get_use_ids, get_subtask_seq, f1
 from gym_psketch.visualize import distance2ctree, tree_to_str
 
 FLAGS = flags.FLAGS
 
+
+
 # Misc
 flags.DEFINE_bool('il_demo_from_model', default=False, help='Whether to use demo from bot')
-flags.DEFINE_integer('il_train_steps', default=3000, help='Trainig steps')
+flags.DEFINE_integer('il_train_steps', default=50, help='Trainig steps')
 flags.DEFINE_integer('il_eval_freq', default=20, help='Evaluation frequency')
 flags.DEFINE_integer('il_save_freq', default=200, help='Save freq')
 flags.DEFINE_bool('il_no_done', default=False, help='Whether or not to use done during IL')
@@ -238,18 +241,31 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
     # === APPENDED: extract and print skill IDs per episode ===
     print("\nExtracting skill assignments across validation episodes...")
     bot.eval()
+
+    episode_details = []
+    all_predicted_subtask = []
+    all_gt_subtask = []
+
     for env_name in dataloader.env_names:
         print(f"Environment: {env_name}")
-        val_iter = dataloader.val_iter(batch_size=1, env_names=[env_name])
-        for ep_idx, (batch, lengths) in enumerate(val_iter):
+        
+        # Get all trajectories for this environment
+        all_trajs = dataloader.data['train'][env_name] + dataloader.data['val'][env_name]
+        # random.shuffle(all_trajs)
+        
+        for ep_idx, traj in enumerate(all_trajs):
+            # Convert trajectory to batch format
+            batch = DictList(traj)
+            batch.apply(lambda _t: torch.tensor(_t)[:-1].unsqueeze(0))  # Remove done
             if FLAGS.cuda:
                 batch.apply(lambda _t: _t.cuda())
-                lengths = lengths.cuda()
-            seq_len = lengths.item()
+            
+            seq_len = batch.action.shape[1]
             env_ids = batch.env_id[:, 0]
             mems = bot.init_memory(env_ids)
             actions = batch.action
-            skill_trace = []
+            mem_trace = []
+            
             for t in range(seq_len):
                 transition = batch[:, t]
                 with torch.no_grad():
@@ -258,44 +274,56 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 p_slots = p_hat[:, 1:]  # drop end logit
                 p_dist = torch.nn.functional.normalize(p_slots, dim=1)
                 skill_id = p_dist.argmax(dim=1).item()
-                skill_trace.append(skill_id)
+                mem_trace.append(skill_id)
                 mems = out.mems
-            print(f"  Episode {ep_idx}: skills : {skill_trace}")
-            print(f"  Episode {ep_idx}: actions: {actions.squeeze().tolist()}")
+            # print(f"  Episode {ep_idx}: mems : {mem_trace}")
+            # print(f"  Episode {ep_idx}: actions: {actions.squeeze().tolist()}")
 
-            # Extract predicted segments from skill trace
-            def extract_segments(skill_trace):
-                """Extract contiguous segments from skill trace.
-                Returns list of (start, end, skill_id) tuples."""
-                if not skill_trace:
-                    return []
+            # Compute and print boundaries
+            p_hats = []
+            for t in range(seq_len):
+                transition = batch[:, t]
+                with torch.no_grad():
+                    out = bot.forward(transition, transition.env_id, mems)
+                p_hats.append(out.p)
+            p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
+            
+            subtask_seq = [0, 1, 2, 3]
 
-                segments = []
-                current_skill = skill_trace[0]
-                start_idx = 0
+            boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.5, nb_boundaries=len(subtask_seq))
 
-                for i in range(1, len(skill_trace)):
-                    if skill_trace[i] != current_skill:
-                        # End of current segment
-                        segments.append((start_idx, i-1, current_skill))
-                        # Start new segment
-                        current_skill = skill_trace[i]
-                        start_idx = i
+            ground_truth = get_use_ids(actions.squeeze(), env_name)
+            predicted = np.array(boundaries)
 
-                # Add final segment
-                segments.append((start_idx, len(skill_trace)-1, current_skill))
-                return segments
+            # Get decoded subtasks for both ground truth and predicted
+            _action = actions.squeeze()
+            _decoded_subtask = get_subtask_seq(_action, 
+                                             subtask=subtask_seq,
+                                             use_ids=predicted)
+            
+            _gt_subtask = get_subtask_seq(_action,
+                                         subtask=subtask_seq,
+                                         use_ids=ground_truth)
 
-            segments = extract_segments(skill_trace)
-            print(f"  Episode {ep_idx}: segments: {segments}")
 
-            # Build and print parse tree based on skill assignments
-            depths = np.array(skill_trace[:-1])  # drop last step to match actions length - 1
-            action_seq = [str(a) for a in actions.squeeze().tolist()]
-            parse_tree = distance2ctree(depths, action_seq, False)
-            tree_str = tree_to_str(parse_tree)
-            print(f"  Episode {ep_idx}: tree: {tree_str[1:-1]}")
-            print("--------------------------")
+            if len(_decoded_subtask) != len(_gt_subtask):
+                print(f"  Episode {ep_idx}: decoded subtask length: {len(_decoded_subtask)}")
+                print(f"  Episode {ep_idx}: gt subtask length: {len(_gt_subtask)}")
+
+            episode_details.append({
+                'mem_trace': mem_trace,
+                'actions': actions.squeeze().tolist(),
+                'boundaries': boundaries,
+                'decoded_subtask': _decoded_subtask.tolist(),
+                'gt_subtask': _gt_subtask.tolist(),
+                # 'tree': tree_str[1:-1]
+            })
+
+            all_predicted_subtask.append(_decoded_subtask)
+            all_gt_subtask.append(_gt_subtask)
+
+
+
 
 
 
