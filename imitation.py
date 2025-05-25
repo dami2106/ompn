@@ -18,7 +18,7 @@ FLAGS = flags.FLAGS
 
 # Misc
 flags.DEFINE_bool('il_demo_from_model', default=False, help='Whether to use demo from bot')
-flags.DEFINE_integer('il_train_steps', default=300, help='Trainig steps')
+flags.DEFINE_integer('il_train_steps', default=3000, help='Trainig steps')
 flags.DEFINE_integer('il_eval_freq', default=20, help='Evaluation frequency')
 flags.DEFINE_integer('il_save_freq', default=200, help='Save freq')
 flags.DEFINE_bool('il_no_done', default=False, help='Whether or not to use done during IL')
