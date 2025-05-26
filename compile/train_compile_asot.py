@@ -238,7 +238,24 @@ def main(training_folder):
 
         pred_truth_list = [int(c) for c in pred_truth]
 
-        ground_truth_boundaries = truths[np.insert(truths[1:] != truths[:-1], 0, True)]
+        # ground_truth_boundaries = truths[np.insert(truths[1:] != truths[:-1], 0, True)]
+
+                # Find indices where the label changes (segment ends)
+        change_points = np.where(truths[1:] != truths[:-1])[0] + 1
+
+        # Add the end of the sequence as the last boundary
+        ground_truth_boundaries = np.concatenate([change_points, [len(truths)]])
+
+        # Pad with the sequence length if fewer than max_num_segments
+        if len(ground_truth_boundaries) < FLAGS.compile_max_segs:
+            ground_truth_boundaries = np.pad(ground_truth_boundaries, (0, FLAGS.compile_max_segs - len(ground_truth_boundaries)), constant_values=len(truths))
+
+
+        print("Ground Truth:            ", truths)
+        print("Ground Truth Boundaries: ", ground_truth_boundaries)
+        print("Predicted Boundaries:    ", bound)
+        print("Predicted Truths:        ", pred_truth_list)
+        print("Actions:                 ", acts)
 
         decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=ground_truth_boundaries, use_ids=bound)
 

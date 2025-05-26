@@ -4,7 +4,7 @@
 CURR_DATE_TIME=$(date +%s)
 
 # Training configuration flags
-COMPILE_TRAIN_STEPS=300
+COMPILE_TRAIN_STEPS=80
 COMPILE_EVAL_FREQ=10
 COMPILE_LR=0.001
 COMPILE_BATCH_SIZE=256
@@ -22,7 +22,7 @@ ACTION_SIZE=16
 HIDDEN_SIZE=128
 
 # Misc
-DEBUG=false
+DEBUG=true
 MODE="compile"
 EXPERIMENT="testing_gmm_wsws_static_symbolic_${CURR_DATE_TIME}"
 CUDA=true
