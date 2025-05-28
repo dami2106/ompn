@@ -1,0 +1,1522 @@
+environment ['boundary', 'water', 'stone']
+workshop ['toolshed', 'workbench', 'factory']
+primitive ['iron', 'grass', 'wood', 'gold', 'gem']
+grabbale: ['iron', 'grass', 'wood', 'gold', 'gem', 'plank', 'stick', 'axe', 'rope', 'bed', 'shears', 'cloth', 'bridge', 'ladder']
+nongrabbale: ['boundary', 'water', 'stone', 'toolshed', 'workbench', 'factory']
+CUDA Available: True
+Number of GPUs: 1
+
+GPU 0:
+  Name: NVIDIA GeForce RTX 3050
+  Capability: (8, 6)
+  Memory Allocated: 0.00 MB
+  Memory Reserved: 0.00 MB
+Start compile...
+Model loaded to device:  cuda
+Best model saved, loss:  34.49999237060547
+[TRAIN] steps=10	loss: 34.5000	nll: 29.4819	kl_b: 9.1072	kl_z: 46.4434	reconst_acc: 0.2433
+Best model saved, loss:  22.14978199005127
+[TRAIN] steps=20	loss: 22.1498	nll: 21.1050	kl_b: 1.4903	kl_z: 29.9630	reconst_acc: 0.3871
+Best model saved, loss:  18.677312469482423
+[TRAIN] steps=30	loss: 18.6773	nll: 17.8214	kl_b: 1.0131	kl_z: 34.9337	reconst_acc: 0.4977
+Best model saved, loss:  15.68336009979248
+[TRAIN] steps=40	loss: 15.6834	nll: 14.6653	kl_b: 1.1959	kl_z: 42.0137	reconst_acc: 0.6001
+Best model saved, loss:  13.330086708068848
+[TRAIN] steps=50	loss: 13.3301	nll: 12.1077	kl_b: 1.5157	kl_z: 46.4564	reconst_acc: 0.6677
+Best model saved, loss:  11.352973079681396
+[TRAIN] steps=60	loss: 11.3530	nll: 10.1905	kl_b: 1.4313	kl_z: 44.6793	reconst_acc: 0.7362
+Best model saved, loss:  9.631897926330566
+[TRAIN] steps=70	loss: 9.6319	nll: 8.4505	kl_b: 1.4751	kl_z: 44.3851	reconst_acc: 0.7865
+Best model saved, loss:  8.344472360610961
+[TRAIN] steps=80	loss: 8.3445	nll: 7.1115	kl_b: 1.6002	kl_z: 43.2924	reconst_acc: 0.8275
+Best model saved, loss:  7.373962688446045
+[TRAIN] steps=90	loss: 7.3740	nll: 6.1409	kl_b: 1.5652	kl_z: 45.0442	reconst_acc: 0.8533
+Best model saved, loss:  6.674705171585083
+[TRAIN] steps=100	loss: 6.6747	nll: 5.3564	kl_b: 1.7371	kl_z: 44.9758	reconst_acc: 0.8722
+Best model saved, loss:  6.217855548858642
+[TRAIN] steps=110	loss: 6.2179	nll: 4.7913	kl_b: 1.9481	kl_z: 45.2492	reconst_acc: 0.8925
+Best model saved, loss:  5.681269741058349
+[TRAIN] steps=120	loss: 5.6813	nll: 4.1923	kl_b: 2.0469	kl_z: 46.5521	reconst_acc: 0.9064
+Best model saved, loss:  5.13563346862793
+[TRAIN] steps=130	loss: 5.1356	nll: 3.7118	kl_b: 1.9122	kl_z: 46.7739	reconst_acc: 0.9222
+Best model saved, loss:  4.7563722133636475
+[TRAIN] steps=140	loss: 4.7564	nll: 3.4062	kl_b: 1.7949	kl_z: 45.2766	reconst_acc: 0.9300
+Best model saved, loss:  4.417923641204834
+[TRAIN] steps=150	loss: 4.4179	nll: 3.0072	kl_b: 1.9071	kl_z: 45.7150	reconst_acc: 0.9377
+Best model saved, loss:  4.2656573295593265
+[TRAIN] steps=160	loss: 4.2657	nll: 2.8481	kl_b: 1.9160	kl_z: 45.9528	reconst_acc: 0.9425
+Best model saved, loss:  3.9237457752227782
+[TRAIN] steps=170	loss: 3.9237	nll: 2.5617	kl_b: 1.7808	kl_z: 47.1683	reconst_acc: 0.9500
+[TRAIN] steps=180	loss: 4.3652	nll: 2.5710	kl_b: 2.7008	kl_z: 44.3829	reconst_acc: 0.9486
+[TRAIN] steps=190	loss: 4.1598	nll: 2.4096	kl_b: 2.5664	kl_z: 46.6972	reconst_acc: 0.9524
+[TRAIN] steps=200	loss: 3.9659	nll: 2.2702	kl_b: 2.4742	kl_z: 45.8599	reconst_acc: 0.9573
+Best model saved, loss:  3.611856698989868
+[TRAIN] steps=210	loss: 3.6119	nll: 2.0170	kl_b: 2.3139	kl_z: 43.7910	reconst_acc: 0.9607
+Best model saved, loss:  3.3657199144363403
+[TRAIN] steps=220	loss: 3.3657	nll: 1.8485	kl_b: 2.1023	kl_z: 46.6109	reconst_acc: 0.9674
+Best model saved, loss:  3.14738667011261
+[TRAIN] steps=230	loss: 3.1474	nll: 1.6385	kl_b: 2.0902	kl_z: 46.3780	reconst_acc: 0.9710
+Best model saved, loss:  2.941070580482483
+[TRAIN] steps=240	loss: 2.9411	nll: 1.5142	kl_b: 1.9750	kl_z: 43.9357	reconst_acc: 0.9760
+Best model saved, loss:  2.854975366592407
+[TRAIN] steps=250	loss: 2.8550	nll: 1.4712	kl_b: 1.8959	kl_z: 43.5837	reconst_acc: 0.9746
+Best model saved, loss:  2.8454142570495606
+[TRAIN] steps=260	loss: 2.8454	nll: 1.4685	kl_b: 1.8719	kl_z: 44.0986	reconst_acc: 0.9751
+[TRAIN] steps=270	loss: 3.1727	nll: 1.6257	kl_b: 2.2773	kl_z: 40.8345	reconst_acc: 0.9718
+[TRAIN] steps=280	loss: 3.1990	nll: 1.5919	kl_b: 2.3698	kl_z: 42.2221	reconst_acc: 0.9710
+Best model saved, loss:  2.752142095565796
+[TRAIN] steps=290	loss: 2.7521	nll: 1.3504	kl_b: 1.9734	kl_z: 41.5055	reconst_acc: 0.9774
+Best model saved, loss:  2.5918371200561525
+[TRAIN] steps=300	loss: 2.5918	nll: 1.2800	kl_b: 1.8216	kl_z: 40.1059	reconst_acc: 0.9805
+Best model saved, loss:  2.5559789180755614
+[TRAIN] steps=310	loss: 2.5560	nll: 1.1932	kl_b: 1.9186	kl_z: 40.3510	reconst_acc: 0.9810
+[TRAIN] steps=320	loss: 2.9486	nll: 1.1298	kl_b: 2.8506	kl_z: 39.3500	reconst_acc: 0.9815
+[TRAIN] steps=330	loss: 2.6700	nll: 1.0586	kl_b: 2.4208	kl_z: 40.0958	reconst_acc: 0.9841
+Best model saved, loss:  2.4259052515029906
+[TRAIN] steps=340	loss: 2.4259	nll: 0.9993	kl_b: 2.0908	kl_z: 38.1210	reconst_acc: 0.9832
+Best model saved, loss:  2.284089708328247
+[TRAIN] steps=350	loss: 2.2841	nll: 0.8971	kl_b: 1.9780	kl_z: 39.7938	reconst_acc: 0.9854
+Best model saved, loss:  2.1416977405548097
+[TRAIN] steps=360	loss: 2.1417	nll: 0.8115	kl_b: 1.9224	kl_z: 36.9022	reconst_acc: 0.9881
+[TRAIN] steps=370	loss: 2.1840	nll: 0.8096	kl_b: 2.0054	kl_z: 37.1742	reconst_acc: 0.9881
+Best model saved, loss:  2.122503924369812
+[TRAIN] steps=380	loss: 2.1225	nll: 0.8034	kl_b: 1.8823	kl_z: 37.7913	reconst_acc: 0.9860
+Best model saved, loss:  2.0657196283340453
+[TRAIN] steps=390	loss: 2.0657	nll: 0.7978	kl_b: 1.8310	kl_z: 35.2421	reconst_acc: 0.9868
+Best model saved, loss:  1.9657686829566956
+[TRAIN] steps=400	loss: 1.9658	nll: 0.7056	kl_b: 1.8133	kl_z: 35.3545	reconst_acc: 0.9899
+[TRAIN] steps=410	loss: 2.0447	nll: 0.7128	kl_b: 1.9749	kl_z: 34.4448	reconst_acc: 0.9894
+Best model saved, loss:  1.9546700596809388
+[TRAIN] steps=420	loss: 1.9547	nll: 0.6509	kl_b: 1.9018	kl_z: 35.2865	reconst_acc: 0.9895
+Best model saved, loss:  1.8476075291633607
+[TRAIN] steps=430	loss: 1.8476	nll: 0.6043	kl_b: 1.8490	kl_z: 31.8793	reconst_acc: 0.9908
+Best model saved, loss:  1.7835786461830139
+[TRAIN] steps=440	loss: 1.7836	nll: 0.5760	kl_b: 1.7906	kl_z: 31.2330	reconst_acc: 0.9915
+[TRAIN] steps=450	loss: 1.9364	nll: 0.6659	kl_b: 1.9299	kl_z: 30.5590	reconst_acc: 0.9895
+[TRAIN] steps=460	loss: 1.9976	nll: 0.5905	kl_b: 2.1856	kl_z: 31.4279	reconst_acc: 0.9901
+[TRAIN] steps=470	loss: 1.8894	nll: 0.5738	kl_b: 2.0237	kl_z: 30.3735	reconst_acc: 0.9905
+[TRAIN] steps=480	loss: 1.8333	nll: 0.5269	kl_b: 2.0134	kl_z: 29.9746	reconst_acc: 0.9907
+Best model saved, loss:  1.7380247712135315
+[TRAIN] steps=490	loss: 1.7380	nll: 0.4733	kl_b: 1.9534	kl_z: 28.8057	reconst_acc: 0.9927
+Best model saved, loss:  1.7160662770271302
+[TRAIN] steps=500	loss: 1.7161	nll: 0.4582	kl_b: 1.9682	kl_z: 27.3709	reconst_acc: 0.9929
+Training finished, start collecting segments
+Accumulated all segments and latents
+All Latents Shape (100, 4, 256)
+All Boundaries Shape (100, 4)
+Labels Shape (100, 4)
+Trained Gaussian Mixture clustering model
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6  8 11]
+Predicted Boundaries:     [ 2  6  8 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 3 2 2 2 5 3 5 3 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  7 15 23]
+Predicted Boundaries:     [ 2  7 15 23]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 3 3 3 3 5 4 4 2 4 2 4 2 5 3 1 3 1 3 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  8 12 14]
+Predicted Boundaries:     [ 2  8 12 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 3 3 3 1 3 5 1 3 1 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6 11 13]
+Predicted Boundaries:     [ 2  6 11 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 3 3 5 4 1 1 4 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  8 14 16]
+Predicted Boundaries:     [ 2  8 14 16]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 1 1 4 4 1 5 4 4 4 1 4 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  5  8 11]
+Predicted Boundaries:     [ 2  6  8 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 1 1 1 5 4 1 5 1 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6  8 10]
+Predicted Boundaries:     [ 2  6  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 2 2 2 5 4 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  8 10 13]
+Predicted Boundaries:     [ 2  8 10 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 2 5 3 3 1 1 1 5 3 5 3 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  5  8 11]
+Predicted Boundaries:     [ 2  5  8 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 3 3 5 2 2 5 3 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6 10 14]
+Predicted Boundaries:     [ 1  6 10 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 2 2 2 5 4 2 4 5 4 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 2  9 12 16]
+Predicted Boundaries:     [ 2  9 12 16]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 2 5 1 1 1 1 4 4 5 3 3 5 1 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  7 12 14]
+Predicted Boundaries:     [ 2  7 12 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 1 1 1 1 5 2 3 3 3 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  7 14 17]
+Predicted Boundaries:     [ 2  7 14 17]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 3 5 3 3 3 3 5 1 4 1 4 4 4 5 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  7 10 12]
+Predicted Boundaries:     [ 2  7 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 3 2 2 3 5 1 3 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 1 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 2  5  9 13]
+Predicted Boundaries:     [ 2  5  9 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 4 4 5 1 1 1 5 2 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  7 10 12]
+Predicted Boundaries:     [ 2  7 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 2 2 4 2 5 3 2 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6 12 18]
+Predicted Boundaries:     [ 1  6 12 18]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 2 2 2 2 5 1 1 1 1 4 5 2 2 2 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6 10 15]
+Predicted Boundaries:     [ 2  6 10 15]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 2 3 5 1 1 1 5 3 3 2 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 3  6  9 12]
+Predicted Boundaries:     [ 3  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 2 4 5 3 3 5 4 2 5 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 3  7 11 13]
+Predicted Boundaries:     [ 3  7 11 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 1 1 5 1 4 1 5 2 2 4 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6  9 12]
+Predicted Boundaries:     [ 1  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 3 3 5 4 1 5 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6  9 12]
+Predicted Boundaries:     [ 2  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 1 3 5 2 2 5 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  7  9 12]
+Predicted Boundaries:     [ 2  7  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 3 1 1 5 4 5 3 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  7  9 11]
+Predicted Boundaries:     [ 2  7  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 1 1 3 5 4 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  8 10 13]
+Predicted Boundaries:     [ 2  8 10 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 2 4 2 2 3 2 5 1 5 3 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 1  7 13 17]
+Predicted Boundaries:     [ 2  7 13 17]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 3 3 1 3 5 2 2 4 4 4 5 3 3 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6  9 11]
+Predicted Boundaries:     [ 2  6  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 1 4 4 5 2 4 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 2  6 11 15]
+Predicted Boundaries:     [ 2  6 11 15]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 3 5 3 3 3 5 2 2 2 2 5 3 3 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6 15 20]
+Predicted Boundaries:     [ 2  6 15 20]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 1 1 1 1 5 2 2 2 2 2 4 4 4 5 1 1 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1 12 15 17]
+Predicted Boundaries:     [ 1 12 15 17]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 3 1 3 3 3 3 2 3 5 2 4 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 6  8 24 26]
+Predicted Boundaries:     [ 6  8 18 26]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 2 2 2 2 4 5 3 5 1 1 1 1 1 1 1 1 1 3 1 3 3 1 3 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  8 13 16]
+Predicted Boundaries:     [ 2  8 13 16]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 3 1 1 1 1 5 2 4 4 4 5 4 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  5  8 10]
+Predicted Boundaries:     [ 2  5  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 2 4 4 5 1 3 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6  9 14]
+Predicted Boundaries:     [ 2  6  9 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 1 1 4 4 5 3 3 5 2 4 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1 12 15 18]
+Predicted Boundaries:     [ 2 12 15 18]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 3 3 3 3 3 3 3 3 2 2 5 1 3 5 3 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  6 12 18]
+Predicted Boundaries:     [ 2  6 12 18]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 3 3 3 5 1 1 1 1 4 5 3 2 2 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6 10 12]
+Predicted Boundaries:     [ 2  6 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 3 3 5 1 1 3 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  6 12 14]
+Predicted Boundaries:     [ 2  6 12 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 3 5 4 4 4 5 3 3 2 2 2 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  8 11 24]
+Predicted Boundaries:     [ 2  8 11 24]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 2 2 4 4 4 5 1 3 5 3 3 2 2 2 2 3 2 2 4 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 7 16 23 30]
+Predicted Boundaries:     [ 7 16 23 30]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 3 3 3 3 2 3 5 2 2 2 2 4 4 4 4 5 3 3 3 3 1 3 5 2 2 2 4 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  8 10 19]
+Predicted Boundaries:     [ 2  8 10 19]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 1 1 1 4 1 5 3 5 2 4 4 4 4 1 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6 10 13]
+Predicted Boundaries:     [ 1  6 10 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 1 1 1 4 5 3 3 3 5 3 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 3  9 12 14]
+Predicted Boundaries:     [ 3  9 12 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 2 2 5 4 4 4 4 4 5 2 2 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  6  8 13]
+Predicted Boundaries:     [ 2  6  8 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 3 1 1 5 3 5 1 1 1 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  7 12 15]
+Predicted Boundaries:     [ 1  7 12 15]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 3 1 3 5 2 2 4 2 5 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  5  8 11]
+Predicted Boundaries:     [ 2  5  8 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 1 1 1 5 3 1 5 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6 10 12]
+Predicted Boundaries:     [ 1  6 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 1 3 5 2 2 4 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  5  8 10]
+Predicted Boundaries:     [ 2  5  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 3 3 5 1 3 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 3  5  8 10]
+Predicted Boundaries:     [ 3  5  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 3 2 5 2 5 3 2 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  8 14 17]
+Predicted Boundaries:     [ 2  8 14 17]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 3 3 3 3 1 5 3 2 3 2 2 5 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 2  7  9 13]
+Predicted Boundaries:     [ 2  7  9 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 1 5 1 4 1 4 5 3 5 1 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  5  9 11]
+Predicted Boundaries:     [ 2  5  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 1 3 5 4 1 4 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6 11 14]
+Predicted Boundaries:     [ 2  6 11 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 1 1 1 5 2 2 4 4 5 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  6 13 15]
+Predicted Boundaries:     [ 2  6 13 15]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 4 5 3 2 2 5 1 1 4 4 4 4 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  7  9 11]
+Predicted Boundaries:     [ 2  7  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 4 4 2 2 5 3 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6 10 12]
+Predicted Boundaries:     [ 2  7 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 3 3 5 4 2 4 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6  9 13]
+Predicted Boundaries:     [ 2  6  9 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 2 2 2 5 1 4 5 2 4 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  7 11 14]
+Predicted Boundaries:     [ 2  7 11 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 3 1 1 3 5 2 2 3 5 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6 10 12]
+Predicted Boundaries:     [ 1  6 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 2 2 5 3 1 3 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 1 1 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  4 11 13]
+Predicted Boundaries:     [ 2  4 11 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 1 1 5 3 3 3 2 3 2 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  7 12 14]
+Predicted Boundaries:     [ 1  7 12 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 3 2 3 5 4 2 4 2 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6  8 15]
+Predicted Boundaries:     [ 1  6  8 15]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 2 3 2 5 1 5 2 4 4 2 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  7  9 11]
+Predicted Boundaries:     [ 2  7  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 1 1 4 1 5 3 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  5  8 10]
+Predicted Boundaries:     [ 2  5  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 3 3 5 1 3 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  8 12 18]
+Predicted Boundaries:     [ 2  8 12 18]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 3 5 3 3 1 1 1 5 2 2 2 5 1 1 1 4 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  8 15 21]
+Predicted Boundaries:     [ 2  8 15 21]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 2 2 2 4 2 4 5 1 1 1 1 1 4 5 2 2 2 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6  8 13]
+Predicted Boundaries:     [ 2  6  8 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 1 1 1 4 5 2 5 3 3 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  6  9 11]
+Predicted Boundaries:     [ 2  6  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 1 5 3 3 1 5 4 1 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6  9 12]
+Predicted Boundaries:     [ 2  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 3 3 5 1 4 5 3 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6 14 22]
+Predicted Boundaries:     [ 2  6 14 22]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 3 3 3 3 5 4 1 4 1 4 4 4 5 3 3 3 1 3 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 1  6 14 18]
+Predicted Boundaries:     [ 2  7 10 18]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 3 3 3 3 5 4 1 1 3 1 1 3 5 3 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6  8 10]
+Predicted Boundaries:     [ 2  6  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 4 4 1 5 3 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  7  9 16]
+Predicted Boundaries:     [ 2  7  9 16]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 2 4 4 2 4 5 3 5 3 3 2 2 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  7 10 12]
+Predicted Boundaries:     [ 2  7 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 3 5 3 2 2 3 5 1 3 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  7 14 22]
+Predicted Boundaries:     [ 2  7 14 22]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 2 5 1 1 1 1 5 2 2 2 2 2 4 5 1 1 1 1 1 1 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 0 0 0 0]
+Ground Truth Boundaries:  [ 1  7  9 13]
+Predicted Boundaries:     [ 1  7  9 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 1 1 1 1 4 5 3 5 2 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2 10 13 16]
+Predicted Boundaries:     [ 2 10 13 16]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 1 5 3 3 2 2 3 3 1 5 4 1 5 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  6  9 12]
+Predicted Boundaries:     [ 2  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 3 5 4 4 4 5 3 1 5 1 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  7 11 14]
+Predicted Boundaries:     [ 2  7 11 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 3 3 1 1 3 5 2 2 3 5 1 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  8 28 36]
+Predicted Boundaries:     [ 2  8 14 36]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 3 3 3 2 3 5 4 1 4 1 4 1 4 4 4 1 1 1 1 3 1 1 3 1 1 5 3 1 3 1 1 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  5 10 15]
+Predicted Boundaries:     [ 2  5 10 15]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [4 5 1 1 1 5 3 3 2 3 5 1 1 1 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  6  9 12]
+Predicted Boundaries:     [ 2  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 3 3 5 4 2 5 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  6  9 12]
+Predicted Boundaries:     [ 2  6  9 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 3 5 4 4 4 5 3 1 5 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0]
+Ground Truth Boundaries:  [ 3 11 13 18]
+Predicted Boundaries:     [ 3 11 13 18]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 1 1 5 3 3 2 2 2 2 2 5 3 5 3 3 3 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 0 0 0]
+Ground Truth Boundaries:  [ 2  6  8 11]
+Predicted Boundaries:     [ 2  6  8 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 3 5 3 2 3 5 4 5 2 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 3  9 12 14]
+Predicted Boundaries:     [ 3  9 13 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 1 3 5 1 1 4 4 1 5 3 1 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 3  8 11 14]
+Predicted Boundaries:     [ 3  8 11 14]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 2 4 5 4 4 4 4 5 3 1 5 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6  8 10]
+Predicted Boundaries:     [ 2  7  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 3 3 2 2 5 4 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 3  7 10 12]
+Predicted Boundaries:     [ 3  7 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 2 4 5 3 2 3 5 4 4 5 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 2  7 13 19]
+Predicted Boundaries:     [ 2  7 13 19]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 1 1 1 4 5 2 3 2 2 3 5 3 2 3 3 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 0 1 1 0 0 0]
+Ground Truth Boundaries:  [ 1  8 10 13]
+Predicted Boundaries:     [ 2  8 10 13]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [2 5 1 4 4 4 1 4 5 3 5 1 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 3  5  8 11]
+Predicted Boundaries:     [ 3  5  8 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 3 3 5 3 5 4 1 5 1 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6  8 10]
+Predicted Boundaries:     [ 2  6  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 1 3 5 2 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 2  6  9 11]
+Predicted Boundaries:     [ 2  6  9 11]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 4 5 1 1 4 5 1 3 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6 10 12]
+Predicted Boundaries:     [ 1  6 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 2 2 4 4 5 1 1 1 5 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 1  5 10 16]
+Predicted Boundaries:     [ 2  5 10 16]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 1 1 5 2 3 2 3 5 1 4 4 4 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 0 1 1 1 0 0]
+Ground Truth Boundaries:  [ 1  7 10 12]
+Predicted Boundaries:     [ 2  7 10 12]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [1 5 3 3 1 1 3 5 2 3 5 3 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 0 0 0 0 0 1 1 0 0]
+Ground Truth Boundaries:  [ 1  6  8 10]
+Predicted Boundaries:     [ 2  6  8 10]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 5 3 3 1 3 5 4 5 1 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0]
+Ground Truth Boundaries:  [ 4  7 14 20]
+Predicted Boundaries:     [ 4  7 14 20]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 3 2 3 5 2 3 5 1 3 1 3 3 3 5 3 3 3 3 2 5]
+Subtask Order:            [1, 0, 1, 0]
+Ground Truth:             [1 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0]
+Ground Truth Boundaries:  [ 3 12 20 23]
+Predicted Boundaries:     [ 3 12 20 23]
+Predicted Truths:         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:                  [3 3 3 5 1 1 4 4 1 4 1 4 5 2 2 2 2 2 2 4 5 2 4 5]
+Subtask Order:            [1, 0, 1, 0]
+Saved model and episode data to:  /home/nightless/Desktop/ompn/experiment/testing_gmm_wsws_static_updated_gt_segments_proper_3
+Finished collecting segments
+Episode:  0
+Pred. Boundaries:  [2, 6, 8, 11]
+GT. Boundaries:  [1, 6, 8, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [4, 5, 3, 2, 2, 2, 5, 3, 5, 3, 2, 5]
+--------------------------------------------------
+Episode:  1
+Pred. Boundaries:  [2, 7, 15, 23]
+GT. Boundaries:  [2, 7, 15, 23]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [2, 4, 5, 3, 3, 3, 3, 5, 4, 4, 2, 4, 2, 4, 2, 5, 3, 1, 3, 1, 3, 1, 1, 5]
+--------------------------------------------------
+Episode:  2
+Pred. Boundaries:  [2, 8, 12, 14]
+GT. Boundaries:  [2, 8, 12, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [1, 4, 5, 3, 3, 3, 1, 3, 5, 1, 3, 1, 5, 3, 5]
+--------------------------------------------------
+Episode:  3
+Pred. Boundaries:  [2, 6, 11, 13]
+GT. Boundaries:  [1, 6, 11, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 3, 3, 3, 5, 4, 1, 1, 4, 5, 3, 5]
+--------------------------------------------------
+Episode:  4
+Pred. Boundaries:  [2, 8, 14, 16]
+GT. Boundaries:  [1, 8, 14, 16]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [2, 5, 1, 1, 1, 4, 4, 1, 5, 4, 4, 4, 1, 4, 5, 3, 5]
+--------------------------------------------------
+Episode:  5
+Pred. Boundaries:  [2, 6, 8, 11]
+GT. Boundaries:  [1, 5, 8, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [3, 5, 1, 1, 1, 5, 4, 1, 5, 1, 4, 5]
+--------------------------------------------------
+Episode:  6
+Pred. Boundaries:  [2, 6, 8, 10]
+GT. Boundaries:  [1, 6, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 2, 2, 2, 5, 4, 5, 2, 5]
+--------------------------------------------------
+Episode:  7
+Pred. Boundaries:  [2, 8, 10, 13]
+GT. Boundaries:  [2, 8, 10, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [3, 2, 5, 3, 3, 1, 1, 1, 5, 3, 5, 3, 1, 5]
+--------------------------------------------------
+Episode:  8
+Pred. Boundaries:  [2, 5, 8, 11]
+GT. Boundaries:  [1, 5, 8, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 5, 3, 3, 3, 5, 2, 2, 5, 3, 3, 5]
+--------------------------------------------------
+Episode:  9
+Pred. Boundaries:  [1, 6, 10, 14]
+GT. Boundaries:  [1, 6, 10, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+Actions:           [3, 5, 3, 2, 2, 2, 5, 4, 2, 4, 5, 4, 4, 4, 5]
+--------------------------------------------------
+Episode:  10
+Pred. Boundaries:  [2, 9, 12, 16]
+GT. Boundaries:  [2, 9, 12, 16]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]
+Actions:           [3, 2, 5, 1, 1, 1, 1, 4, 4, 5, 3, 3, 5, 1, 4, 4, 5]
+--------------------------------------------------
+Episode:  11
+Pred. Boundaries:  [2, 7, 12, 14]
+GT. Boundaries:  [1, 7, 12, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [2, 5, 1, 1, 1, 1, 1, 5, 2, 3, 3, 3, 5, 1, 5]
+--------------------------------------------------
+Episode:  12
+Pred. Boundaries:  [2, 7, 14, 17]
+GT. Boundaries:  [2, 7, 14, 17]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 3, 5, 3, 3, 3, 3, 5, 1, 4, 1, 4, 4, 4, 5, 1, 1, 5]
+--------------------------------------------------
+Episode:  13
+Pred. Boundaries:  [2, 7, 10, 12]
+GT. Boundaries:  [2, 7, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 4, 5, 3, 2, 2, 3, 5, 1, 3, 5, 3, 5]
+--------------------------------------------------
+Episode:  14
+Pred. Boundaries:  [2, 5, 9, 13]
+GT. Boundaries:  [2, 5, 9, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+Actions:           [1, 4, 5, 4, 4, 5, 1, 1, 1, 5, 2, 2, 4, 5]
+--------------------------------------------------
+Episode:  15
+Pred. Boundaries:  [2, 7, 10, 12]
+GT. Boundaries:  [2, 7, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 4, 5, 2, 2, 4, 2, 5, 3, 2, 5, 2, 5]
+--------------------------------------------------
+Episode:  16
+Pred. Boundaries:  [1, 6, 12, 18]
+GT. Boundaries:  [1, 6, 12, 18]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [1, 5, 2, 2, 2, 2, 5, 1, 1, 1, 1, 4, 5, 2, 2, 2, 2, 4, 5]
+--------------------------------------------------
+Episode:  17
+Pred. Boundaries:  [2, 6, 10, 15]
+GT. Boundaries:  [1, 6, 10, 15]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [3, 5, 3, 3, 2, 3, 5, 1, 1, 1, 5, 3, 3, 2, 2, 5]
+--------------------------------------------------
+Episode:  18
+Pred. Boundaries:  [3, 6, 9, 12]
+GT. Boundaries:  [3, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 2, 4, 5, 3, 3, 5, 4, 2, 5, 2, 3, 5]
+--------------------------------------------------
+Episode:  19
+Pred. Boundaries:  [3, 7, 11, 13]
+GT. Boundaries:  [3, 7, 11, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [3, 1, 1, 5, 1, 4, 1, 5, 2, 2, 4, 5, 1, 5]
+--------------------------------------------------
+Episode:  20
+Pred. Boundaries:  [1, 6, 9, 12]
+GT. Boundaries:  [1, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [3, 5, 3, 3, 3, 3, 5, 4, 1, 5, 1, 3, 5]
+--------------------------------------------------
+Episode:  21
+Pred. Boundaries:  [2, 6, 9, 12]
+GT. Boundaries:  [1, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [1, 5, 3, 3, 1, 3, 5, 2, 2, 5, 1, 1, 5]
+--------------------------------------------------
+Episode:  22
+Pred. Boundaries:  [2, 7, 9, 12]
+GT. Boundaries:  [1, 7, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [3, 5, 3, 3, 3, 1, 1, 5, 4, 5, 3, 1, 5]
+--------------------------------------------------
+Episode:  23
+Pred. Boundaries:  [2, 7, 9, 11]
+GT. Boundaries:  [1, 7, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 3, 1, 1, 3, 5, 4, 5, 1, 5]
+--------------------------------------------------
+Episode:  24
+Pred. Boundaries:  [2, 8, 10, 13]
+GT. Boundaries:  [1, 8, 10, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [3, 5, 2, 4, 2, 2, 3, 2, 5, 1, 5, 3, 2, 5]
+--------------------------------------------------
+Episode:  25
+Pred. Boundaries:  [2, 7, 13, 17]
+GT. Boundaries:  [1, 7, 13, 17]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+Actions:           [2, 5, 3, 3, 3, 1, 3, 5, 2, 2, 4, 4, 4, 5, 3, 3, 3, 5]
+--------------------------------------------------
+Episode:  26
+Pred. Boundaries:  [2, 6, 9, 11]
+GT. Boundaries:  [1, 6, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 5, 1, 1, 4, 4, 5, 2, 4, 5, 4, 5]
+--------------------------------------------------
+Episode:  27
+Pred. Boundaries:  [2, 6, 11, 15]
+GT. Boundaries:  [2, 6, 11, 15]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+Actions:           [1, 3, 5, 3, 3, 3, 5, 2, 2, 2, 2, 5, 3, 3, 1, 5]
+--------------------------------------------------
+Episode:  28
+Pred. Boundaries:  [2, 6, 15, 20]
+GT. Boundaries:  [1, 6, 15, 20]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [4, 5, 1, 1, 1, 1, 5, 2, 2, 2, 2, 2, 4, 4, 4, 5, 1, 1, 1, 1, 5]
+--------------------------------------------------
+Episode:  29
+Pred. Boundaries:  [1, 12, 15, 17]
+GT. Boundaries:  [1, 12, 15, 17]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [3, 5, 3, 3, 3, 1, 3, 3, 3, 3, 2, 3, 5, 2, 4, 5, 3, 5]
+--------------------------------------------------
+Episode:  30
+Pred. Boundaries:  [6, 8, 18, 26]
+GT. Boundaries:  [6, 8, 24, 26]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [2, 2, 2, 2, 2, 4, 5, 3, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 3, 3, 1, 3, 5, 2, 5]
+--------------------------------------------------
+Episode:  31
+Pred. Boundaries:  [2, 8, 13, 16]
+GT. Boundaries:  [2, 8, 13, 16]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 4, 5, 3, 1, 1, 1, 1, 5, 2, 4, 4, 4, 5, 4, 1, 5]
+--------------------------------------------------
+Episode:  32
+Pred. Boundaries:  [2, 5, 8, 10]
+GT. Boundaries:  [1, 5, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 5, 2, 4, 4, 5, 1, 3, 5, 4, 5]
+--------------------------------------------------
+Episode:  33
+Pred. Boundaries:  [2, 6, 9, 14]
+GT. Boundaries:  [1, 6, 9, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [1, 5, 1, 1, 4, 4, 5, 3, 3, 5, 2, 4, 4, 4, 5]
+--------------------------------------------------
+Episode:  34
+Pred. Boundaries:  [2, 12, 15, 18]
+GT. Boundaries:  [1, 12, 15, 18]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [4, 5, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 5, 1, 3, 5, 3, 2, 5]
+--------------------------------------------------
+Episode:  35
+Pred. Boundaries:  [2, 6, 12, 18]
+GT. Boundaries:  [2, 6, 12, 18]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [2, 4, 5, 3, 3, 3, 5, 1, 1, 1, 1, 4, 5, 3, 2, 2, 2, 3, 5]
+--------------------------------------------------
+Episode:  36
+Pred. Boundaries:  [2, 6, 10, 12]
+GT. Boundaries:  [1, 6, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 3, 3, 3, 5, 1, 1, 3, 5, 3, 5]
+--------------------------------------------------
+Episode:  37
+Pred. Boundaries:  [2, 6, 12, 14]
+GT. Boundaries:  [2, 6, 12, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [1, 3, 5, 4, 4, 4, 5, 3, 3, 2, 2, 2, 5, 2, 5]
+--------------------------------------------------
+Episode:  38
+Pred. Boundaries:  [2, 8, 11, 24]
+GT. Boundaries:  [2, 8, 11, 24]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [1, 4, 5, 2, 2, 4, 4, 4, 5, 1, 3, 5, 3, 3, 2, 2, 2, 2, 3, 2, 2, 4, 2, 4, 5]
+--------------------------------------------------
+Episode:  39
+Pred. Boundaries:  [7, 16, 23, 30]
+GT. Boundaries:  [7, 16, 23, 30]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [3, 3, 3, 3, 3, 2, 3, 5, 2, 2, 2, 2, 4, 4, 4, 4, 5, 3, 3, 3, 3, 1, 3, 5, 2, 2, 2, 4, 4, 4, 5]
+--------------------------------------------------
+Episode:  40
+Pred. Boundaries:  [2, 8, 10, 19]
+GT. Boundaries:  [1, 8, 10, 19]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [2, 5, 1, 1, 1, 1, 4, 1, 5, 3, 5, 2, 4, 4, 4, 4, 1, 1, 3, 5]
+--------------------------------------------------
+Episode:  41
+Pred. Boundaries:  [1, 6, 10, 13]
+GT. Boundaries:  [1, 6, 10, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [3, 5, 1, 1, 1, 4, 5, 3, 3, 3, 5, 3, 1, 5]
+--------------------------------------------------
+Episode:  42
+Pred. Boundaries:  [3, 9, 12, 14]
+GT. Boundaries:  [3, 9, 12, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [3, 2, 2, 5, 4, 4, 4, 4, 4, 5, 2, 2, 5, 4, 5]
+--------------------------------------------------
+Episode:  43
+Pred. Boundaries:  [2, 6, 8, 13]
+GT. Boundaries:  [2, 6, 8, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [1, 4, 5, 3, 1, 1, 5, 3, 5, 1, 1, 1, 4, 5]
+--------------------------------------------------
+Episode:  44
+Pred. Boundaries:  [1, 7, 12, 15]
+GT. Boundaries:  [1, 7, 12, 15]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [3, 5, 3, 3, 3, 1, 3, 5, 2, 2, 4, 2, 5, 2, 3, 5]
+--------------------------------------------------
+Episode:  45
+Pred. Boundaries:  [2, 5, 8, 11]
+GT. Boundaries:  [1, 5, 8, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [4, 5, 1, 1, 1, 5, 3, 1, 5, 1, 3, 5]
+--------------------------------------------------
+Episode:  46
+Pred. Boundaries:  [1, 6, 10, 12]
+GT. Boundaries:  [1, 6, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [3, 5, 3, 3, 1, 3, 5, 2, 2, 4, 5, 3, 5]
+--------------------------------------------------
+Episode:  47
+Pred. Boundaries:  [2, 5, 8, 10]
+GT. Boundaries:  [1, 5, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 5, 3, 3, 3, 5, 1, 3, 5, 3, 5]
+--------------------------------------------------
+Episode:  48
+Pred. Boundaries:  [3, 5, 8, 10]
+GT. Boundaries:  [3, 5, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [3, 3, 2, 5, 2, 5, 3, 2, 5, 2, 5]
+--------------------------------------------------
+Episode:  49
+Pred. Boundaries:  [2, 8, 14, 17]
+GT. Boundaries:  [2, 8, 14, 17]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 4, 5, 3, 3, 3, 3, 1, 5, 3, 2, 3, 2, 2, 5, 1, 1, 5]
+--------------------------------------------------
+Episode:  50
+Pred. Boundaries:  [2, 7, 9, 13]
+GT. Boundaries:  [2, 7, 9, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+Actions:           [3, 1, 5, 1, 4, 1, 4, 5, 3, 5, 1, 4, 4, 5]
+--------------------------------------------------
+Episode:  51
+Pred. Boundaries:  [2, 5, 9, 11]
+GT. Boundaries:  [1, 5, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 1, 3, 5, 4, 1, 4, 5, 3, 5]
+--------------------------------------------------
+Episode:  52
+Pred. Boundaries:  [2, 6, 11, 14]
+GT. Boundaries:  [1, 6, 11, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 5, 3, 1, 1, 1, 5, 2, 2, 4, 4, 5, 1, 1, 5]
+--------------------------------------------------
+Episode:  53
+Pred. Boundaries:  [2, 6, 13, 15]
+GT. Boundaries:  [2, 6, 13, 15]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [2, 4, 5, 3, 2, 2, 5, 1, 1, 4, 4, 4, 4, 5, 2, 5]
+--------------------------------------------------
+Episode:  54
+Pred. Boundaries:  [2, 7, 9, 11]
+GT. Boundaries:  [1, 7, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [2, 5, 1, 4, 4, 2, 2, 5, 3, 5, 4, 5]
+--------------------------------------------------
+Episode:  55
+Pred. Boundaries:  [2, 7, 10, 12]
+GT. Boundaries:  [1, 6, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 3, 3, 3, 5, 4, 2, 4, 5, 2, 5]
+--------------------------------------------------
+Episode:  56
+Pred. Boundaries:  [2, 6, 9, 13]
+GT. Boundaries:  [1, 6, 9, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]
+Actions:           [2, 5, 3, 2, 2, 2, 5, 1, 4, 5, 2, 4, 2, 5]
+--------------------------------------------------
+Episode:  57
+Pred. Boundaries:  [2, 7, 11, 14]
+GT. Boundaries:  [1, 7, 11, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 5, 3, 3, 1, 1, 3, 5, 2, 2, 3, 5, 1, 1, 5]
+--------------------------------------------------
+Episode:  58
+Pred. Boundaries:  [1, 6, 10, 12]
+GT. Boundaries:  [1, 6, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [3, 5, 3, 3, 2, 2, 5, 3, 1, 3, 5, 2, 5]
+--------------------------------------------------
+Episode:  59
+Pred. Boundaries:  [2, 4, 11, 13]
+GT. Boundaries:  [1, 4, 11, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [4, 5, 1, 1, 5, 3, 3, 3, 2, 3, 2, 5, 1, 5]
+--------------------------------------------------
+Episode:  60
+Pred. Boundaries:  [1, 7, 12, 14]
+GT. Boundaries:  [1, 7, 12, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+Actions:           [3, 5, 3, 3, 3, 2, 3, 5, 4, 2, 4, 2, 5, 3, 5]
+--------------------------------------------------
+Episode:  61
+Pred. Boundaries:  [1, 6, 8, 15]
+GT. Boundaries:  [1, 6, 8, 15]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [3, 5, 3, 2, 3, 2, 5, 1, 5, 2, 4, 4, 2, 2, 3, 5]
+--------------------------------------------------
+Episode:  62
+Pred. Boundaries:  [2, 7, 9, 11]
+GT. Boundaries:  [1, 7, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [2, 5, 1, 1, 1, 4, 1, 5, 3, 5, 4, 5]
+--------------------------------------------------
+Episode:  63
+Pred. Boundaries:  [2, 5, 8, 10]
+GT. Boundaries:  [1, 5, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 5, 3, 3, 3, 5, 1, 3, 5, 3, 5]
+--------------------------------------------------
+Episode:  64
+Pred. Boundaries:  [2, 8, 12, 18]
+GT. Boundaries:  [2, 8, 12, 18]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [2, 3, 5, 3, 3, 1, 1, 1, 5, 2, 2, 2, 5, 1, 1, 1, 4, 1, 5]
+--------------------------------------------------
+Episode:  65
+Pred. Boundaries:  [2, 8, 15, 21]
+GT. Boundaries:  [1, 8, 15, 21]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [3, 5, 2, 2, 2, 4, 2, 4, 5, 1, 1, 1, 1, 1, 4, 5, 2, 2, 2, 2, 4, 5]
+--------------------------------------------------
+Episode:  66
+Pred. Boundaries:  [2, 6, 8, 13]
+GT. Boundaries:  [1, 6, 8, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [1, 5, 1, 1, 1, 4, 5, 2, 5, 3, 3, 1, 1, 5]
+--------------------------------------------------
+Episode:  67
+Pred. Boundaries:  [2, 6, 9, 11]
+GT. Boundaries:  [2, 6, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [3, 1, 5, 3, 3, 1, 5, 4, 1, 5, 1, 5]
+--------------------------------------------------
+Episode:  68
+Pred. Boundaries:  [2, 6, 9, 12]
+GT. Boundaries:  [1, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [1, 5, 3, 3, 3, 3, 5, 1, 4, 5, 3, 3, 5]
+--------------------------------------------------
+Episode:  69
+Pred. Boundaries:  [2, 6, 14, 22]
+GT. Boundaries:  [1, 6, 14, 22]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [4, 5, 3, 3, 3, 3, 5, 4, 1, 4, 1, 4, 4, 4, 5, 3, 3, 3, 1, 3, 1, 3, 5]
+--------------------------------------------------
+Episode:  70
+Pred. Boundaries:  [2, 7, 10, 18]
+GT. Boundaries:  [1, 6, 14, 18]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [4, 5, 3, 3, 3, 3, 5, 4, 1, 1, 3, 1, 1, 3, 5, 3, 2, 3, 5]
+--------------------------------------------------
+Episode:  71
+Pred. Boundaries:  [2, 6, 8, 10]
+GT. Boundaries:  [1, 6, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [2, 5, 1, 4, 4, 1, 5, 3, 5, 4, 5]
+--------------------------------------------------
+Episode:  72
+Pred. Boundaries:  [2, 7, 9, 16]
+GT. Boundaries:  [1, 7, 9, 16]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [2, 5, 2, 4, 4, 2, 4, 5, 3, 5, 3, 3, 2, 2, 2, 4, 5]
+--------------------------------------------------
+Episode:  73
+Pred. Boundaries:  [2, 7, 10, 12]
+GT. Boundaries:  [2, 7, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 3, 5, 3, 2, 2, 3, 5, 1, 3, 5, 3, 5]
+--------------------------------------------------
+Episode:  74
+Pred. Boundaries:  [2, 7, 14, 22]
+GT. Boundaries:  [2, 7, 14, 22]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [3, 2, 5, 1, 1, 1, 1, 5, 2, 2, 2, 2, 2, 4, 5, 1, 1, 1, 1, 1, 1, 4, 5]
+--------------------------------------------------
+Episode:  75
+Pred. Boundaries:  [1, 7, 9, 13]
+GT. Boundaries:  [1, 7, 9, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+Actions:           [3, 5, 1, 1, 1, 1, 4, 5, 3, 5, 2, 4, 4, 5]
+--------------------------------------------------
+Episode:  76
+Pred. Boundaries:  [2, 10, 13, 16]
+GT. Boundaries:  [2, 10, 13, 16]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [1, 1, 5, 3, 3, 2, 2, 3, 3, 1, 5, 4, 1, 5, 2, 3, 5]
+--------------------------------------------------
+Episode:  77
+Pred. Boundaries:  [2, 6, 9, 12]
+GT. Boundaries:  [2, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [1, 3, 5, 4, 4, 4, 5, 3, 1, 5, 1, 4, 5]
+--------------------------------------------------
+Episode:  78
+Pred. Boundaries:  [2, 7, 11, 14]
+GT. Boundaries:  [1, 7, 11, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [4, 5, 3, 3, 1, 1, 3, 5, 2, 2, 3, 5, 1, 1, 5]
+--------------------------------------------------
+Episode:  79
+Pred. Boundaries:  [2, 8, 14, 36]
+GT. Boundaries:  [2, 8, 28, 36]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Actions:           [1, 4, 5, 3, 3, 3, 2, 3, 5, 4, 1, 4, 1, 4, 1, 4, 4, 4, 1, 1, 1, 1, 3, 1, 1, 3, 1, 1, 5, 3, 1, 3, 1, 1, 1, 3, 5]
+--------------------------------------------------
+Episode:  80
+Pred. Boundaries:  [2, 5, 10, 15]
+GT. Boundaries:  [1, 5, 10, 15]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [4, 5, 1, 1, 1, 5, 3, 3, 2, 3, 5, 1, 1, 1, 4, 5]
+--------------------------------------------------
+Episode:  81
+Pred. Boundaries:  [2, 6, 9, 12]
+GT. Boundaries:  [1, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [1, 5, 3, 3, 3, 3, 5, 4, 2, 5, 1, 3, 5]
+--------------------------------------------------
+Episode:  82
+Pred. Boundaries:  [2, 6, 9, 12]
+GT. Boundaries:  [2, 6, 9, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [1, 3, 5, 4, 4, 4, 5, 3, 1, 5, 4, 4, 5]
+--------------------------------------------------
+Episode:  83
+Pred. Boundaries:  [3, 11, 13, 18]
+GT. Boundaries:  [3, 11, 13, 18]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+Actions:           [1, 1, 1, 5, 3, 3, 2, 2, 2, 2, 2, 5, 3, 5, 3, 3, 3, 2, 5]
+--------------------------------------------------
+Episode:  84
+Pred. Boundaries:  [2, 6, 8, 11]
+GT. Boundaries:  [2, 6, 8, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [3, 3, 5, 3, 2, 3, 5, 4, 5, 2, 3, 5]
+--------------------------------------------------
+Episode:  85
+Pred. Boundaries:  [3, 9, 13, 14]
+GT. Boundaries:  [3, 9, 12, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0]
+Actions:           [3, 1, 3, 5, 1, 1, 4, 4, 1, 5, 3, 1, 5, 4, 5]
+--------------------------------------------------
+Episode:  86
+Pred. Boundaries:  [3, 8, 11, 14]
+GT. Boundaries:  [3, 8, 11, 14]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [2, 2, 4, 5, 4, 4, 4, 4, 5, 3, 1, 5, 2, 4, 5]
+--------------------------------------------------
+Episode:  87
+Pred. Boundaries:  [2, 7, 8, 10]
+GT. Boundaries:  [1, 6, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0]
+Actions:           [2, 5, 3, 3, 2, 2, 5, 4, 5, 2, 5]
+--------------------------------------------------
+Episode:  88
+Pred. Boundaries:  [3, 7, 10, 12]
+GT. Boundaries:  [3, 7, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [2, 2, 4, 5, 3, 2, 3, 5, 4, 4, 5, 2, 5]
+--------------------------------------------------
+Episode:  89
+Pred. Boundaries:  [2, 7, 13, 19]
+GT. Boundaries:  [2, 7, 13, 19]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [1, 4, 5, 1, 1, 1, 4, 5, 2, 3, 2, 2, 3, 5, 3, 2, 3, 3, 1, 5]
+--------------------------------------------------
+Episode:  90
+Pred. Boundaries:  [2, 8, 10, 13]
+GT. Boundaries:  [1, 8, 10, 13]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Actions:           [2, 5, 1, 4, 4, 4, 1, 4, 5, 3, 5, 1, 4, 5]
+--------------------------------------------------
+Episode:  91
+Pred. Boundaries:  [3, 5, 8, 11]
+GT. Boundaries:  [3, 5, 8, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0]
+Actions:           [3, 3, 3, 5, 3, 5, 4, 1, 5, 1, 3, 5]
+--------------------------------------------------
+Episode:  92
+Pred. Boundaries:  [2, 6, 8, 10]
+GT. Boundaries:  [1, 6, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 3, 1, 3, 5, 2, 5, 1, 5]
+--------------------------------------------------
+Episode:  93
+Pred. Boundaries:  [2, 6, 9, 11]
+GT. Boundaries:  [2, 6, 9, 11]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [1, 4, 5, 1, 1, 4, 5, 1, 3, 5, 4, 5]
+--------------------------------------------------
+Episode:  94
+Pred. Boundaries:  [1, 6, 10, 12]
+GT. Boundaries:  [1, 6, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0]
+Actions:           [3, 5, 2, 2, 4, 4, 5, 1, 1, 1, 5, 4, 5]
+--------------------------------------------------
+Episode:  95
+Pred. Boundaries:  [2, 5, 10, 16]
+GT. Boundaries:  [1, 5, 10, 16]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [1, 5, 3, 1, 1, 5, 2, 3, 2, 3, 5, 1, 4, 4, 4, 4, 5]
+--------------------------------------------------
+Episode:  96
+Pred. Boundaries:  [2, 7, 10, 12]
+GT. Boundaries:  [1, 7, 10, 12]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+Actions:           [1, 5, 3, 3, 1, 1, 3, 5, 2, 3, 5, 3, 5]
+--------------------------------------------------
+Episode:  97
+Pred. Boundaries:  [2, 6, 8, 10]
+GT. Boundaries:  [1, 6, 8, 10]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+Predicted Static:  [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0]
+Actions:           [3, 5, 3, 3, 1, 3, 5, 4, 5, 1, 5]
+--------------------------------------------------
+Episode:  98
+Pred. Boundaries:  [4, 7, 14, 20]
+GT. Boundaries:  [4, 7, 14, 20]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+Actions:           [3, 3, 2, 3, 5, 2, 3, 5, 1, 3, 1, 3, 3, 3, 5, 3, 3, 3, 3, 2, 5]
+--------------------------------------------------
+Episode:  99
+Pred. Boundaries:  [3, 12, 20, 23]
+GT. Boundaries:  [3, 12, 20, 23]
+Predicted Truths:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Ground Truth:      [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+Predicted Static:  [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+Actions:           [3, 3, 3, 5, 1, 1, 4, 4, 1, 4, 1, 4, 5, 2, 2, 2, 2, 2, 2, 4, 5, 2, 4, 5]
+--------------------------------------------------
+Clustering Results (OMPN STATIC):
+----------------------------------
+test_f1_full   1.2764
+test_f1_per    1.2893
+test_miou_full 0.9056
+test_miou_per  0.9145
+test_mof_full  0.9511
+test_mof_per   0.9539
+----------------------------------
+
+Plotting results...
+Finished plotting results

@@ -4,14 +4,14 @@
 CURR_DATE_TIME=$(date +%s)
 
 # Training configuration flags
-COMPILE_TRAIN_STEPS=80
+COMPILE_TRAIN_STEPS=500
 COMPILE_EVAL_FREQ=10
 COMPILE_LR=0.001
 COMPILE_BATCH_SIZE=256
 COMPILE_MAX_SEGS=4
 COMPILE_SKILLS=2
-COMPILE_BETA_Z=0.1
-COMPILE_BETA_B=0.1
+COMPILE_BETA_Z=0.01
+COMPILE_BETA_B=0.5
 COMPILE_PRIOR_RATE=3
 
 ENVS="wsws_static_symbolic"
@@ -19,12 +19,12 @@ STATE_SIZE=1087
 ACTION_SIZE=16
 
 # Model configuration
-HIDDEN_SIZE=128
+HIDDEN_SIZE=256
 
 # Misc
 DEBUG=true
 MODE="compile"
-EXPERIMENT="testing_gmm_wsws_static_symbolic_${CURR_DATE_TIME}"
+EXPERIMENT="testing_gmm_wsws_static_updated_gt_segments_proper_3"
 CUDA=true
 PROCS=8
 
@@ -45,6 +45,5 @@ python main.py \
   --compile_action_size "$ACTION_SIZE" \
   --envs "$ENVS" \
   --hidden_size "$HIDDEN_SIZE" \
-  --debug "$DEBUG" \
   --experiment "$EXPERIMENT" \
   --procs "$PROCS"

@@ -34,6 +34,27 @@ flags.DEFINE_enum('compile_latent', enum_values=['gaussian', 'concrete'], defaul
 flags.DEFINE_integer('compile_state_size', default=1087, help='State Space size')
 flags.DEFINE_integer('compile_action_size', default=16, help='Action Space size')
 
+
+def get_subtask_ordering(truths, boundaries):
+    """
+    truths: 1D array-like of ground truth labels (e.g. [1,1,1,1,1,1,1,1,1,0,0,0,0])
+    boundaries: 1D array-like of boundary indices (e.g. [4,8,10,12])
+
+    Returns:
+        List of dominant labels for each segment
+    """
+    segment_labels = []
+    start = 0
+    for end in boundaries:
+        segment = truths[start:end]
+        if len(segment) == 0:
+            continue
+        # Use the first label (or majority if needed)
+        label = segment[0]  # or np.bincount(segment).argmax()
+        segment_labels.append(label)
+        start = end
+    return segment_labels
+
 def main(training_folder):
     print('Start compile...')
     n_feature, action_size = FLAGS.compile_state_size, FLAGS.compile_action_size
@@ -251,13 +272,22 @@ def main(training_folder):
             ground_truth_boundaries = np.pad(ground_truth_boundaries, (0, FLAGS.compile_max_segs - len(ground_truth_boundaries)), constant_values=len(truths))
 
 
+
+                #Use the ground truth boundaries with the ground truth to get skill ordering subtask:
+        subtask_order = get_subtask_ordering(truths, ground_truth_boundaries)
+
+        ground_truth_boundaries = ground_truth_boundaries - 1
+
+        decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=subtask_order, use_ids=bound)
+
         print("Ground Truth:            ", truths)
         print("Ground Truth Boundaries: ", ground_truth_boundaries)
         print("Predicted Boundaries:    ", bound)
         print("Predicted Truths:        ", pred_truth_list)
         print("Actions:                 ", acts)
+        print("Subtask Order:           ", subtask_order)
 
-        decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=ground_truth_boundaries, use_ids=bound)
+
 
 
 
@@ -269,7 +299,8 @@ def main(training_folder):
             'predicted_skills': pred_truth_list,
             'predicted_skills_static': decoded_subtask.tolist(),
             'ground_truth': truths,
-            'boundaries': bound
+            'ground_truth_boundaries': ground_truth_boundaries,
+            'predicted_boundaries': bound
         })
 
         preds.append(pred_truth_list)
@@ -288,7 +319,8 @@ def main(training_folder):
 
     for ep in episode_data:
         print("Episode: ", ep['episode'])
-        print("Pred. Boundaries: ", ep['boundaries'].tolist())
+        print("Pred. Boundaries: ", ep['predicted_boundaries'].tolist())
+        print("GT. Boundaries: ", ep['ground_truth_boundaries'].tolist())
         print("Predicted Truths: ", ep['predicted_skills'])
         print("Ground Truth:     ", ep['ground_truth'].tolist())
         print("Predicted Static: ", ep['predicted_skills_static'])
