@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_TASK="wsws_static"
+BASE_TASK="wsws_random"
 MAX_SEGS=4
 SKILLS=2
 TRIALS=150  # Set your desired number of trials here
@@ -8,9 +8,9 @@ TRIALS=150  # Set your desired number of trials here
 # Generate task variants
 TASK_VARIANTS=(
   "${BASE_TASK}_symbolic"
-  "${BASE_TASK}_symbolic_big"
+  # "${BASE_TASK}_symbolic_big"
   "${BASE_TASK}_pixels"
-  "${BASE_TASK}_pixels_big"
+  # "${BASE_TASK}_pixels_big"
 )
 
 # Start timing
