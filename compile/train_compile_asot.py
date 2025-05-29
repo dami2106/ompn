@@ -36,13 +36,6 @@ flags.DEFINE_integer('compile_action_size', default=16, help='Action Space size'
 
 
 def get_subtask_ordering(truths, boundaries):
-    """
-    truths: 1D array-like of ground truth labels (e.g. [1,1,1,1,1,1,1,1,1,0,0,0,0])
-    boundaries: 1D array-like of boundary indices (e.g. [4,8,10,12])
-
-    Returns:
-        List of dominant labels for each segment
-    """
     segment_labels = []
     start = 0
     for end in boundaries:
@@ -259,36 +252,21 @@ def main(training_folder):
 
         pred_truth_list = [int(c) for c in pred_truth]
 
-        # ground_truth_boundaries = truths[np.insert(truths[1:] != truths[:-1], 0, True)]
+        look_for = np.arange(5, 18)
+        gt_segments = np.where(np.isin(acts, look_for))[0]
 
-                # Find indices where the label changes (segment ends)
-        change_points = np.where(truths[1:] != truths[:-1])[0] + 1
+        subtask_order = get_subtask_ordering(truths, gt_segments + 1)
 
-        # Add the end of the sequence as the last boundary
-        ground_truth_boundaries = np.concatenate([change_points, [len(truths)]])
-
-        # Pad with the sequence length if fewer than max_num_segments
-        if len(ground_truth_boundaries) < FLAGS.compile_max_segs:
-            ground_truth_boundaries = np.pad(ground_truth_boundaries, (0, FLAGS.compile_max_segs - len(ground_truth_boundaries)), constant_values=len(truths))
-
-
-
-                #Use the ground truth boundaries with the ground truth to get skill ordering subtask:
-        subtask_order = get_subtask_ordering(truths, ground_truth_boundaries)
-
-        ground_truth_boundaries = ground_truth_boundaries - 1
-
-        decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=subtask_order, use_ids=bound)
 
         print("Ground Truth:            ", truths)
-        print("Ground Truth Boundaries: ", ground_truth_boundaries)
+        print("Ground Truth Boundaries: ", gt_segments)
         print("Predicted Boundaries:    ", bound)
         print("Predicted Truths:        ", pred_truth_list)
         print("Actions:                 ", acts)
         print("Subtask Order:           ", subtask_order)
+        print()
 
-
-
+        decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=subtask_order, use_ids=bound)
 
 
         episode_data.append({
@@ -299,12 +277,13 @@ def main(training_folder):
             'predicted_skills': pred_truth_list,
             'predicted_skills_static': decoded_subtask.tolist(),
             'ground_truth': truths,
-            'ground_truth_boundaries': ground_truth_boundaries,
+            'ground_truth_boundaries': gt_segments,
             'predicted_boundaries': bound
         })
 
         preds.append(pred_truth_list)
         preds_static.append(decoded_subtask)
+
 
     #Save the episode data to a file
     with open(os.path.join(training_folder, 'episode_data.pkl'), 'wb') as f:
@@ -346,7 +325,7 @@ def main(training_folder):
 
     if not FLAGS.debug:
         print("Plotting results...")
-        pred_batch, gt_batch, mask = make_batch(preds, all_truths, pad_value=-1)
+        pred_batch, gt_batch, mask = make_batch(preds_static, all_truths, pad_value=-1)
         visualisation_dir = os.path.join(training_folder, 'visualisation')
         os.makedirs(visualisation_dir, exist_ok=True)
 

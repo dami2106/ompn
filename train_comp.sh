@@ -14,7 +14,7 @@ COMPILE_BETA_Z=0.01
 COMPILE_BETA_B=0.5
 COMPILE_PRIOR_RATE=3
 
-ENVS="wsws_static_symbolic"
+ENVS="wsws_random_symbolic"
 STATE_SIZE=1087
 ACTION_SIZE=16
 
@@ -24,7 +24,7 @@ HIDDEN_SIZE=256
 # Misc
 DEBUG=true
 MODE="compile"
-EXPERIMENT="testing_gmm_wsws_static_updated_gt_segments_proper_3"
+EXPERIMENT="wsws_rand_test"
 CUDA=true
 PROCS=8
 
