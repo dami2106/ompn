@@ -1,8 +1,8 @@
 #!/bin/bash
 
-BASE_TASK="wsws_random"
-MAX_SEGS=4
-SKILLS=2
+BASE_TASK="stone_pick_static"
+MAX_SEGS=8
+SKILLS=5
 TRIALS=150  # Set your desired number of trials here
 
 # Generate task variants
