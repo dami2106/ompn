@@ -38,6 +38,19 @@ flags.DEFINE_float('il_lr', default=5e-4, help="Learning rate")
 flags.DEFINE_float('il_clip', default=0.2, help='RNN clip')
 
 
+def get_subtask_ordering(truths, boundaries):
+    segment_labels = []
+    start = 0
+    for end in boundaries:
+        segment = truths[start:end]
+        if len(segment) == 0:
+            continue
+        # Use the first label (or majority if needed)
+        label = segment[0]  # or np.bincount(segment).argmax()
+        segment_labels.append(label)
+        start = end
+    return segment_labels
+
 def run_batch(batch: DictList,
               batch_lengths,
               bot: ModelBot,
@@ -288,39 +301,64 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 p_hats.append(out.p)
             p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
             
-            subtask_seq = [0, 1, 2, 3]
 
-            boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.5, nb_boundaries=len(subtask_seq))
+            look_for = np.arange(5, 18)
+            actions_cpu = actions.cpu().squeeze().numpy()
+            print("Actions CPU:     ", actions_cpu)
+            gt_segments = np.where(np.isin(actions_cpu, look_for))[0]
 
-            ground_truth = get_use_ids(actions.squeeze(), env_name)
+            print("Ground Truth:     ", gt_segments)
+
+            subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
+
+            print("Subtask Sequence: ", subtask_order)
+
+            boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.5, nb_boundaries=len(subtask_order))
+
+            # ground_truth = get_use_ids(actions_cpu.squeeze(), env_name)
             predicted = np.array(boundaries)
 
+            if len(predicted) < len(gt_segments):
+               
+                predicted = np.pad(predicted, (0,
+                                                len(gt_segments) - len(predicted)), constant_values=predicted[-1])
+            print("Predicted:        ", predicted)
+
+
             # Get decoded subtasks for both ground truth and predicted
-            _action = actions.squeeze()
+            _action = torch.from_numpy(actions_cpu.squeeze()) 
             _decoded_subtask = get_subtask_seq(_action, 
-                                             subtask=subtask_seq,
+                                             subtask=subtask_order,
                                              use_ids=predicted)
             
-            _gt_subtask = get_subtask_seq(_action,
-                                         subtask=subtask_seq,
-                                         use_ids=ground_truth)
+            print("Decoded Subtask:  ", _decoded_subtask)
+
+            
+            # _gt_subtask = get_subtask_seq(_action,
+            #                              subtask=subtask_order,
+            #                              use_ids=gt_segments)
+
+            print("GT Subtask:       ", batch.groundTruth[0].cpu().numpy())
 
 
-            if len(_decoded_subtask) != len(_gt_subtask):
-                print(f"  Episode {ep_idx}: decoded subtask length: {len(_decoded_subtask)}")
-                print(f"  Episode {ep_idx}: gt subtask length: {len(_gt_subtask)}")
+            # if len(_decoded_subtask) != len(_gt_subtask):
+            #     print(f"  Episode {ep_idx}: decoded subtask length: {len(_decoded_subtask)}")
+            #     print(f"  Episode {ep_idx}: gt subtask length: {len(_gt_subtask)}")
+
+
+            print("Actions:         ", actions.squeeze().tolist())
 
             episode_details.append({
                 'mem_trace': mem_trace,
                 'actions': actions.squeeze().tolist(),
                 'boundaries': boundaries,
                 'decoded_subtask': _decoded_subtask.tolist(),
-                'gt_subtask': _gt_subtask.tolist(),
+                # 'gt_subtask': _gt_subtask.tolist(),
                 # 'tree': tree_str[1:-1]
             })
 
             all_predicted_subtask.append(_decoded_subtask)
-            all_gt_subtask.append(_gt_subtask)
+            # all_gt_subtask.append(_gt_subtask)
 
 
 
@@ -331,9 +369,9 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
 def run(training_folder):
     print('Start IL...')
-    first_env = gym.make(FLAGS.envs[0])
-    n_feature, action_size = first_env.n_features, first_env.n_actions
-    # n_feature, action_size = 1087, 17
+    # first_env = gym.make(FLAGS.envs[0])
+    # n_feature, action_size = first_env.n_features, first_env.n_actions
+    n_feature, action_size = 1087, 17
     bot = bots.make(vec_size=n_feature,
                     action_size=action_size,
                     arch=FLAGS.arch,
