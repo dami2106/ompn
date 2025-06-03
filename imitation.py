@@ -88,8 +88,10 @@ def run_batch(batch: DictList,
             final_output.ce_loss = torch.nn.functional.cross_entropy(input=logits, target=targets,
                                                                      reduction='none',
                                                                      ignore_index=bot.done_id)
+            # print("ignore_index: ", bot.done_id)
         else:
             #We are here
+            # print("DONT ignore_index: ", bot.done_id)
             final_output.ce_loss = torch.nn.functional.cross_entropy(input=logits, target=targets,
                                                                      reduction='none')
             # print("dont ignore ", final_output.ce_loss)
@@ -313,18 +315,15 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
             print("Subtask Sequence: ", subtask_order)
 
-            boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.5, nb_boundaries=len(subtask_order))
+            boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.2, nb_boundaries=len(subtask_order))
 
             # ground_truth = get_use_ids(actions_cpu.squeeze(), env_name)
             predicted = np.array(boundaries)
 
             if len(predicted) < len(gt_segments):
-               
-                predicted = np.pad(predicted, (0,
-                                                len(gt_segments) - len(predicted)), constant_values=predicted[-1])
+                predicted = np.pad(predicted, (0, len(gt_segments) - len(predicted)), constant_values=predicted[-1])
+
             print("Predicted:        ", predicted)
-
-
             # Get decoded subtasks for both ground truth and predicted
             _action = torch.from_numpy(actions_cpu.squeeze()) 
             _decoded_subtask = get_subtask_seq(_action, 
@@ -347,6 +346,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
 
             print("Actions:         ", actions.squeeze().tolist())
+            print("--------------------------------------------")
 
             episode_details.append({
                 'mem_trace': mem_trace,

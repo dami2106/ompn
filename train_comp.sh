@@ -28,10 +28,22 @@ EXPERIMENT="stone_pick_static_test"
 CUDA=true
 PROCS=8
 
+# Conditional flags
+CUDA_FLAG=""
+if [ "$CUDA" = "true" ]; then
+  CUDA_FLAG="--cuda"
+fi
+
+DEBUG_FLAG=""
+if [ "$DEBUG" = "true" ]; then
+  DEBUG_FLAG="--debug"
+fi
+
 # Run the Python training script with flags
 python main.py \
   --mode "$MODE" \
-  --cuda "$CUDA" \
+  $CUDA_FLAG \
+  $DEBUG_FLAG \
   --compile_train_steps "$COMPILE_TRAIN_STEPS" \
   --compile_eval_freq "$COMPILE_EVAL_FREQ" \
   --compile_lr "$COMPILE_LR" \

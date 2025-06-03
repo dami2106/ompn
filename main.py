@@ -129,4 +129,10 @@ def main(_):
 
 if __name__ == '__main__':
     FLAGS(sys.argv)
+
+    print("\nFlags:")
+    for flag_name in FLAGS:
+        print(f"{flag_name}: {getattr(FLAGS, flag_name)}")
+    print()
+
     app.run(main)
