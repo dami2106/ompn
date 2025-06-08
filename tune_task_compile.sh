@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_TASK="stone_pick_static"
+BASE_TASK="stone_pick_random"
 MAX_SEGS=8
 SKILLS=5
 TRIALS=150  # Set your desired number of trials here
