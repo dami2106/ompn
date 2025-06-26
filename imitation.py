@@ -304,14 +304,20 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
             
 
-            look_for = np.arange(5, 18)
+            # look_for = np.arange(5, 18)
             actions_cpu = actions.cpu().squeeze().numpy()
             print("Actions CPU:     ", actions_cpu)
-            gt_segments = np.where(np.isin(actions_cpu, look_for))[0]
+            # gt_segments = np.where(np.isin(actions_cpu, look_for))[0]
+
+            look_for = 4
+
+            gt_segments= np.where(actions_cpu == look_for)[0]
 
             print("Ground Truth:     ", gt_segments)
 
-            subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
+            # subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
+
+            subtask_order = [0 ,1 ,2 , 3]
 
             print("Subtask Sequence: ", subtask_order)
 
@@ -333,11 +339,12 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             print("Decoded Subtask:  ", _decoded_subtask)
 
             
-            # _gt_subtask = get_subtask_seq(_action,
-            #                              subtask=subtask_order,
-            #                              use_ids=gt_segments)
+            _gt_subtask = get_subtask_seq(_action,
+                                         subtask=subtask_order,
+                                         use_ids=gt_segments)
 
-            print("GT Subtask:       ", batch.groundTruth[0].cpu().numpy())
+            # print("GT Subtask:       ", batch.groundTruth[0].cpu().numpy()) OURS 
+            print("GT Subtask:       ", _gt_subtask)
 
 
             # if len(_decoded_subtask) != len(_gt_subtask):
@@ -371,7 +378,7 @@ def run(training_folder):
     print('Start IL...')
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
-    n_feature, action_size = 1087, 17
+    n_feature, action_size = 1075, 7
     bot = bots.make(vec_size=n_feature,
                     action_size=action_size,
                     arch=FLAGS.arch,
