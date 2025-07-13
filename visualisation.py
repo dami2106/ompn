@@ -49,7 +49,7 @@ def plot_segmentation_gt(gt, pred, mask, gt_uniq=None, pred_to_gt=None, name='',
     # plot gt segmentation
 
     ax = fig.add_subplot(2, 1, 1)
-    ax.set_ylabel('TRUTH', fontsize=30, rotation=0, labelpad=40, verticalalignment='center')
+    ax.set_ylabel('TRUTH', fontsize=22, rotation=0, labelpad=40, verticalalignment='center')
     ax.set_yticklabels([])
     ax.set_xticklabels([])
 
@@ -65,7 +65,7 @@ def plot_segmentation_gt(gt, pred, mask, gt_uniq=None, pred_to_gt=None, name='',
     # plot predicted segmentation after matching to gt labels w/Hungarian
 
     ax = fig.add_subplot(2, 1, 2)
-    ax.set_ylabel('CMPLE', fontsize=30, rotation=0, labelpad=60, verticalalignment='center')
+    ax.set_ylabel(f'{comparison_name}', fontsize=22, rotation=0, labelpad=60, verticalalignment='center')
     ax.set_yticklabels([])
     ax.set_xticklabels([])
 
