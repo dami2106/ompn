@@ -2,7 +2,7 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="full_ompn_original_2"
+EXPERIMENT="full_ompn_original_3"
 ENVS="makebedfull-v0"
 ENV_ARCH="noenv"
 
@@ -13,7 +13,7 @@ HIDDEN_SIZE=64
 
 ### IL TRAINING ###
 IL_DEMO_FROM_MODEL=False
-IL_TRAIN_STEPS=50000
+IL_TRAIN_STEPS=500
 IL_EVAL_FREQ=20
 IL_SAVE_FREQ=200
 IL_NO_DONE=False

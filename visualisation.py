@@ -6,7 +6,7 @@ from scipy.spatial.distance import pdist, squareform
 from metrics import pred_to_gt_match, filter_exclusions
 
 
-def plot_segmentation_gt(gt, pred, mask, gt_uniq=None, pred_to_gt=None, name=''):
+def plot_segmentation_gt(gt, pred, mask, gt_uniq=None, pred_to_gt=None, name='', comparison_name = 'CMPLE'):
     colors = {}
 
     # pred_, gt_ = filter_exclusions(pred[mask].cpu().numpy(), gt[mask].cpu().numpy())
