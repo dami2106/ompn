@@ -296,11 +296,13 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
             # Compute and print boundaries
             p_hats = []
+            mems = bot.init_memory(env_ids)
             for t in range(seq_len):
                 transition = batch[:, t]
                 with torch.no_grad():
                     out = bot.forward(transition, transition.env_id, mems)
                 p_hats.append(out.p)
+                mems = out.mems
             p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
             
 

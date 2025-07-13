@@ -2,7 +2,7 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="full_ompn_original"
+EXPERIMENT="full_ompn_original_2"
 ENVS="makebedfull-v0"
 ENV_ARCH="noenv"
 
