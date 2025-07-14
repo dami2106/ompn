@@ -5,6 +5,9 @@ from scipy.spatial.distance import pdist, squareform
 
 from metrics import pred_to_gt_match, filter_exclusions
 
+import json
+import re
+from graphviz import Digraph
 
 def plot_segmentation_gt(gt, pred, mask, gt_uniq=None, pred_to_gt=None, name='', comparison_name = 'CMPLE'):
     colors = {}
@@ -120,6 +123,7 @@ def plot_segmentation(pred, mask, name=''):
 
 
 def plot_matrix(mat, gt=None, colorbar=True, title=None, figsize=(10, 5), ylabel=None, xlabel=None):
+
     fig, ax = plt.subplots(1, 1, figsize=figsize)
     plot1 = ax.matshow(mat)
     if gt is not None: # plot gt segment boundaries
@@ -139,3 +143,123 @@ def plot_matrix(mat, gt=None, colorbar=True, title=None, figsize=(10, 5), ylabel
     ax.set_aspect('auto')
     fig.tight_layout()
     return fig
+
+
+def parse_tree_string(s):
+    s = s.strip()
+    idx = 0
+    counter = {'n': 0}
+
+    def skip_ws():
+        nonlocal idx
+        while idx < len(s) and s[idx].isspace():
+            idx += 1
+
+    def parse_node(is_root=False):
+        nonlocal idx
+        assert s[idx] == '(', f"Expected '(', got {s[idx:]}"
+        idx += 1
+        vals = []
+        kids = []
+        while True:
+            skip_ws()
+            if idx >= len(s):
+                raise ValueError("Unmatched '('")
+            if s[idx] == '(':
+                kids.append(parse_node(is_root=False))
+            elif s[idx] == ')':
+                idx += 1
+                break
+            else:
+                # parse an integer
+                m = re.match(r'[+-]?\d+', s[idx:])
+                if not m:
+                    raise ValueError(f"Invalid token at {s[idx:]}")
+                token = m.group(0)
+                vals.append(int(token))
+                idx += len(token)
+
+        # choose a label
+        if kids and not vals:
+            if is_root:
+                label = 'root'
+            else:
+                counter['n'] += 1
+                label = f"N{counter['n']}"
+        elif vals:
+            label = " ".join(str(v) for v in vals)
+        else:
+            # empty node?  Treat like a pure‑children node.
+            if is_root:
+                label = 'root'
+            else:
+                counter['n'] += 1
+                label = f"N{counter['n']}"
+
+        node = {'symbol': label}
+        if kids:
+            node['children'] = kids
+        return node
+
+    # kick off the parse, telling the top level it's the root
+    skip_ws()
+    if not s or s[0] != '(':
+        raise ValueError("Input must start with '('")
+    tree = parse_node(is_root=True)
+    skip_ws()
+    if idx != len(s):
+        raise ValueError(f"Extra text after tree: {s[idx:]}")
+    return tree
+
+
+def save_tree_to_json(tree_dict, filename):
+    """
+    Save a parsed tree dict to a JSON file.
+
+    :param tree_dict: The nested dict returned by parse_tree_string()
+    :param filename:   Path to write, e.g. "my_tree.json"
+    """
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(tree_dict, f, indent=2, ensure_ascii=False)
+    print(f"Tree written to {filename}")
+
+
+def visualize_tree(tree_dict, filename_base, fmt="png", root_label=None, label_mapping=None):
+    """
+    tree_dict: nested dict with keys
+      - 'production' → int
+      - OR 'symbol' → str
+      and optional 'children': [ … ]
+    filename_base: e.g. "seq_tree_0"  (no extension)
+    fmt: "png" or "pdf"
+    root_label: if given, use this string as the label for the very top node
+    label_mapping: optional dict mapping grammar labels to readable strings
+    """
+    dot = Digraph(format=fmt)
+    dot.attr(rankdir="TB")     # top→bottom
+    dot.attr("node", shape="oval", fontsize="12")
+
+    def recurse(node, parent_id=None, is_root=False):
+        nid = str(id(node))
+        # if this is the root of the entire tree and a custom label was supplied, use it:
+        if is_root and root_label is not None:
+            label = root_label
+        else:
+            if "production" in node:
+                label = f"R{node['production']}"
+            else:
+                # Use mapping if available, otherwise use original symbol
+                label = label_mapping.get(node["symbol"], node["symbol"]) if label_mapping else node["symbol"]
+
+        dot.node(nid, label)
+        if parent_id is not None:
+            dot.edge(parent_id, nid)
+
+        for child in node.get("children", []):
+            recurse(child, nid)
+
+    # kick off recursion marking the first call as the root
+    recurse(tree_dict, parent_id=None, is_root=True)
+
+    outpath = dot.render(filename_base, cleanup=True)
+    print(f"Written {outpath}")
