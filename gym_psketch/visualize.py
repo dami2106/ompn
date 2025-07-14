@@ -79,7 +79,7 @@ def predicted_data_to_tree(actions, boundaries, subtask_seq, binary=False):
         return []
     
     # Convert actions to vocabulary strings
-    action_strs = [ACTION_VOCAB[idx] if idx < len(ACTION_VOCAB) else f"act_{idx}" for idx in actions]
+    action_strs = [str(idx) for idx in actions]
     
     if len(boundaries) == 0 or len(subtask_seq) == 0:
         # No segmentation, return flat action sequence
@@ -95,28 +95,25 @@ def predicted_data_to_tree(actions, boundaries, subtask_seq, binary=False):
         
         segment_actions = action_strs[start:boundary]
         if len(segment_actions) > 0:
-            # Create subtask representation
-            subtask_label = f"subtask_{subtask_seq[i]}" if i < len(subtask_seq) else f"subtask_{i}"
+
             
             if len(segment_actions) == 1:
                 # Single action segment
-                segments.append([subtask_label, segment_actions[0]])
+                segments.append([segment_actions[0]])
             else:
                 # Multiple actions in segment
-                segments.append([subtask_label] + segment_actions)
+                segments.append( segment_actions)
         
         start = boundary
     
     # Handle any remaining actions after last boundary
     if start < len(action_strs):
         remaining_actions = action_strs[start:]
-        subtask_idx = len(boundaries)
-        subtask_label = f"subtask_{subtask_seq[subtask_idx]}" if subtask_idx < len(subtask_seq) else f"subtask_{subtask_idx}"
-        
+
         if len(remaining_actions) == 1:
-            segments.append([subtask_label, remaining_actions[0]])
+            segments.append([ remaining_actions[0]])
         else:
-            segments.append([subtask_label] + remaining_actions)
+            segments.append( remaining_actions)
     
     # If binary tree requested, convert to binary structure
     if binary and len(segments) > 2:

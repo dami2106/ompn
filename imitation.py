@@ -19,7 +19,7 @@ from gym_psketch.visualize import distance2ctree, tree_to_str
 from sklearn.cluster import KMeans
 from metrics import *
 
-from visualisation import plot_segmentation_gt
+from visualisation import plot_segmentation_gt, parse_tree_string, save_tree_to_json, visualize_tree
 import matplotlib.pyplot as plt
 import json
 from gym_psketch.visualize import predicted_data_to_tree, tree_to_str, predicted_data_to_hierarchical_tree
@@ -364,27 +364,19 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                                              predicted, 
                                              _decoded_subtask.tolist())
             tree_str = tree_to_str(pred_tree)
+
+            predicted_tree = parse_tree_string(tree_str)
             print("Predicted Tree:   ", tree_str)
 
-            # Generate hierarchical tree using distance2ctree approach
-            hierarchical_pred_tree = predicted_data_to_hierarchical_tree(actions_cpu.squeeze(), predicted)
-            hierarchical_tree_str = tree_to_str(hierarchical_pred_tree)
-            print("Hierarchical Tree:", hierarchical_tree_str)
 
             # Generate tree representation from ground truth data  
             gt_tree = predicted_data_to_tree(actions_cpu.squeeze(),
                                            gt_segments,
                                            _gt_subtask.tolist())
             gt_tree_str = tree_to_str(gt_tree)
+            gt_tree = parse_tree_string(gt_tree_str)
             print("Ground Truth Tree:", gt_tree_str)
 
-            # if len(_decoded_subtask) != len(_gt_subtask):
-            #     print(f"  Episode {ep_idx}: decoded subtask length: {len(_decoded_subtask)}")
-            #     print(f"  Episode {ep_idx}: gt subtask length: {len(_gt_subtask)}")
-
-
-            # print("Actions:         ", actions.squeeze().tolist())
-            # print("--------------------------------------------")
 
             episode_details.append({
                 'mem_trace': mem_trace,
@@ -392,9 +384,8 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 'boundaries': boundaries,
                 'decoded_subtask': _decoded_subtask.tolist(),
                 'gt_subtask': _gt_subtask.tolist(),
-                'predicted_tree': tree_str,
-                'hierarchical_tree': hierarchical_tree_str,
-                'gt_tree': gt_tree_str
+                'predicted_tree': predicted_tree,
+                'gt_tree': gt_tree
             })
 
             all_predicted_subtask.append(_decoded_subtask.tolist())
@@ -432,23 +423,23 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
         # Save and visualize trees
         print("Saving and visualizing trees...")
-        trees_dir = os.path.join(training_folder, 'trees')
+        trees_dir = os.path.join(training_folder, 'episode_data')
         os.makedirs(trees_dir, exist_ok=True)
         
         # Save all tree data to a JSON file for later analysis
         import json
-        tree_data = {
+        data_details = {
             'episode_details': episode_details,
             'environment': env_name,
             'total_episodes': len(episode_details)
         }
         
-        with open(os.path.join(trees_dir, f'tree_data_{env_name}.json'), 'w') as f:
-            json.dump(tree_data, f, indent=2)
+        with open(os.path.join(trees_dir, f'data_details_{env_name}.json'), 'w') as f:
+            json.dump(data_details, f, indent=2)
         
         # Create text file with formatted tree outputs
-        with open(os.path.join(trees_dir, f'trees_formatted_{env_name}.txt'), 'w') as f:
-            f.write(f"Tree Analysis for Environment: {env_name}\n")
+        with open(os.path.join(trees_dir, f'episode_details_{env_name}.txt'), 'w') as f:
+            f.write(f"Analysis for Environment: {env_name}\n")
             f.write("=" * 60 + "\n\n")
             
             for ep_idx, episode in enumerate(episode_details):
@@ -458,63 +449,27 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 f.write(f"Boundaries: {episode['boundaries']}\n")
                 f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
                 f.write(f"GT Subtasks: {episode['gt_subtask']}\n")
-                f.write(f"Predicted Tree: {episode['predicted_tree']}\n")
-                f.write(f"Hierarchical Tree: {episode['hierarchical_tree']}\n")
-                f.write(f"Ground Truth Tree: {episode['gt_tree']}\n")
                 f.write("\n")
-        
 
-        # Save individual tree files for detailed analysis
-        save_individual_tree_files(episode_details, trees_dir, env_name)
-  
+        #Create a folder called 'tree_visualization' to save the visualizations
+        tree_visualization_dir =  os.path.join(training_folder, 'tree_visualization')
+        os.makedirs(tree_visualization_dir, exist_ok=True)
+        for ep_idx, episode in enumerate(episode_details):
+            # Visualize predicted tree
+            pred_tree = episode['predicted_tree']
+            gt_tree = episode['gt_tree']
+
+            save_tree_to_json(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.json'))
+            visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.png'))
+
+            # Save ground truth tree to JSON
+            save_tree_to_json(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.json'))
+            visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.png'))
+
+        
 
         print("Finished saving and visualizing trees")
 
-
-def save_individual_tree_files(episode_details, trees_dir, env_name):
-    """Save individual tree files for each episode for detailed analysis"""
-    episode_trees_dir = os.path.join(trees_dir, f'individual_episodes_{env_name}')
-    os.makedirs(episode_trees_dir, exist_ok=True)
-    
-    for ep_idx, episode in enumerate(episode_details):
-        # Save each episode's tree data
-        episode_file = os.path.join(episode_trees_dir, f'episode_{ep_idx}.txt')
-        
-        with open(episode_file, 'w') as f:
-            f.write(f"Episode {ep_idx} - Environment: {env_name}\n")
-            f.write("=" * 60 + "\n\n")
-            
-            f.write("Raw Data:\n")
-            f.write("-" * 20 + "\n")
-            f.write(f"Actions: {episode['actions']}\n")
-            f.write(f"Memory Trace: {episode['mem_trace']}\n")
-            f.write(f"Predicted Boundaries: {episode['boundaries']}\n")
-            f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
-            f.write(f"Ground Truth Subtasks: {episode['gt_subtask']}\n\n")
-            
-            f.write("Tree Representations:\n")
-            f.write("-" * 20 + "\n")
-            f.write(f"Predicted Tree:\n{episode['predicted_tree']}\n\n")
-            f.write(f"Hierarchical Tree:\n{episode['hierarchical_tree']}\n\n")
-            f.write(f"Ground Truth Tree:\n{episode['gt_tree']}\n\n")
-            
-            # Add some analysis
-            f.write("Analysis:\n")
-            f.write("-" * 20 + "\n")
-            f.write(f"Action Sequence Length: {len(episode['actions'])}\n")
-            f.write(f"Number of Predicted Boundaries: {len(episode['boundaries'])}\n")
-            f.write(f"Number of Predicted Subtasks: {len(episode['decoded_subtask'])}\n")
-            f.write(f"Number of GT Subtasks: {len(episode['gt_subtask'])}\n")
-            f.write(f"Predicted Tree Complexity: {len(episode['predicted_tree'])} characters\n")
-            f.write(f"GT Tree Complexity: {len(episode['gt_tree'])} characters\n")
-            
-            # Simple accuracy metrics
-            subtask_match = episode['decoded_subtask'] == episode['gt_subtask']
-            f.write(f"Subtask Sequence Match: {subtask_match}\n")
-            if len(episode['decoded_subtask']) == len(episode['gt_subtask']):
-                matches = sum(1 for p, g in zip(episode['decoded_subtask'], episode['gt_subtask']) if p == g)
-                accuracy = matches / len(episode['decoded_subtask']) if len(episode['decoded_subtask']) > 0 else 0
-                f.write(f"Subtask Accuracy: {accuracy:.2f} ({matches}/{len(episode['decoded_subtask'])})\n")
 
 
 
