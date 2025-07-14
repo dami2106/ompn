@@ -1,16 +1,16 @@
 #!/bin/bash
 
-BASE_TASK="stone_pick_random"
-MAX_SEGS=8
-SKILLS=5
-TRIALS=150  # Set your desired number of trials here
+BASE_TASK="wsws_random"
+MAX_SEGS=4
+SKILLS=2
+TRIALS=50  # Set your desired number of trials here
 
 # Generate task variants
 TASK_VARIANTS=(
-  "${BASE_TASK}_symbolic"
-  # "${BASE_TASK}_symbolic_big"
-  "${BASE_TASK}_pixels"
-  # "${BASE_TASK}_pixels_big"
+  # "${BASE_TASK}_symbolic"
+  "${BASE_TASK}_symbolic_big"
+  # "${BASE_TASK}_pixels"
+  "${BASE_TASK}_pixels_big"
 )
 
 # Start timing

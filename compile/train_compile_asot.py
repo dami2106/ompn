@@ -186,25 +186,25 @@ def main(training_folder):
     print("All Latents Shape", all_z.shape)
     print("All Boundaries Shape", all_sample_bs.shape)
 
-    # flat_z = all_z.reshape(-1, all_z.shape[-1])
-    # flat_z_scaled = StandardScaler().fit_transform(flat_z)
-    # del flat_z
+    flat_z = all_z.reshape(-1, all_z.shape[-1])
+    flat_z_scaled = StandardScaler().fit_transform(flat_z)
+    del flat_z
 
-    # # Define and fit the GMM model
-    # gmm = GaussianMixture(
-    #     n_components=FLAGS.compile_skills,
-    #     covariance_type='full',       # Allow full covariance to capture complex skill dependencies
-    #     reg_covar=1e-6,               # Small regularization to improve stability
-    #     n_init=5,                     # Multiple initializations for robustness
-    #     random_state=0
-    # )
-    # gmm.fit(flat_z_scaled)
+    # Define and fit the GMM model
+    gmm = GaussianMixture(
+        n_components=FLAGS.compile_skills,
+        covariance_type='full',       # Allow full covariance to capture complex skill dependencies
+        reg_covar=1e-6,               # Small regularization to improve stability
+        n_init=5,                     # Multiple initializations for robustness
+        random_state=0
+    )
+    gmm.fit(flat_z_scaled)
 
-    # # Predict the cluster labels and reshape
-    # labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
-    # del  flat_z_scaled
-    #
-    labels = np.zeros_like(all_sample_bs)
+    # Predict the cluster labels and reshape
+    labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
+    del  flat_z_scaled
+    
+    # labels = np.zeros_like(all_sample_bs)
 
     print("Labels Shape", labels.shape)
     print("Trained Gaussian Mixture clustering model")
@@ -255,6 +255,16 @@ def main(training_folder):
         look_for = np.arange(5, 18)
         gt_segments = np.where(np.isin(acts, look_for))[0]
 
+        if len(gt_segments) < FLAGS.compile_max_segs:
+            #Extend gt_segments by padding wit hthe last segment
+            # Pad gt_segments with the last value until it reaches compile_max_segs length
+            if len(gt_segments) > 0:
+                pad_value = gt_segments[-1]
+                gt_segments = np.pad(gt_segments, (0, FLAGS.compile_max_segs - len(gt_segments)), mode='constant', constant_values=pad_value)
+            else:
+                # If gt_segments is empty, pad with zeros
+                gt_segments = np.zeros(FLAGS.compile_max_segs, dtype=int)
+
         subtask_order = get_subtask_ordering(truths, gt_segments + 1)
 
 
@@ -265,6 +275,11 @@ def main(training_folder):
         print("Actions:                 ", acts)
         print("Subtask Order:           ", subtask_order)
         print()
+
+        if len(subtask_order) < FLAGS.compile_max_segs:
+            # Pad subtask_order with the last value until it reaches compile_max_segs length
+            pad_value = subtask_order[-1] if len(subtask_order) > 0 else 0
+            subtask_order = np.pad(subtask_order, (0, FLAGS.compile_max_segs - len(subtask_order)), mode='constant', constant_values=pad_value)
 
         decoded_subtask = get_subtask_seq(torch.from_numpy(acts), subtask=subtask_order, use_ids=bound)
 
@@ -309,11 +324,11 @@ def main(training_folder):
     clustering_metrics = get_all_metrics(preds, all_truths)
     static = get_all_metrics(preds_static, all_truths)
 
-    # print("Clustering Results (ASOT):")
-    # print("----------------------------------")
-    # for name, val in clustering_metrics.items():
-    #     print(f"{name:<15}{val:.4f}")
-    # print("----------------------------------\n")
+    print("Clustering Results (ASOT):")
+    print("----------------------------------")
+    for name, val in clustering_metrics.items():
+        print(f"{name:<15}{val:.4f}")
+    print("----------------------------------\n")
 
 
     print("Clustering Results (OMPN STATIC):")
@@ -326,7 +341,20 @@ def main(training_folder):
     if not FLAGS.debug:
         print("Plotting results...")
         pred_batch, gt_batch, mask = make_batch(preds_static, all_truths, pad_value=-1)
-        visualisation_dir = os.path.join(training_folder, 'visualisation')
+        visualisation_dir = os.path.join(training_folder, 'visualisation_static')
+        os.makedirs(visualisation_dir, exist_ok=True)
+
+        for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
+            p, g, m = data_batch
+            fig = plot_segmentation_gt(g, p, m)
+
+            #Save it
+            fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
+            plt.close(fig)
+
+        print("Plotting results...")
+        pred_batch, gt_batch, mask = make_batch(preds, all_truths, pad_value=-1)
+        visualisation_dir = os.path.join(training_folder, 'visualisation_clustering')
         os.makedirs(visualisation_dir, exist_ok=True)
 
         for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
