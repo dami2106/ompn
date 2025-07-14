@@ -2,18 +2,18 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="OMPN_TEST_1000_wsws_static_symbolic_3"
-ENVS="wsws_static_symbolic"
+EXPERIMENT="full_ompn_original_3"
+ENVS="makebedfull-v0"
 ENV_ARCH="noenv"
 
 ### MODEL ###
 ARCH="omstack"
-NB_SLOTS=1
-HIDDEN_SIZE=256
+NB_SLOTS=3
+HIDDEN_SIZE=64
 
 ### IL TRAINING ###
 IL_DEMO_FROM_MODEL=False
-IL_TRAIN_STEPS=1000
+IL_TRAIN_STEPS=500
 IL_EVAL_FREQ=20
 IL_SAVE_FREQ=200
 IL_NO_DONE=False
@@ -63,4 +63,5 @@ python main.py \
   --il_recurrence "$IL_RECURRENCE" \
   --il_lr "$IL_LR" \
   --il_clip "$IL_CLIP" \
-  $CUDA_FLAG
+  $CUDA_FLAG \
+  --debug

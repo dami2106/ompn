@@ -7,6 +7,7 @@ from gym_psketch import bots
 import gym
 import torch
 import time
+import os
 from typing import Dict
 from tensorboardX import SummaryWriter
 import numpy as np
@@ -14,6 +15,15 @@ import random
 
 from gym_psketch.evaluate import evaluate_loop, parsing_loop, get_boundaries, get_use_ids, get_subtask_seq, f1
 from gym_psketch.visualize import distance2ctree, tree_to_str
+
+from sklearn.cluster import KMeans
+from metrics import *
+
+from visualisation import plot_segmentation_gt
+import matplotlib.pyplot as plt
+import json
+from gym_psketch.visualize import predicted_data_to_tree, tree_to_str, predicted_data_to_hierarchical_tree
+
 
 FLAGS = flags.FLAGS
 
@@ -266,6 +276,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
         
         # Get all trajectories for this environment
         all_trajs = dataloader.data['train'][env_name] + dataloader.data['val'][env_name]
+        print(f"Number of trajectories to eval: {len(all_trajs)}")
         # random.shuffle(all_trajs)
         
         for ep_idx, traj in enumerate(all_trajs):
@@ -296,24 +307,32 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
             # Compute and print boundaries
             p_hats = []
+            mems = bot.init_memory(env_ids)
             for t in range(seq_len):
                 transition = batch[:, t]
                 with torch.no_grad():
                     out = bot.forward(transition, transition.env_id, mems)
                 p_hats.append(out.p)
+                mems = out.mems
             p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
             
 
-            look_for = np.arange(5, 18)
+            # look_for = np.arange(5, 18)
             actions_cpu = actions.cpu().squeeze().numpy()
-            print("Actions CPU:     ", actions_cpu)
-            gt_segments = np.where(np.isin(actions_cpu, look_for))[0]
+            # print("Actions CPU:     ", actions_cpu)
+            # gt_segments = np.where(np.isin(actions_cpu, look_for))[0]
 
-            print("Ground Truth:     ", gt_segments)
+            look_for = 4
 
-            subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
+            gt_segments= np.where(actions_cpu == look_for)[0] + 1  # Add 1 to match boundary expectations
 
-            print("Subtask Sequence: ", subtask_order)
+            # print("Ground Truth:     ", gt_segments)
+
+            # subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
+
+            subtask_order = [0 ,1 ,2 , 3]
+
+            # print("Subtask Sequence: ", subtask_order)
 
             boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.2, nb_boundaries=len(subtask_order))
 
@@ -323,7 +342,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             if len(predicted) < len(gt_segments):
                 predicted = np.pad(predicted, (0, len(gt_segments) - len(predicted)), constant_values=predicted[-1])
 
-            print("Predicted:        ", predicted)
+            # print("Predicted:        ", predicted)
             # Get decoded subtasks for both ground truth and predicted
             _action = torch.from_numpy(actions_cpu.squeeze()) 
             _decoded_subtask = get_subtask_seq(_action, 
@@ -333,37 +352,169 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             print("Decoded Subtask:  ", _decoded_subtask)
 
             
-            # _gt_subtask = get_subtask_seq(_action,
-            #                              subtask=subtask_order,
-            #                              use_ids=gt_segments)
+            _gt_subtask = get_subtask_seq(_action,
+                                         subtask=subtask_order,
+                                         use_ids=gt_segments)
 
-            print("GT Subtask:       ", batch.groundTruth[0].cpu().numpy())
+            # # print("GT Subtask:       ", batch.groundTruth[0].cpu().numpy()) OURS 
+            print("GT Subtask:       ", _gt_subtask)
 
+            # Generate tree representation from predicted data
+            pred_tree = predicted_data_to_tree(actions_cpu.squeeze(), 
+                                             predicted, 
+                                             _decoded_subtask.tolist())
+            tree_str = tree_to_str(pred_tree)
+            print("Predicted Tree:   ", tree_str)
+
+            # Generate hierarchical tree using distance2ctree approach
+            hierarchical_pred_tree = predicted_data_to_hierarchical_tree(actions_cpu.squeeze(), predicted)
+            hierarchical_tree_str = tree_to_str(hierarchical_pred_tree)
+            print("Hierarchical Tree:", hierarchical_tree_str)
+
+            # Generate tree representation from ground truth data  
+            gt_tree = predicted_data_to_tree(actions_cpu.squeeze(),
+                                           gt_segments,
+                                           _gt_subtask.tolist())
+            gt_tree_str = tree_to_str(gt_tree)
+            print("Ground Truth Tree:", gt_tree_str)
 
             # if len(_decoded_subtask) != len(_gt_subtask):
             #     print(f"  Episode {ep_idx}: decoded subtask length: {len(_decoded_subtask)}")
             #     print(f"  Episode {ep_idx}: gt subtask length: {len(_gt_subtask)}")
 
 
-            print("Actions:         ", actions.squeeze().tolist())
-            print("--------------------------------------------")
+            # print("Actions:         ", actions.squeeze().tolist())
+            # print("--------------------------------------------")
 
             episode_details.append({
                 'mem_trace': mem_trace,
                 'actions': actions.squeeze().tolist(),
                 'boundaries': boundaries,
                 'decoded_subtask': _decoded_subtask.tolist(),
-                # 'gt_subtask': _gt_subtask.tolist(),
-                # 'tree': tree_str[1:-1]
+                'gt_subtask': _gt_subtask.tolist(),
+                'predicted_tree': tree_str,
+                'hierarchical_tree': hierarchical_tree_str,
+                'gt_tree': gt_tree_str
             })
 
-            all_predicted_subtask.append(_decoded_subtask)
-            # all_gt_subtask.append(_gt_subtask)
+            all_predicted_subtask.append(_decoded_subtask.tolist())
+            all_gt_subtask.append( _gt_subtask.tolist())
 
 
 
+        print(f"Evaluating environment {env_name} done.")
 
 
+        static = get_all_metrics(all_predicted_subtask, all_gt_subtask)
+
+        print("OMPN Results (OMPN STATIC):")
+        print("----------------------------------")
+        for name, val in static.items():
+            print(f"{name:<15}{val:.4f}")
+        print("----------------------------------\n")
+
+
+        # if not FLAGS.debug:
+        print("Plotting results...")
+        pred_batch, gt_batch, mask = make_batch(all_predicted_subtask, all_gt_subtask, pad_value=-1)
+        visualisation_dir = os.path.join(training_folder, 'visualisation')
+        os.makedirs(visualisation_dir, exist_ok=True)
+
+        for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
+            p, g, m = data_batch
+            fig = plot_segmentation_gt(g, p, m, comparison_name='OMPN')
+
+            #Save it
+            fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
+            plt.close(fig)
+
+        print("Finished plotting results")
+
+        # Save and visualize trees
+        print("Saving and visualizing trees...")
+        trees_dir = os.path.join(training_folder, 'trees')
+        os.makedirs(trees_dir, exist_ok=True)
+        
+        # Save all tree data to a JSON file for later analysis
+        import json
+        tree_data = {
+            'episode_details': episode_details,
+            'environment': env_name,
+            'total_episodes': len(episode_details)
+        }
+        
+        with open(os.path.join(trees_dir, f'tree_data_{env_name}.json'), 'w') as f:
+            json.dump(tree_data, f, indent=2)
+        
+        # Create text file with formatted tree outputs
+        with open(os.path.join(trees_dir, f'trees_formatted_{env_name}.txt'), 'w') as f:
+            f.write(f"Tree Analysis for Environment: {env_name}\n")
+            f.write("=" * 60 + "\n\n")
+            
+            for ep_idx, episode in enumerate(episode_details):
+                f.write(f"Episode {ep_idx}:\n")
+                f.write("-" * 40 + "\n")
+                f.write(f"Actions: {episode['actions']}\n")
+                f.write(f"Boundaries: {episode['boundaries']}\n")
+                f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
+                f.write(f"GT Subtasks: {episode['gt_subtask']}\n")
+                f.write(f"Predicted Tree: {episode['predicted_tree']}\n")
+                f.write(f"Hierarchical Tree: {episode['hierarchical_tree']}\n")
+                f.write(f"Ground Truth Tree: {episode['gt_tree']}\n")
+                f.write("\n")
+        
+
+        # Save individual tree files for detailed analysis
+        save_individual_tree_files(episode_details, trees_dir, env_name)
+  
+
+        print("Finished saving and visualizing trees")
+
+
+def save_individual_tree_files(episode_details, trees_dir, env_name):
+    """Save individual tree files for each episode for detailed analysis"""
+    episode_trees_dir = os.path.join(trees_dir, f'individual_episodes_{env_name}')
+    os.makedirs(episode_trees_dir, exist_ok=True)
+    
+    for ep_idx, episode in enumerate(episode_details):
+        # Save each episode's tree data
+        episode_file = os.path.join(episode_trees_dir, f'episode_{ep_idx}.txt')
+        
+        with open(episode_file, 'w') as f:
+            f.write(f"Episode {ep_idx} - Environment: {env_name}\n")
+            f.write("=" * 60 + "\n\n")
+            
+            f.write("Raw Data:\n")
+            f.write("-" * 20 + "\n")
+            f.write(f"Actions: {episode['actions']}\n")
+            f.write(f"Memory Trace: {episode['mem_trace']}\n")
+            f.write(f"Predicted Boundaries: {episode['boundaries']}\n")
+            f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
+            f.write(f"Ground Truth Subtasks: {episode['gt_subtask']}\n\n")
+            
+            f.write("Tree Representations:\n")
+            f.write("-" * 20 + "\n")
+            f.write(f"Predicted Tree:\n{episode['predicted_tree']}\n\n")
+            f.write(f"Hierarchical Tree:\n{episode['hierarchical_tree']}\n\n")
+            f.write(f"Ground Truth Tree:\n{episode['gt_tree']}\n\n")
+            
+            # Add some analysis
+            f.write("Analysis:\n")
+            f.write("-" * 20 + "\n")
+            f.write(f"Action Sequence Length: {len(episode['actions'])}\n")
+            f.write(f"Number of Predicted Boundaries: {len(episode['boundaries'])}\n")
+            f.write(f"Number of Predicted Subtasks: {len(episode['decoded_subtask'])}\n")
+            f.write(f"Number of GT Subtasks: {len(episode['gt_subtask'])}\n")
+            f.write(f"Predicted Tree Complexity: {len(episode['predicted_tree'])} characters\n")
+            f.write(f"GT Tree Complexity: {len(episode['gt_tree'])} characters\n")
+            
+            # Simple accuracy metrics
+            subtask_match = episode['decoded_subtask'] == episode['gt_subtask']
+            f.write(f"Subtask Sequence Match: {subtask_match}\n")
+            if len(episode['decoded_subtask']) == len(episode['gt_subtask']):
+                matches = sum(1 for p, g in zip(episode['decoded_subtask'], episode['gt_subtask']) if p == g)
+                accuracy = matches / len(episode['decoded_subtask']) if len(episode['decoded_subtask']) > 0 else 0
+                f.write(f"Subtask Accuracy: {accuracy:.2f} ({matches}/{len(episode['decoded_subtask'])})\n")
 
 
 
@@ -371,7 +522,7 @@ def run(training_folder):
     print('Start IL...')
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
-    n_feature, action_size = 1087, 17
+    n_feature, action_size = 1075, 7
     bot = bots.make(vec_size=n_feature,
                     action_size=action_size,
                     arch=FLAGS.arch,
