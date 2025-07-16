@@ -460,11 +460,11 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             gt_tree = episode['gt_tree']
 
             save_tree_to_json(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.json'))
-            visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.png'))
+            visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}'))
 
             # Save ground truth tree to JSON
             save_tree_to_json(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.json'))
-            visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.png'))
+            visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}'))
 
         
 
