@@ -2,13 +2,13 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="full_ompn_original_3"
+EXPERIMENT="wsws_static_symbolic_big_all_data_best_432423"
 ENVS="wsws_static_symbolic_big"
 ENV_ARCH="noenv"
 
 ### MODEL ###
 ARCH="omstack"
-NB_SLOTS=3
+NB_SLOTS=2
 HIDDEN_SIZE=128
 
 ### IL TRAINING ###
@@ -21,9 +21,9 @@ IL_VAL_RATIO=0.05
 IL_BATCH_SIZE=128
 
 ### OPTIMIZATION ###
-IL_RECURRENCE=30
+IL_RECURRENCE=40
 IL_LR=0.0001
-IL_CLIP=0.2
+IL_CLIP=0.3
 
 ### SYSTEM ###
 CUDA=True
@@ -65,3 +65,5 @@ python main.py \
   --il_clip "$IL_CLIP" \
   $CUDA_FLAG \
   --debug
+
+

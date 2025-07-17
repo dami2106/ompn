@@ -11,12 +11,18 @@ import traceback
 import string
 import torch
 import random
-
+import uuid
 import gym_psketch.bots.model_bot
 import imitation as IL
 import generate_demo as demo
 from taco import train_taco
 from compile import train_compile_asot
+
+random.seed(0)
+# np.random.seed(0)
+torch.manual_seed(0)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(0)
 
 FLAGS = flags.FLAGS
 flags.DEFINE_list('envs', default=['makebedfull-v0'], help='List of env to train. Use comma spearated')
@@ -54,7 +60,7 @@ def handler(type, value, tb):
 
 
 def random_string():
-    return ''.join(random.sample(string.ascii_lowercase + string.ascii_uppercase, k=10))
+    return uuid.uuid4().hex[:10]
 
 
 def setup_logging_and_exp_folder():
@@ -79,6 +85,7 @@ def setup_logging_and_exp_folder():
 
     # set up logging
     if FLAGS.debug:
+        print("Debug mode")
         logging.get_absl_handler().python_handler.stream = sys.stdout
     else:
         logging.get_absl_handler().use_absl_log_file('absl_logging', training_folder)

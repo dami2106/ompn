@@ -25,6 +25,17 @@ import json
 from gym_psketch.visualize import predicted_data_to_tree, tree_to_str, predicted_data_to_hierarchical_tree
 
 
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+# torch.use_deterministic_algorithms(True, warn_only=True)  # PyTorch >=1.8
+
+
+random.seed(0)
+np.random.seed(0)
+torch.manual_seed(0)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(0)
+
 FLAGS = flags.FLAGS
 
 
@@ -325,9 +336,9 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             gt_segments = np.where(np.isin(actions_cpu, look_for))[0] 
         
             subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
-
-            print(f"{'Subtask Sequence:':20} {subtask_order}")
-            print(f"{'GT Segments:':20} {gt_segments}")
+            if not FLAGS.debug:
+                print(f"{'Subtask Sequence:':20} {subtask_order}")
+                print(f"{'GT Segments:':20} {gt_segments}")
 
             boundaries = get_boundaries(p_hats.squeeze(1), bot.nb_slots, threshold=0.5, nb_boundaries=len(subtask_order))
 
@@ -337,8 +348,9 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             if len(predicted) < len(gt_segments):
                 predicted = np.pad(predicted, (0, len(gt_segments) - len(predicted)), constant_values=predicted[-1])
 
-            print(f"{'Predicted:':20} {predicted}")
-            print()
+            if not FLAGS.debug:
+                print(f"{'Predicted:':20} {predicted}")
+                print()
             # Get decoded subtasks for both ground truth and predicted
             _action = torch.from_numpy(actions_cpu.squeeze()) 
             _decoded_subtask = get_subtask_seq(_action, 
@@ -350,10 +362,11 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                                          subtask=subtask_order,
                                          use_ids=gt_segments)
 
-            print(f"{'Decoded Subtask:':20} {_decoded_subtask}")
-            print(f"{'OURS GT Subtask:':20} {batch.groundTruth[0].cpu().numpy()}")
-            print(f"{'GT Subtask:':20} {_gt_subtask}")
-            print()
+            if not FLAGS.debug:
+                print(f"{'Decoded Subtask:':20} {_decoded_subtask}")
+                print(f"{'OURS GT Subtask:':20} {batch.groundTruth[0].cpu().numpy()}")
+                print(f"{'GT Subtask:':20} {_gt_subtask}")
+                print()
 
             # Generate tree representation from predicted data
             pred_tree = predicted_data_to_tree(actions_cpu.squeeze(), 
@@ -371,9 +384,10 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                                            _gt_subtask.tolist())
             gt_tree_str = tree_to_str(gt_tree)
             gt_tree = parse_tree_string(gt_tree_str)
-            print(f"{'Predicted Tree:':20} {tree_str}")
-            print(f"{'Ground Truth Tree:':20} {gt_tree_str}")
-            print("="*48)
+            if not FLAGS.debug:
+                print(f"{'Predicted Tree:':20} {tree_str}")
+                print(f"{'Ground Truth Tree:':20} {gt_tree_str}")
+                print("="*48)
 
 
 
@@ -404,70 +418,69 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
         print("----------------------------------\n")
 
 
-        # if not FLAGS.debug:
-        print("Plotting results...")
-        pred_batch, gt_batch, mask = make_batch(all_predicted_subtask, all_gt_subtask, pad_value=-1)
-        visualisation_dir = os.path.join(training_folder, 'visualisation')
-        os.makedirs(visualisation_dir, exist_ok=True)
+        if not FLAGS.debug:
+            print("Plotting results...")
+            pred_batch, gt_batch, mask = make_batch(all_predicted_subtask, all_gt_subtask, pad_value=-1)
+            visualisation_dir = os.path.join(training_folder, 'visualisation')
+            os.makedirs(visualisation_dir, exist_ok=True)
 
-        for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
-            p, g, m = data_batch
-            fig = plot_segmentation_gt(g, p, m, comparison_name='OMPN')
+            for i, data_batch in enumerate(zip(pred_batch, gt_batch, mask)):
+                p, g, m = data_batch
+                fig = plot_segmentation_gt(g, p, m, comparison_name='OMPN')
 
-            #Save it
-            fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
-            plt.close(fig)
+                #Save it
+                fig.savefig(os.path.join(visualisation_dir, f"segmentation_{i}.png"), dpi=300)
+                plt.close(fig)
 
-        print("Finished plotting results")
+            print("Finished plotting results")
 
-        # Save and visualize trees
-        print("Saving and visualizing trees...")
-        trees_dir = os.path.join(training_folder, 'episode_data')
-        os.makedirs(trees_dir, exist_ok=True)
-        
-        # Save all tree data to a JSON file for later analysis
-        import json
-        data_details = {
-            'episode_details': episode_details,
-            'environment': env_name,
-            'total_episodes': len(episode_details)
-        }
-        
-        with open(os.path.join(trees_dir, f'data_details_{env_name}.json'), 'w') as f:
-            json.dump(data_details, f, indent=2)
-        
-        # Create text file with formatted tree outputs
-        with open(os.path.join(trees_dir, f'episode_details_{env_name}.txt'), 'w') as f:
-            f.write(f"Analysis for Environment: {env_name}\n")
-            f.write("=" * 60 + "\n\n")
+            # Save and visualize trees
+            print("Saving and visualizing trees...")
+            trees_dir = os.path.join(training_folder, 'episode_data')
+            os.makedirs(trees_dir, exist_ok=True)
             
+            # Save all tree data to a JSON file for later analysis
+            data_details = {
+                'episode_details': episode_details,
+                'environment': env_name,
+                'total_episodes': len(episode_details)
+            }
+            
+            with open(os.path.join(trees_dir, f'data_details_{env_name}.json'), 'w') as f:
+                json.dump(data_details, f, indent=2)
+            
+            # Create text file with formatted tree outputs
+            with open(os.path.join(trees_dir, f'episode_details_{env_name}.txt'), 'w') as f:
+                f.write(f"Analysis for Environment: {env_name}\n")
+                f.write("=" * 60 + "\n\n")
+                
+                for ep_idx, episode in enumerate(episode_details):
+                    f.write(f"Episode {ep_idx}:\n")
+                    f.write("-" * 40 + "\n")
+                    f.write(f"Actions: {episode['actions']}\n")
+                    f.write(f"Boundaries: {episode['boundaries']}\n")
+                    f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
+                    f.write(f"GT Subtasks: {episode['gt_subtask']}\n")
+                    f.write("\n")
+
+            #Create a folder called 'tree_visualization' to save the visualizations
+            tree_visualization_dir =  os.path.join(training_folder, 'tree_visualization')
+            os.makedirs(tree_visualization_dir, exist_ok=True)
             for ep_idx, episode in enumerate(episode_details):
-                f.write(f"Episode {ep_idx}:\n")
-                f.write("-" * 40 + "\n")
-                f.write(f"Actions: {episode['actions']}\n")
-                f.write(f"Boundaries: {episode['boundaries']}\n")
-                f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
-                f.write(f"GT Subtasks: {episode['gt_subtask']}\n")
-                f.write("\n")
+                # Visualize predicted tree
+                pred_tree = episode['predicted_tree']
+                gt_tree = episode['gt_tree']
 
-        #Create a folder called 'tree_visualization' to save the visualizations
-        tree_visualization_dir =  os.path.join(training_folder, 'tree_visualization')
-        os.makedirs(tree_visualization_dir, exist_ok=True)
-        for ep_idx, episode in enumerate(episode_details):
-            # Visualize predicted tree
-            pred_tree = episode['predicted_tree']
-            gt_tree = episode['gt_tree']
+                save_tree_to_json(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.json'))
+                visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}'))
 
-            save_tree_to_json(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.json'))
-            visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}'))
+                # Save ground truth tree to JSON
+                save_tree_to_json(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.json'))
+                visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}'))
 
-            # Save ground truth tree to JSON
-            save_tree_to_json(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.json'))
-            visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}'))
+            
 
-        
-
-        print("Finished saving and visualizing trees")
+            print("Finished saving and visualizing trees")
 
 
 
@@ -493,6 +506,12 @@ def run(training_folder):
     dataloader = Dataloader(FLAGS.envs, FLAGS.il_val_ratio)
     print('Dataloader: {}'.format(dataloader))
 
+    # Set random seeds for reproducibility
+    random.seed(0)
+    np.random.seed(0)
+    torch.manual_seed(0)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(0)
 
     try:
         print('Start training')
