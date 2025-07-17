@@ -221,7 +221,7 @@ def save_tree_to_json(tree_dict, filename):
     """
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(tree_dict, f, indent=2, ensure_ascii=False)
-    print(f"Tree written to {filename}")
+    # print(f"Tree written to {filename}")
 
 
 def visualize_tree(tree_dict, filename_base, fmt="png", root_label=None, label_mapping=None):
@@ -262,4 +262,4 @@ def visualize_tree(tree_dict, filename_base, fmt="png", root_label=None, label_m
     recurse(tree_dict, parent_id=None, is_root=True)
 
     outpath = dot.render(filename_base, cleanup=True)
-    print(f"Written {outpath}")
+    # print(f"Written {outpath}")

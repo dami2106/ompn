@@ -270,9 +270,9 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
     episode_details = []
     all_predicted_subtask = []
     all_gt_subtask = []
-
     for env_name in dataloader.env_names:
         print(f"Environment: {env_name}")
+    
         
         # Get all trajectories for this environment
         all_trajs = dataloader.data['train'][env_name] + dataloader.data['val'][env_name]
@@ -283,6 +283,8 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             # Convert trajectory to batch format
             batch = DictList(traj)
             batch.apply(lambda _t: torch.tensor(_t)[:-1].unsqueeze(0))  # Remove done
+
+            # batch.apply(lambda _t: torch.tensor(_t)[:-1].unsqueeze(0))  # Remove done
             if FLAGS.cuda:
                 batch.apply(lambda _t: _t.cuda())
             
@@ -317,24 +319,17 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
             
 
-            # look_for = np.arange(5, 18)
+            look_for = np.arange(5, 18)
             actions_cpu = actions.cpu().squeeze().numpy()
-            # print("Actions CPU:     ", actions_cpu)
-            # gt_segments = np.where(np.isin(actions_cpu, look_for))[0]
+            
+            gt_segments = np.where(np.isin(actions_cpu, look_for))[0] 
+        
+            subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
 
-            look_for = 4
+            print(f"{'Subtask Sequence:':20} {subtask_order}")
+            print(f"{'GT Segments:':20} {gt_segments}")
 
-            gt_segments= np.where(actions_cpu == look_for)[0] + 1  # Add 1 to match boundary expectations
-
-            # print("Ground Truth:     ", gt_segments)
-
-            # subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
-
-            subtask_order = [0 ,1 ,2 , 3]
-
-            # print("Subtask Sequence: ", subtask_order)
-
-            boundaries = get_boundaries(p_hats, bot.nb_slots, threshold=0.2, nb_boundaries=len(subtask_order))
+            boundaries = get_boundaries(p_hats.squeeze(1), bot.nb_slots, threshold=0.5, nb_boundaries=len(subtask_order))
 
             # ground_truth = get_use_ids(actions_cpu.squeeze(), env_name)
             predicted = np.array(boundaries)
@@ -342,22 +337,23 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             if len(predicted) < len(gt_segments):
                 predicted = np.pad(predicted, (0, len(gt_segments) - len(predicted)), constant_values=predicted[-1])
 
-            # print("Predicted:        ", predicted)
+            print(f"{'Predicted:':20} {predicted}")
+            print()
             # Get decoded subtasks for both ground truth and predicted
             _action = torch.from_numpy(actions_cpu.squeeze()) 
             _decoded_subtask = get_subtask_seq(_action, 
                                              subtask=subtask_order,
                                              use_ids=predicted)
             
-            print("Decoded Subtask:  ", _decoded_subtask)
-
             
             _gt_subtask = get_subtask_seq(_action,
                                          subtask=subtask_order,
                                          use_ids=gt_segments)
 
-            # # print("GT Subtask:       ", batch.groundTruth[0].cpu().numpy()) OURS 
-            print("GT Subtask:       ", _gt_subtask)
+            print(f"{'Decoded Subtask:':20} {_decoded_subtask}")
+            print(f"{'OURS GT Subtask:':20} {batch.groundTruth[0].cpu().numpy()}")
+            print(f"{'GT Subtask:':20} {_gt_subtask}")
+            print()
 
             # Generate tree representation from predicted data
             pred_tree = predicted_data_to_tree(actions_cpu.squeeze(), 
@@ -366,7 +362,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             tree_str = tree_to_str(pred_tree)
 
             predicted_tree = parse_tree_string(tree_str)
-            print("Predicted Tree:   ", tree_str)
+            
 
 
             # Generate tree representation from ground truth data  
@@ -375,7 +371,10 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                                            _gt_subtask.tolist())
             gt_tree_str = tree_to_str(gt_tree)
             gt_tree = parse_tree_string(gt_tree_str)
-            print("Ground Truth Tree:", gt_tree_str)
+            print(f"{'Predicted Tree:':20} {tree_str}")
+            print(f"{'Ground Truth Tree:':20} {gt_tree_str}")
+            print("="*48)
+
 
 
             episode_details.append({
@@ -477,7 +476,8 @@ def run(training_folder):
     print('Start IL...')
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
-    n_feature, action_size = 1075, 7
+    n_feature, action_size = 1087, 18
+    # n_feature, action_size = 1075, 7
     bot = bots.make(vec_size=n_feature,
                     action_size=action_size,
                     arch=FLAGS.arch,

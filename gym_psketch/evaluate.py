@@ -314,8 +314,8 @@ def get_ta_lines(action, decoded_subtask, gt_subtask):
 def get_boundaries(ps, nb_slots, threshold, nb_boundaries=None):
     """ Pick the end of segment as boundaries """
     # Get average p standardized
-    ps[0, :-1] = 0
-    ps[0, -1] = 1
+    # ps[0, :-1] = 0
+    # ps[0, -1] = 1
     p_vals = torch.arange(nb_slots + 1, device=ps.device).flip(0)
     avg_p = (p_vals * ps).sum(-1)
     avg_p = avg_p / (avg_p.max() - avg_p.min())
