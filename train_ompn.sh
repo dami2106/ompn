@@ -2,17 +2,17 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="wsws_static_symbolic_big_all_data_best_432423"
+EXPERIMENT="wsws_static_symbolic_big_all_data_new_best_adding_one"
 ENVS="wsws_static_symbolic_big"
 ENV_ARCH="noenv"
 
 ### MODEL ###
 ARCH="omstack"
 NB_SLOTS=2
-HIDDEN_SIZE=128
+HIDDEN_SIZE=256
 
 ### IL TRAINING ###
-IL_TRAIN_STEPS=50
+IL_TRAIN_STEPS=3000
 IL_DEMO_FROM_MODEL=False
 IL_EVAL_FREQ=20
 IL_SAVE_FREQ=200
@@ -23,10 +23,11 @@ IL_BATCH_SIZE=128
 ### OPTIMIZATION ###
 IL_RECURRENCE=40
 IL_LR=0.0001
-IL_CLIP=0.3
+IL_CLIP=0.8
 
 ### SYSTEM ###
 CUDA=True
+DEBUG=False
 
 ### CONDITIONAL BOOLEAN FLAGS ###
 DEMO_FLAG=""
@@ -44,9 +45,15 @@ if [ "$CUDA" = "True" ]; then
   CUDA_FLAG="--cuda"
 fi
 
+DEBUG_FLAG=""
+if [ "$DEBUG" = "True" ]; then
+  DEBUG_FLAG="--debug"
+fi
+
 ### RUN ###
 python main.py \
   --mode "$MODE" \
+  $DEBUG_FLAG \
   --experiment "$EXPERIMENT" \
   --envs "$ENVS" \
   --env_arch "$ENV_ARCH" \
@@ -63,7 +70,6 @@ python main.py \
   --il_recurrence "$IL_RECURRENCE" \
   --il_lr "$IL_LR" \
   --il_clip "$IL_CLIP" \
-  $CUDA_FLAG \
-  --debug
+  $CUDA_FLAG 
 
 

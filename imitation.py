@@ -344,6 +344,9 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
             # ground_truth = get_use_ids(actions_cpu.squeeze(), env_name)
             predicted = np.array(boundaries)
+            
+            #Increase all elements of predicted by 1 except the last one
+            predicted[:-1] += 1
 
             if len(predicted) < len(gt_segments):
                 predicted = np.pad(predicted, (0, len(gt_segments) - len(predicted)), constant_values=predicted[-1])
