@@ -11,6 +11,9 @@ import random
 import numpy as np
 import torch
 
+
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
 random.seed(0)
 np.random.seed(0)
 torch.manual_seed(0)
@@ -93,7 +96,7 @@ def objective(trial, args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, required=True, help='Path of the dataset to use')
-    parser.add_argument('--trials',  default=500, type=int, help='nb of trials')
+    parser.add_argument('--trials',  default=80, type=int, help='nb of trials')
     args = parser.parse_args()
 
     # args.task = args.envs.split(".")[0]
