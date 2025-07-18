@@ -27,4 +27,4 @@ elapsed=$(( end_time - start_time ))
 echo "Total time for all studies: ${elapsed} seconds"
 
 #Delete the experiment directory
-rm -rf experiments/
+# rm -rf experiments/
