@@ -22,7 +22,7 @@ ACTION_SIZE=16
 HIDDEN_SIZE=128
 
 # Misc
-DEBUG=false
+DEBUG=trur
 MODE="compile"
 EXPERIMENT="wsws_static_symbolic_big_${CURR_DATE_TIME}"
 CUDA=true
