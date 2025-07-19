@@ -27,7 +27,6 @@ from gym_psketch.visualize import predicted_data_to_tree, tree_to_str, predicted
 
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
-# torch.use_deterministic_algorithms(True, warn_only=True)  # PyTorch >=1.8
 
 
 random.seed(0)
@@ -377,7 +376,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                                              _decoded_subtask.tolist())
             tree_str = tree_to_str(pred_tree)
 
-            predicted_tree = parse_tree_string(tree_str)
+            # predicted_tree = parse_tree_string(tree_str)
             
 
 
@@ -386,7 +385,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                                            gt_segments,
                                            _gt_subtask.tolist())
             gt_tree_str = tree_to_str(gt_tree)
-            gt_tree = parse_tree_string(gt_tree_str)
+            # gt_tree = parse_tree_string(gt_tree_str)
             if not FLAGS.debug:
                 print(f"{'Predicted Tree:':20} {tree_str}")
                 print(f"{'Ground Truth Tree:':20} {gt_tree_str}")
@@ -395,13 +394,16 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
 
             episode_details.append({
-                'mem_trace': mem_trace,
+                # 'mem_trace': mem_trace,
+                'ep_idx': ep_idx,
                 'actions': actions.squeeze().tolist(),
                 'boundaries': boundaries,
+                'gt_boundaries': gt_segments,
+                'subtask_order': subtask_order,
                 'decoded_subtask': _decoded_subtask.tolist(),
                 'gt_subtask': _gt_subtask.tolist(),
-                'predicted_tree': predicted_tree,
-                'gt_tree': gt_tree
+                'predicted_tree': tree_str,
+                'gt_tree': gt_tree_str
             })
 
             all_predicted_subtask.append(_decoded_subtask.tolist())

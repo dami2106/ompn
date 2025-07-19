@@ -2,7 +2,7 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="wsws_static_symbolic_big_all_data_new_best_adding_one"
+EXPERIMENT="wsws_static_symbolic_big_2_slots_new_tree"
 ENVS="wsws_static_symbolic_big"
 ENV_ARCH="noenv"
 
