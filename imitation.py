@@ -66,7 +66,7 @@ def get_subtask_ordering(truths, boundaries):
         if len(segment) == 0:
             continue
         # Use the first label (or majority if needed)
-        label = segment[0]  # or np.bincount(segment).argmax()
+        label = int(segment[0])  # or np.bincount(segment).argmax()
         segment_labels.append(label)
         start = end
     return segment_labels
@@ -395,16 +395,26 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
             episode_details.append({
                 # 'mem_trace': mem_trace,
-                'ep_idx': ep_idx,
+                'ep_idx': int(ep_idx),
                 'actions': actions.squeeze().tolist(),
                 'boundaries': boundaries,
-                'gt_boundaries': gt_segments,
+                'gt_boundaries': gt_segments.tolist(),
                 'subtask_order': subtask_order,
                 'decoded_subtask': _decoded_subtask.tolist(),
-                'gt_subtask': _gt_subtask.tolist(),
+                'gt_subtask': _gt_subtask,
                 'predicted_tree': tree_str,
                 'gt_tree': gt_tree_str
             })
+
+            print("ep_idx type", type(ep_idx))
+            print("actions type", type(actions.squeeze().tolist()))
+            print("boundaries type", type(boundaries))
+            print("gt_boundaries type", type(gt_segments.tolist()))
+            print("subtask_order type", type(subtask_order))
+            print("decoded_subtask type", type(_decoded_subtask.tolist()))
+            print("gt_subtask type", type(_gt_subtask.tolist()))
+            print("predicted_tree type", type(tree_str))
+            print("gt_tree type", type(gt_tree_str))
 
             all_predicted_subtask.append(_decoded_subtask.tolist())
             all_gt_subtask.append( _gt_subtask.tolist())
@@ -447,7 +457,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             # Save all tree data to a JSON file for later analysis
             data_details = {
                 'episode_details': episode_details,
-                'environment': env_name,
+                # 'environment': env_name,
                 'total_episodes': len(episode_details)
             }
             
@@ -455,37 +465,37 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 json.dump(data_details, f, indent=2)
             
             # Create text file with formatted tree outputs
-            with open(os.path.join(trees_dir, f'episode_details_{env_name}.txt'), 'w') as f:
-                f.write(f"Analysis for Environment: {env_name}\n")
-                f.write("=" * 60 + "\n\n")
+            # with open(os.path.join(trees_dir, f'episode_details_{env_name}.txt'), 'w') as f:
+            #     f.write(f"Analysis for Environment: {env_name}\n")
+            #     f.write("=" * 60 + "\n\n")
                 
-                for ep_idx, episode in enumerate(episode_details):
-                    f.write(f"Episode {ep_idx}:\n")
-                    f.write("-" * 40 + "\n")
-                    f.write(f"Actions: {episode['actions']}\n")
-                    f.write(f"Boundaries: {episode['boundaries']}\n")
-                    f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
-                    f.write(f"GT Subtasks: {episode['gt_subtask']}\n")
-                    f.write("\n")
+            #     for ep_idx, episode in enumerate(episode_details):
+            #         f.write(f"Episode {ep_idx}:\n")
+            #         f.write("-" * 40 + "\n")
+            #         f.write(f"Actions: {episode['actions']}\n")
+            #         f.write(f"Boundaries: {episode['boundaries']}\n")
+            #         f.write(f"Predicted Subtasks: {episode['decoded_subtask']}\n")
+            #         f.write(f"GT Subtasks: {episode['gt_subtask']}\n")
+            #         f.write("\n")
 
             #Create a folder called 'tree_visualization' to save the visualizations
-            tree_visualization_dir =  os.path.join(training_folder, 'tree_visualization')
-            os.makedirs(tree_visualization_dir, exist_ok=True)
-            for ep_idx, episode in enumerate(episode_details):
-                # Visualize predicted tree
-                pred_tree = episode['predicted_tree']
-                gt_tree = episode['gt_tree']
+            # tree_visualization_dir =  os.path.join(training_folder, 'tree_visualization')
+            # os.makedirs(tree_visualization_dir, exist_ok=True)
+            # for ep_idx, episode in enumerate(episode_details):
+            #     # Visualize predicted tree
+            #     pred_tree = episode['predicted_tree']
+            #     gt_tree = episode['gt_tree']
 
-                save_tree_to_json(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.json'))
-                visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}'))
+            #     save_tree_to_json(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}.json'))
+            #     visualize_tree(pred_tree, os.path.join(tree_visualization_dir, f'predicted_tree_{ep_idx}'))
 
-                # Save ground truth tree to JSON
-                save_tree_to_json(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.json'))
-                visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}'))
+            #     # Save ground truth tree to JSON
+            #     save_tree_to_json(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}.json'))
+            #     visualize_tree(gt_tree, os.path.join(tree_visualization_dir, f'gt_tree_{ep_idx}'))
 
             
 
-            print("Finished saving and visualizing trees")
+            # print("Finished saving and visualizing trees")
 
 
 
@@ -494,7 +504,8 @@ def run(training_folder):
     print('Start IL...')
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
-    n_feature, action_size = 1087, 18
+    n_feature, action_size = 650, 18
+    # n_feature, action_size = 1087, 18
     # n_feature, action_size = 1075, 7
     bot = bots.make(vec_size=n_feature,
                     action_size=action_size,

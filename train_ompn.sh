@@ -2,8 +2,8 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="wsws_static_symbolic_big_2_slots_new_tree"
-ENVS="wsws_static_symbolic_big"
+EXPERIMENT="wsws_static_pixels_big_og_params"
+ENVS="wsws_static_pixels_big"
 ENV_ARCH="noenv"
 
 ### MODEL ###
@@ -27,7 +27,7 @@ IL_CLIP=0.8
 
 ### SYSTEM ###
 CUDA=True
-DEBUG=False
+DEBUG=True
 
 ### CONDITIONAL BOOLEAN FLAGS ###
 DEMO_FLAG=""
