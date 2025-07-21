@@ -394,27 +394,19 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
 
             episode_details.append({
-                # 'mem_trace': mem_trace,
-                'ep_idx': int(ep_idx),
-                'actions': actions.squeeze().tolist(),
-                'boundaries': boundaries,
-                'gt_boundaries': gt_segments.tolist(),
-                'subtask_order': subtask_order,
-                'decoded_subtask': _decoded_subtask.tolist(),
-                'gt_subtask': _gt_subtask,
-                'predicted_tree': tree_str,
-                'gt_tree': gt_tree_str
-            })
+            'ep_idx': int(ep_idx),
+            'actions': actions.squeeze().tolist(),
+            'boundaries': [int(x) for x in boundaries],
+            'gt_boundaries': [int(x) for x in gt_segments.tolist()],
+            'subtask_order': [int(x) for x in subtask_order],
+            'decoded_subtask': [int(x) for x in _decoded_subtask.tolist()],
+            'gt_subtask': [int(x) for x in _gt_subtask.tolist()],
+            'predicted_tree': tree_str,
+            'gt_tree': gt_tree_str
+        })
 
-            print("ep_idx type", type(ep_idx))
-            print("actions type", type(actions.squeeze().tolist()))
-            print("boundaries type", type(boundaries))
-            print("gt_boundaries type", type(gt_segments.tolist()))
-            print("subtask_order type", type(subtask_order))
-            print("decoded_subtask type", type(_decoded_subtask.tolist()))
-            print("gt_subtask type", type(_gt_subtask.tolist()))
-            print("predicted_tree type", type(tree_str))
-            print("gt_tree type", type(gt_tree_str))
+            for x in episode_details:
+                print("Type of ", x, " is: ", type(x))
 
             all_predicted_subtask.append(_decoded_subtask.tolist())
             all_gt_subtask.append( _gt_subtask.tolist())

@@ -25,3 +25,4 @@ experiment/*
 zzz*
 
 Traces/*.pkl
+/test_tree

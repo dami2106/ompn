@@ -90,6 +90,40 @@ def compute_structure_metrics(tree: TreeNode) -> Dict[str, Union[int, float]]:
     }
 
 
+def compute_average_structure_metrics(trees: List[TreeNode]) -> Dict[str, float]:
+    if not trees:
+        return {}
+
+    sums = defaultdict(float)
+    count = 0
+
+    for tree in trees:
+        metrics = compute_structure_metrics(tree)
+        for k, v in metrics.items():
+            sums[k] += v
+        count += 1
+
+    return {k: (sums[k] / count) for k in sums}
+
+def serialize_tree_ignoring_root(tree: TreeNode) -> str:
+    def serialize(node):
+        if "children" not in node:
+            return f"leaf:{node['symbol']}"
+        child_strs = [serialize(child) for child in node["children"]]
+        return f"[{','.join(child_strs)}]"
+    
+    # Skip root symbol
+    if "children" not in tree:
+        return serialize(tree)
+    return serialize({"children": tree["children"]})
+
+def count_unique_trees(trees: List[TreeNode]) -> int:
+    seen = set()
+    for tree in trees:
+        tree_str = serialize_tree_ignoring_root(tree)
+        seen.add(tree_str)
+    return len(seen)
+
 if __name__ == "__main__":
     import json 
         # Load the tree from my_tree.json

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-BASE_TASK="wsws_static"
+BASE_TASK="mixed_static"
 TRIALS=50
 
 # Generate task variants
 TASK_VARIANTS=(
-  "${BASE_TASK}_symbolic"
-  "${BASE_TASK}_symbolic_big"
-  "${BASE_TASK}_pixels"
+  # "${BASE_TASK}_symbolic"
+  # "${BASE_TASK}_symbolic_big"
+  # "${BASE_TASK}_pixels"
   "${BASE_TASK}_pixels_big"
 )
 
