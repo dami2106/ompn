@@ -35,6 +35,16 @@ flags.DEFINE_integer('compile_state_size', default=1087, help='State Space size'
 flags.DEFINE_integer('compile_action_size', default=16, help='Action Space size')
 
 
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+
+
+# random.seed(0)
+np.random.seed(0)
+torch.manual_seed(0)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(0)
+
 def get_subtask_ordering(truths, boundaries):
     segment_labels = []
     start = 0

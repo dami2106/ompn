@@ -23,8 +23,8 @@ def objective(trial, args):
         "compile_batch_size": trial.suggest_categorical("compile_batch_size", [64, 128, 256]),
         "compile_beta_z": trial.suggest_categorical("compile_beta_z", [0.01, 0.1, 0.5, 1.0]),
         "compile_beta_b": trial.suggest_categorical("compile_beta_b",[0.01, 0.1, 0.5, 1.0]),
-        "compile_prior_rate": trial.suggest_categorical("compile_prior_rate",[3, 10, 15]),
-        "hidden_size": trial.suggest_categorical("hidden_size", [ 64, 128, 256, 512]),
+        "compile_prior_rate": trial.suggest_categorical("compile_prior_rate",[3, 5, 10]),
+        "hidden_size": trial.suggest_categorical("hidden_size", [ 64, 128, 256]),
     }
 
 
@@ -111,7 +111,7 @@ if __name__ == "__main__":
 
     args.action_size = space_sizes['action_space_size']
 
-    directory = os.path.join('Tuning', args.task)
+    directory = os.path.join('New_Compile_Tuning', args.task)
     os.makedirs(directory, exist_ok=True)
 
     study_file = os.path.join(directory, f'optuna_model_{args.task}.pkl')
