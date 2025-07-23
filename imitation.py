@@ -45,6 +45,7 @@ flags.DEFINE_integer('il_train_steps', default=50, help='Trainig steps')
 flags.DEFINE_integer('il_eval_freq', default=20, help='Evaluation frequency')
 flags.DEFINE_integer('il_save_freq', default=200, help='Save freq')
 flags.DEFINE_bool('il_no_done', default=False, help='Whether or not to use done during IL')
+flags.DEFINE_bool('minecraft', default=False, help='Whether or not to use minecraft loading')
 
 # Data
 flags.DEFINE_float('il_val_ratio', default=0.2,
@@ -328,13 +329,30 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 mems = out.mems
             p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
             
-
-            look_for = np.arange(5, 18)
             actions_cpu = actions.cpu().squeeze().numpy()
+
+
+            if not FLAGS.minecraft:
+                look_for = np.arange(5, 18)
+                gt_segments = np.where(np.isin(actions_cpu, look_for))[0] 
+                subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
+            else:
+                # subtask_order = batch.sequence[0].cpu().numpy().tolist()
+                gt = batch.groundTruth[0].cpu().numpy().tolist()
+
+                subtask_order = []
+                prev = None
+                for num in gt:
+                    if num != prev:
+                        subtask_order.append(num)
+                        prev = num
+
+                change_indices = [0]
+                for i in range(1, len(gt)):
+                    if gt[i] != gt[i - 1]:
+                        change_indices.append(i - 1)
+                gt_segments = np.array(change_indices) + 1  # +1 to match the subtask IDs
             
-            gt_segments = np.where(np.isin(actions_cpu, look_for))[0] 
-        
-            subtask_order = get_subtask_ordering(batch.groundTruth[0].cpu().numpy(), gt_segments + 1)
             if not FLAGS.debug:
                 print(f"{'Subtask Sequence:':20} {subtask_order}")
                 print(f"{'GT Segments:':20} {gt_segments}")
@@ -405,8 +423,8 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             'gt_tree': gt_tree_str
         })
 
-            for x in episode_details:
-                print("Type of ", x, " is: ", type(x))
+            # for x in episode_details:
+            #     print("Type of ", x, " is: ", type(x))
 
             all_predicted_subtask.append(_decoded_subtask.tolist())
             all_gt_subtask.append( _gt_subtask.tolist())
@@ -496,7 +514,8 @@ def run(training_folder):
     print('Start IL...')
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
-    n_feature, action_size = 650, 18
+    # n_feature, action_size = 650, 18
+    n_feature, action_size = 512, 2385
     # n_feature, action_size = 1087, 18
     # n_feature, action_size = 1075, 7
     bot = bots.make(vec_size=n_feature,

@@ -12,6 +12,17 @@ import matplotlib.pyplot as plt
 __all__ = ['Actions', 'ID2ACTIONS', 'CraftWorld', 'CraftState', 'ACTION_VOCAB']
 
 
+#MINECRAFT
+actions_dict = {"DONE": 0}
+
+# Add actions 1 to 2384 with auto-generated names
+for i in range(1, 2385):
+    actions_dict[f"ACTION_{i}"] = i
+
+# Create the enum class
+Actions = enum.Enum("Actions", actions_dict)
+
+# OMPN ENVS
 # class Actions(enum.Enum):
 #     DOWN = 0
 #     UP = 1
@@ -20,25 +31,27 @@ __all__ = ['Actions', 'ID2ACTIONS', 'CraftWorld', 'CraftState', 'ACTION_VOCAB']
 #     USE = 4
 #     DONE = 5
 
-class Actions(enum.Enum):
-    DONE = 0         # Q (previously NOOP)
-    LEFT = 1         # A
-    RIGHT = 2        # D
-    UP = 3           # W
-    DOWN = 4         # S
-    DO = 5           # Space
-    SLEEP = 6        # Tab
-    PLACE_STONE = 7  # R
-    PLACE_TABLE = 8  # T
-    PLACE_FURNACE = 9# F
-    PLACE_PLANT = 10 # P
-    MAKE_WOOD_PICKAXE = 11   # 1
-    MAKE_STONE_PICKAXE = 12  # 2
-    MAKE_IRON_PICKAXE = 13   # 3
-    MAKE_WOOD_SWORD = 14     # 5
-    MAKE_STONE_SWORD = 15    # 6
-    MAKE_IRON_SWORD = 16     # 7
-    REST = 17        # e
+
+# CRAFTAX 
+# class Actions(enum.Enum):
+#     DONE = 0         # Q (previously NOOP)
+#     LEFT = 1         # A
+#     RIGHT = 2        # D
+#     UP = 3           # W
+#     DOWN = 4         # S
+#     DO = 5           # Space
+#     SLEEP = 6        # Tab
+#     PLACE_STONE = 7  # R
+#     PLACE_TABLE = 8  # T
+#     PLACE_FURNACE = 9# F
+#     PLACE_PLANT = 10 # P
+#     MAKE_WOOD_PICKAXE = 11   # 1
+#     MAKE_STONE_PICKAXE = 12  # 2
+#     MAKE_IRON_PICKAXE = 13   # 3
+#     MAKE_WOOD_SWORD = 14     # 5
+#     MAKE_STONE_SWORD = 15    # 6
+#     MAKE_IRON_SWORD = 16     # 7
+#     REST = 17        # e
 
 ID2DIR = ['down', 'up', 'left', 'right']
 ID2ACTIONS = [a for a in Actions]

@@ -50,7 +50,7 @@ flags.DEFINE_enum('mode', default='IL', enum_values=['IL', 'demo', 'compile',
                                                      'taco'],
                   help='choosing between IL and baselines')
 flags.DEFINE_string('experiment', default=None, help='Name of experiment')
-flags.DEFINE_bool('cuda', default=True, help='Use cuda')
+flags.DEFINE_bool('cuda', default=False, help='Use cuda')
 flags.DEFINE_integer('procs', default=4, help='Number of process')
 
 
@@ -98,7 +98,11 @@ def main(_):
     # logging.info('Use Cuda: {}'.format(FLAGS.cuda))
     # logging.info('Current git SHA: ' + gym_psketch.CURR_VERSION)
 
-    flags.FLAGS.cuda = torch.cuda.is_available()
+    # flags.FLAGS.cuda = torch.cuda.is_available()
+    if FLAGS.cuda:
+        print("Using CUDA")
+    else:
+        print("Not using CUDA")
 
     cuda_available = torch.cuda.is_available()
     print(f"CUDA Available: {cuda_available}")
