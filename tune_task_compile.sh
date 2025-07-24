@@ -1,9 +1,9 @@
 #!/bin/bash
 
-BASE_TASKS=("wsws_random" "wsws_static")  # Add more base tasks as needed
-MAX_SEGS=4
-SKILLS=2
-TRIALS=25  # Set your desired number of trials here
+BASE_TASKS=("mixed_static")  # Add more base tasks as needed
+MAX_SEGS=8
+SKILLS=5
+TRIALS=50  # Set your desired number of trials here
 
 # Start timing
 start_time=$(date +%s)
