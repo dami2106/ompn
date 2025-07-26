@@ -1,0 +1,2 @@
+number,value,datetime_start,datetime_complete,duration,params_hidden_size,params_il_batch_size,params_il_clip,params_il_lr,params_il_recurrence,params_il_train_steps,params_nb_slots,state
+25,0.4952000000000001,2025-07-22 12:36:41.959123,2025-07-22 13:22:44.052301,0 days 00:46:02.093178000,128,128,0.2,0.001,40,3000,4,COMPLETE

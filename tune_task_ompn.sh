@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_TASK="mixed_static"
+BASE_TASK="stone_pick_random"
 TRIALS=50
 
 # Generate task variants

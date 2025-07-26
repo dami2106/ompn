@@ -515,7 +515,11 @@ def run(training_folder):
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
     # n_feature, action_size = 650, 18
-    n_feature, action_size = 512, 2385
+
+    if FLAGS.minecraft:
+        n_feature, action_size = 512, 2385
+    else:
+        n_feature, action_size = 650, 18
     # n_feature, action_size = 1087, 18
     # n_feature, action_size = 1075, 7
     bot = bots.make(vec_size=n_feature,

@@ -2,17 +2,17 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="minecraft_test_1"
-ENVS="ompn_cobblestone_all"
+EXPERIMENT="wsws_random_pixels_big_best"
+ENVS="wsws_random_pixels_big"
 ENV_ARCH="noenv"
 
 ### MODEL ###
 ARCH="omstack"
-NB_SLOTS=4
-HIDDEN_SIZE=256
+NB_SLOTS=2
+HIDDEN_SIZE=64
 
 ### IL TRAINING ###
-IL_TRAIN_STEPS=100
+IL_TRAIN_STEPS=5000
 IL_DEMO_FROM_MODEL=False
 IL_EVAL_FREQ=20
 IL_SAVE_FREQ=200
@@ -21,14 +21,14 @@ IL_VAL_RATIO=0.05
 IL_BATCH_SIZE=128
 
 ### OPTIMIZATION ###
-IL_RECURRENCE=40
+IL_RECURRENCE=10
 IL_LR=0.0001
 IL_CLIP=0.8
 
 ### SYSTEM ###
 CUDA=False
-DEBUG=True
-MINECRAFT=True
+DEBUG=False
+MINECRAFT=False
 
 ### CONDITIONAL BOOLEAN FLAGS ###
 DEMO_FLAG=""
@@ -76,7 +76,7 @@ python main.py \
   --il_recurrence "$IL_RECURRENCE" \
   --il_lr "$IL_LR" \
   --il_clip "$IL_CLIP" \
-  # $CUDA_FLAG \
+  $CUDA_FLAG \
   $MINECRAFT_FLAG
 
 

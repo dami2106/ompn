@@ -34,6 +34,8 @@ flags.DEFINE_enum('compile_latent', enum_values=['gaussian', 'concrete'], defaul
 flags.DEFINE_integer('compile_state_size', default=1087, help='State Space size')
 flags.DEFINE_integer('compile_action_size', default=16, help='Action Space size')
 
+flags.DEFINE_bool('minecraft', default=False, help='Whether or not to use minecraft loading')
+
 
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
@@ -200,21 +202,21 @@ def main(training_folder):
     flat_z_scaled = StandardScaler().fit_transform(flat_z)
     del flat_z
 
-    # Define and fit the GMM model
-    gmm = GaussianMixture(
-        n_components=FLAGS.compile_skills,
-        covariance_type='full',       # Allow full covariance to capture complex skill dependencies
-        reg_covar=1e-6,               # Small regularization to improve stability
-        n_init=5,                     # Multiple initializations for robustness
-        random_state=0
-    )
-    gmm.fit(flat_z_scaled)
+    # # Define and fit the GMM model
+    # gmm = GaussianMixture(
+    #     n_components=FLAGS.compile_skills,
+    #     covariance_type='full',       # Allow full covariance to capture complex skill dependencies
+    #     reg_covar=1e-6,               # Small regularization to improve stability
+    #     n_init=5,                     # Multiple initializations for robustness
+    #     random_state=0
+    # )
+    # gmm.fit(flat_z_scaled)
 
-    # Predict the cluster labels and reshape
-    labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
+    # # Predict the cluster labels and reshape
+    # labels = gmm.predict(flat_z_scaled).reshape(all_sample_bs.shape)
     del  flat_z_scaled
     
-    # labels = np.zeros_like(all_sample_bs)
+    labels = np.zeros_like(all_sample_bs)
 
     print("Labels Shape", labels.shape)
     print("Trained Gaussian Mixture clustering model")
@@ -262,20 +264,48 @@ def main(training_folder):
 
         pred_truth_list = [int(c) for c in pred_truth]
 
-        look_for = np.arange(5, 18)
-        gt_segments = np.where(np.isin(acts, look_for))[0]
+        if not FLAGS.minecraft:
+            look_for = np.arange(5, 18)
+            gt_segments = np.where(np.isin(acts, look_for))[0]
 
-        if len(gt_segments) < FLAGS.compile_max_segs:
-            #Extend gt_segments by padding wit hthe last segment
-            # Pad gt_segments with the last value until it reaches compile_max_segs length
-            if len(gt_segments) > 0:
-                pad_value = gt_segments[-1]
-                gt_segments = np.pad(gt_segments, (0, FLAGS.compile_max_segs - len(gt_segments)), mode='constant', constant_values=pad_value)
-            else:
-                # If gt_segments is empty, pad with zeros
-                gt_segments = np.zeros(FLAGS.compile_max_segs, dtype=int)
+            if len(gt_segments) < FLAGS.compile_max_segs:
+                #Extend gt_segments by padding wit hthe last segment
+                # Pad gt_segments with the last value until it reaches compile_max_segs length
+                if len(gt_segments) > 0:
+                    pad_value = gt_segments[-1]
+                    gt_segments = np.pad(gt_segments, (0, FLAGS.compile_max_segs - len(gt_segments)), mode='constant', constant_values=pad_value)
+                else:
+                    # If gt_segments is empty, pad with zeros
+                    gt_segments = np.zeros(FLAGS.compile_max_segs, dtype=int)
 
-        subtask_order = get_subtask_ordering(truths, gt_segments + 1)
+            subtask_order = get_subtask_ordering(truths, gt_segments + 1)
+
+        else:
+            gt = batch.groundTruth[0].cpu().numpy().tolist()
+
+            subtask_order = []
+            prev = None
+            for num in gt:
+                if num != prev:
+                    subtask_order.append(num)
+                    prev = num
+
+            change_indices = [0]
+            for i in range(1, len(gt)):
+                if gt[i] != gt[i - 1]:
+                    change_indices.append(i - 1)
+
+
+            gt_segments = np.array(change_indices) + 1  # +1 to match the subtask IDs
+            if len(gt_segments) < FLAGS.compile_max_segs:
+                #Extend gt_segments by padding wit hthe last segment
+                # Pad gt_segments with the last value until it reaches compile_max_segs length
+                if len(gt_segments) > 0:
+                    pad_value = gt_segments[-1]
+                    gt_segments = np.pad(gt_segments, (0, FLAGS.compile_max_segs - len(gt_segments)), mode='constant', constant_values=pad_value)
+                else:
+                    # If gt_segments is empty, pad with zeros
+                    gt_segments = np.zeros(FLAGS.compile_max_segs, dtype=int)
 
 
         print("Ground Truth:            ", truths)
@@ -334,14 +364,14 @@ def main(training_folder):
     clustering_metrics = get_all_metrics(preds, all_truths)
     static = get_all_metrics(preds_static, all_truths)
 
-    print("Clustering Results (ASOT):")
-    print("----------------------------------")
-    for name, val in clustering_metrics.items():
-        print(f"{name:<15}{val:.4f}")
-    print("----------------------------------\n")
+    # print("Clustering Results (ASOT):")
+    # print("----------------------------------")
+    # for name, val in clustering_metrics.items():
+    #     print(f"{name:<15}{val:.4f}")
+    # print("----------------------------------\n")
 
 
-    print("Clustering Results (OMPN STATIC):")
+    print("Known Ordering Assmumption Results (OMPN STATIC):")
     print("----------------------------------")
     for name, val in static.items():
         print(f"{name:<15}{val:.4f}")

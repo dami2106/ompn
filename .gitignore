@@ -26,3 +26,7 @@ zzz*
 
 Traces/*.pkl
 /test_tree
+ompn_paper_runs/wsws_random_pixels_big/absl_logging.INFO
+*.DamiPC
+*.INFO
+*.46273
