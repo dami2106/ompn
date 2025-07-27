@@ -387,7 +387,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 print()
 
             # Generate tree representation from predicted data using p_avg approach
-            p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
+            # p_hats is already stacked from earlier in the code
             
             # Calculate p_avg like in the original approach
             p_vals = torch.arange(bot.nb_slots + 1, device=p_hats.device)
@@ -402,7 +402,7 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             action_strs = [f"act_{idx}" for idx in actions_cpu.squeeze()]
             
             # Use distance2ctree with depth information
-            pred_tree = distance2ctree(depths.cpu().numpy(), action_strs, binary=False)
+            pred_tree = distance2ctree(depths, action_strs, binary=False)
             tree_str = tree_to_str(pred_tree)
 
             # Generate tree representation from ground truth data using same approach
