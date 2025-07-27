@@ -54,6 +54,9 @@ flags.DEFINE_bool('cuda', default=True, help='Use cuda')
 flags.DEFINE_integer('procs', default=4, help='Number of process')
 
 
+flags.DEFINE_bool('minecraft', default=False, help='Whether or not to use minecraft loading')
+
+
 def handler(type, value, tb):
     logging.exception("Uncaught exception: %s", str(value))
     logging.exception("\n".join(traceback.format_exception(type, value, tb)))

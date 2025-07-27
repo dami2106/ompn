@@ -34,7 +34,6 @@ flags.DEFINE_enum('compile_latent', enum_values=['gaussian', 'concrete'], defaul
 flags.DEFINE_integer('compile_state_size', default=1087, help='State Space size')
 flags.DEFINE_integer('compile_action_size', default=16, help='Action Space size')
 
-flags.DEFINE_bool('minecraft', default=False, help='Whether or not to use minecraft loading')
 
 
 torch.backends.cudnn.deterministic = True

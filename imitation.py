@@ -14,7 +14,7 @@ import numpy as np
 import random
 
 from gym_psketch.evaluate import evaluate_loop, parsing_loop, get_boundaries, get_use_ids, get_subtask_seq, f1
-from gym_psketch.visualize import distance2ctree, tree_to_str
+from gym_psketch.visualize import predicted_data_to_tree, tree_to_str, predicted_data_to_hierarchical_tree, distance2ctree
 
 from sklearn.cluster import KMeans
 from metrics import *
@@ -22,7 +22,6 @@ from metrics import *
 from visualisation import plot_segmentation_gt, parse_tree_string, save_tree_to_json, visualize_tree
 import matplotlib.pyplot as plt
 import json
-from gym_psketch.visualize import predicted_data_to_tree, tree_to_str, predicted_data_to_hierarchical_tree
 
 
 torch.backends.cudnn.deterministic = True
@@ -45,7 +44,6 @@ flags.DEFINE_integer('il_train_steps', default=50, help='Trainig steps')
 flags.DEFINE_integer('il_eval_freq', default=20, help='Evaluation frequency')
 flags.DEFINE_integer('il_save_freq', default=200, help='Save freq')
 flags.DEFINE_bool('il_no_done', default=False, help='Whether or not to use done during IL')
-flags.DEFINE_bool('minecraft', default=False, help='Whether or not to use minecraft loading')
 
 # Data
 flags.DEFINE_float('il_val_ratio', default=0.2,
@@ -388,22 +386,40 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
                 print(f"{'GT Subtask:':20} {_gt_subtask}")
                 print()
 
-            # Generate tree representation from predicted data
-            pred_tree = predicted_data_to_tree(actions_cpu.squeeze(), 
-                                             predicted, 
-                                             _decoded_subtask.tolist())
+            # Generate tree representation from predicted data using p_avg approach
+            p_hats = torch.stack(p_hats, dim=0)  # [seq_len, 1, nb_slots+1]
+            
+            # Calculate p_avg like in the original approach
+            p_vals = torch.arange(bot.nb_slots + 1, device=p_hats.device)
+            p_avg = (p_vals * p_hats.squeeze(1)).sum(-1)  # [seq_len]
+            
+            # Create depth information from p_avg
+            depths = p_avg[:-1]  # Remove last element
+            depths = (depths - depths.min()) / (depths.max() - depths.min() + 1e-8)
+            depths = np.digitize(depths.cpu().numpy(), np.linspace(0, 1, 5))
+            
+            # Convert actions to vocabulary strings
+            action_strs = [f"act_{idx}" for idx in actions_cpu.squeeze()]
+            
+            # Use distance2ctree with depth information
+            pred_tree = distance2ctree(depths.cpu().numpy(), action_strs, binary=False)
             tree_str = tree_to_str(pred_tree)
 
-            # predicted_tree = parse_tree_string(tree_str)
+            # Generate tree representation from ground truth data using same approach
+            # For ground truth, we'll use the predicted boundaries to create depth info
+            gt_depths = np.zeros(len(actions_cpu.squeeze()) - 1)
+            for boundary in gt_segments:
+                if boundary < len(gt_depths):
+                    gt_depths[boundary-1] = 1  # High depth at boundaries
             
-
-
-            # Generate tree representation from ground truth data  
-            gt_tree = predicted_data_to_tree(actions_cpu.squeeze(),
-                                           gt_segments,
-                                           _gt_subtask.tolist())
+            # Normalize and discretize like the original approach
+            if gt_depths.max() > gt_depths.min():
+                gt_depths = (gt_depths - gt_depths.min()) / (gt_depths.max() - gt_depths.min())
+            gt_depths = np.digitize(gt_depths, np.linspace(0, 1, 5))
+            
+            gt_tree = distance2ctree(gt_depths, action_strs, binary=False)
             gt_tree_str = tree_to_str(gt_tree)
-            # gt_tree = parse_tree_string(gt_tree_str)
+
             if not FLAGS.debug:
                 print(f"{'Predicted Tree:':20} {tree_str}")
                 print(f"{'Ground Truth Tree:':20} {gt_tree_str}")

@@ -2,31 +2,31 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="wsws_random_pixels_big_best"
-ENVS="wsws_random_pixels_big"
+EXPERIMENT="stone_pick_static_pixels_big_new_hierarchy_2"
+ENVS="stone_pick_static_pixels_big"
 ENV_ARCH="noenv"
 
 ### MODEL ###
 ARCH="omstack"
-NB_SLOTS=2
-HIDDEN_SIZE=64
+NB_SLOTS=6
+HIDDEN_SIZE=128
 
 ### IL TRAINING ###
-IL_TRAIN_STEPS=5000
+IL_TRAIN_STEPS=1000
 IL_DEMO_FROM_MODEL=False
 IL_EVAL_FREQ=20
 IL_SAVE_FREQ=200
 IL_NO_DONE=False
 IL_VAL_RATIO=0.05
-IL_BATCH_SIZE=128
+IL_BATCH_SIZE=64
 
 ### OPTIMIZATION ###
-IL_RECURRENCE=10
-IL_LR=0.0001
+IL_RECURRENCE=20
+IL_LR=0.001
 IL_CLIP=0.8
 
 ### SYSTEM ###
-CUDA=False
+CUDA=True
 DEBUG=False
 MINECRAFT=False
 
