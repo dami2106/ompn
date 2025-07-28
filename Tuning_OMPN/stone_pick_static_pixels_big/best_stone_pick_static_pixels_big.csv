@@ -1,2 +1,2 @@
-number,value,datetime_start,datetime_complete,duration,params_hidden_size,params_il_batch_size,params_il_clip,params_il_lr,params_il_recurrence,params_il_train_steps,params_nb_slots,state
-37,0.30946,2025-07-24 10:13:10.948770,2025-07-24 10:32:52.672381,0 days 00:19:41.723611000,128,64,0.8,0.001,20,1000,6,COMPLETE
+number, value  , datetime_start            , datetime_complete         , duration                 , params_hidden_size, params_il_batch_size, params_il_clip, params_il_lr, params_il_recurrence, params_il_train_steps, params_nb_slots, state
+    37, 0.30946, 2025-07-24 10:13:10.948770, 2025-07-24 10:32:52.672381, 0 days 00:19:41.723611000,                128,                   64,            0.8,        0.001,                   20,                  1000,               6, COMPLETE
