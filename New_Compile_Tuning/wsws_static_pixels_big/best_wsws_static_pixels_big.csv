@@ -1,0 +1,2 @@
+number, value  , datetime_start            , datetime_complete         , duration                 , params_compile_batch_size, params_compile_beta_b, params_compile_beta_z, params_compile_lr, params_compile_prior_rate, params_compile_train_steps, params_hidden_size, state
+    38, 0.71594, 2025-07-27 06:14:11.951188, 2025-07-27 06:15:13.489605, 0 days 00:01:01.538417000,                        64,                   1.0,                  0.01,             0.001,                         5,                        500,                 64, COMPLETE

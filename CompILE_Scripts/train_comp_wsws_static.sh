@@ -4,27 +4,26 @@
 CURR_DATE_TIME=$(date +%s)
 
 # Training configuration flags
-COMPILE_TRAIN_STEPS=5000
-COMPILE_EVAL_FREQ=10
+COMPILE_BATCH_SIZE=64
+COMPILE_BETA_B=1.0
+COMPILE_BETA_Z=0.01
 COMPILE_LR=0.001
-COMPILE_BATCH_SIZE=128
+COMPILE_PRIOR_RATE=5
+COMPILE_TRAIN_STEPS=500
+HIDDEN_SIZE=64
+
+ENVS="wsws_static_pixels_big"
+EXPERIMENT="wsws_static_pixels_big_${CURR_DATE_TIME}"
 COMPILE_MAX_SEGS=4
 COMPILE_SKILLS=2
-COMPILE_BETA_Z=0.01
-COMPILE_BETA_B=0.1
-COMPILE_PRIOR_RATE=3
 
-ENVS="wsws_static_symbolic_big"
-STATE_SIZE=1087
+STATE_SIZE=512
 ACTION_SIZE=16
-
-# Model configuration
-HIDDEN_SIZE=128
+COMPILE_EVAL_FREQ=10
 
 # Misc
 DEBUG=true
 MODE="compile"
-EXPERIMENT="wsws_static_symbolic_big_${CURR_DATE_TIME}"
 CUDA=true
 PROCS=8
 
@@ -59,3 +58,6 @@ python main.py \
   --hidden_size "$HIDDEN_SIZE" \
   --experiment "$EXPERIMENT" \
   --procs "$PROCS"
+
+
+echo "Training finished expected 0.71594"
