@@ -2,8 +2,8 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="stone_pick_static_pixels_big_new_hierarchy_4"
-ENVS="stone_pick_static_pixels_big"
+EXPERIMENT="stone_pick_random_pixels_big"
+ENVS="stone_pick_random_pixels_big"
 ENV_ARCH="noenv"
 
 ### MODEL ###
@@ -12,7 +12,7 @@ NB_SLOTS=6
 HIDDEN_SIZE=128
 
 ### IL TRAINING ###
-IL_TRAIN_STEPS=1000
+IL_TRAIN_STEPS=250
 IL_DEMO_FROM_MODEL=False
 IL_EVAL_FREQ=20
 IL_SAVE_FREQ=200
