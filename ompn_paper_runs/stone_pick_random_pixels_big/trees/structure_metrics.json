@@ -1,0 +1,4002 @@
+{
+  "tree_0": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_1": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.5714285714285714,
+    "max_branching": 2,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_2": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_3": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.6,
+    "max_branching": 6,
+    "reuse": 0.7857142857142857,
+    "modularity": 0.5
+  },
+  "tree_4": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_5": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_6": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 1.8,
+    "max_branching": 4,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_7": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_8": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 3,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.5
+  },
+  "tree_9": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 6,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_10": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_11": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 6,
+    "reuse": 0.8421052631578947,
+    "modularity": 0.5
+  },
+  "tree_12": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.5714285714285716,
+    "max_branching": 5,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_13": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_14": {
+    "depth": 5,
+    "size": 22,
+    "avg_branching": 2.625,
+    "max_branching": 8,
+    "reuse": 0.8636363636363636,
+    "modularity": 0.5
+  },
+  "tree_15": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8461538461538461,
+    "modularity": 0.5
+  },
+  "tree_16": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_17": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_18": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 3.1666666666666665,
+    "max_branching": 6,
+    "reuse": 0.8,
+    "modularity": 0.5
+  },
+  "tree_19": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_20": {
+    "depth": 5,
+    "size": 23,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8260869565217391,
+    "modularity": 0.5
+  },
+  "tree_21": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_22": {
+    "depth": 5,
+    "size": 10,
+    "avg_branching": 1.5,
+    "max_branching": 4,
+    "reuse": 0.9,
+    "modularity": 0.0
+  },
+  "tree_23": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 1.6363636363636365,
+    "max_branching": 6,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_24": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_25": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.2222222222222223,
+    "max_branching": 4,
+    "reuse": 0.8095238095238095,
+    "modularity": 0.5
+  },
+  "tree_26": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_27": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 6,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_28": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_29": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 6,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_30": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_31": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_32": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.0
+  },
+  "tree_33": {
+    "depth": 5,
+    "size": 29,
+    "avg_branching": 3.111111111111111,
+    "max_branching": 7,
+    "reuse": 0.7241379310344828,
+    "modularity": 0.0
+  },
+  "tree_34": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_35": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_36": {
+    "depth": 4,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_37": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_38": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_39": {
+    "depth": 4,
+    "size": 20,
+    "avg_branching": 3.1666666666666665,
+    "max_branching": 7,
+    "reuse": 0.75,
+    "modularity": 0.5
+  },
+  "tree_40": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 7,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_41": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_42": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_43": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_44": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_45": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.5555555555555556,
+    "max_branching": 5,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.0
+  },
+  "tree_46": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.5714285714285716,
+    "max_branching": 6,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_47": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_48": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.5714285714285716,
+    "max_branching": 5,
+    "reuse": 0.8421052631578947,
+    "modularity": 0.5
+  },
+  "tree_49": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_50": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_51": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8421052631578947,
+    "modularity": 0.5
+  },
+  "tree_52": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_53": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 0.5
+  },
+  "tree_54": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_55": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 4,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_56": {
+    "depth": 5,
+    "size": 25,
+    "avg_branching": 3.4285714285714284,
+    "max_branching": 8,
+    "reuse": 0.8,
+    "modularity": 0.5
+  },
+  "tree_57": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8,
+    "modularity": 0.5
+  },
+  "tree_58": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_59": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.2222222222222223,
+    "max_branching": 7,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_60": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_61": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 6,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_62": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 6,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_63": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 7,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_64": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_65": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_66": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_67": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 1.9,
+    "max_branching": 7,
+    "reuse": 0.9,
+    "modularity": 0.5
+  },
+  "tree_68": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_69": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_70": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_71": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_72": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_73": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_74": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_75": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_76": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.5714285714285714,
+    "max_branching": 4,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_77": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_78": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_79": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.4444444444444444,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_80": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_81": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 5,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_82": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_83": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_84": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 7,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_85": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_86": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.375,
+    "max_branching": 5,
+    "reuse": 0.95,
+    "modularity": 1.0
+  },
+  "tree_87": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_88": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_89": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_90": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 4,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_91": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_92": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_93": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_94": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_95": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_96": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_97": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_98": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_99": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 7,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_100": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_101": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_102": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_103": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_104": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_105": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 7,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_106": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 1.9,
+    "max_branching": 5,
+    "reuse": 0.9,
+    "modularity": 1.0
+  },
+  "tree_107": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_108": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_109": {
+    "depth": 4,
+    "size": 17,
+    "avg_branching": 2.6666666666666665,
+    "max_branching": 6,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_110": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_111": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_112": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_113": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_114": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 3.0,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_115": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_116": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_117": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_118": {
+    "depth": 4,
+    "size": 18,
+    "avg_branching": 2.8333333333333335,
+    "max_branching": 7,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_119": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 4,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_120": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8461538461538461,
+    "modularity": 0.5
+  },
+  "tree_121": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_122": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_123": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 1.9,
+    "max_branching": 5,
+    "reuse": 0.95,
+    "modularity": 1.0
+  },
+  "tree_124": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_125": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 6,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_126": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_127": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 4,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_128": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_129": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.5714285714285714,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_130": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_131": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 5,
+    "reuse": 0.8461538461538461,
+    "modularity": 0.5
+  },
+  "tree_132": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_133": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_134": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_135": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.375,
+    "max_branching": 5,
+    "reuse": 0.85,
+    "modularity": 0.5
+  },
+  "tree_136": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.111111111111111,
+    "max_branching": 4,
+    "reuse": 0.9,
+    "modularity": 0.5
+  },
+  "tree_137": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_138": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_139": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_140": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 5,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_141": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 2.6,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_142": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_143": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_144": {
+    "depth": 4,
+    "size": 15,
+    "avg_branching": 3.5,
+    "max_branching": 11,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.0
+  },
+  "tree_145": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_146": {
+    "depth": 4,
+    "size": 22,
+    "avg_branching": 3.0,
+    "max_branching": 9,
+    "reuse": 0.8636363636363636,
+    "modularity": 0.5
+  },
+  "tree_147": {
+    "depth": 4,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_148": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_149": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_150": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_151": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_152": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_153": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_154": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 6,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_155": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 1.8,
+    "max_branching": 4,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_156": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_157": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_158": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_159": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_160": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_161": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_162": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 4,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.0
+  },
+  "tree_163": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_164": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.0
+  },
+  "tree_165": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_166": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_167": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.6,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_168": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_169": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 6,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_170": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 5,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_171": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_172": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_173": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 6,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_174": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_175": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_176": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 8,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_177": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_178": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 8,
+    "reuse": 0.7894736842105263,
+    "modularity": 0.5
+  },
+  "tree_179": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 4,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_180": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_181": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_182": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_183": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_184": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_185": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_186": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 3,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_187": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_188": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_189": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_190": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 5,
+    "reuse": 0.7222222222222222,
+    "modularity": 0.5
+  },
+  "tree_191": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_192": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_193": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_194": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_195": {
+    "depth": 4,
+    "size": 20,
+    "avg_branching": 2.7142857142857144,
+    "max_branching": 6,
+    "reuse": 0.9,
+    "modularity": 0.5
+  },
+  "tree_196": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8235294117647058,
+    "modularity": 0.5
+  },
+  "tree_197": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_198": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 4,
+    "reuse": 0.8,
+    "modularity": 0.5
+  },
+  "tree_199": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_200": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_201": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.5
+  },
+  "tree_202": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_203": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 5,
+    "reuse": 0.8125,
+    "modularity": 0.5
+  },
+  "tree_204": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_205": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 6,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_206": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_207": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.6,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_208": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.6,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_209": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_210": {
+    "depth": 4,
+    "size": 20,
+    "avg_branching": 2.7142857142857144,
+    "max_branching": 6,
+    "reuse": 0.7,
+    "modularity": 0.5
+  },
+  "tree_211": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_212": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_213": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.5,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_214": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_215": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_216": {
+    "depth": 4,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_217": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_218": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_219": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 8,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_220": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 3.2,
+    "max_branching": 9,
+    "reuse": 0.7058823529411765,
+    "modularity": 0.5
+  },
+  "tree_221": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_222": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.8333333333333335,
+    "max_branching": 7,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_223": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_224": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 6,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_225": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_226": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_227": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 7,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_228": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_229": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9523809523809523,
+    "modularity": 1.0
+  },
+  "tree_230": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_231": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 2.6,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_232": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_233": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_234": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.5
+  },
+  "tree_235": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_236": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_237": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_238": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 4,
+    "reuse": 0.9090909090909091,
+    "modularity": 1.0
+  },
+  "tree_239": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_240": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_241": {
+    "depth": 4,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_242": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8461538461538461,
+    "modularity": 0.5
+  },
+  "tree_243": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_244": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_245": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_246": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_247": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_248": {
+    "depth": 4,
+    "size": 19,
+    "avg_branching": 2.5714285714285716,
+    "max_branching": 7,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_249": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.2222222222222223,
+    "max_branching": 5,
+    "reuse": 0.8095238095238095,
+    "modularity": 0.5
+  },
+  "tree_250": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_251": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_252": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_253": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 0.5
+  },
+  "tree_254": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_255": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 6,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_256": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_257": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_258": {
+    "depth": 5,
+    "size": 24,
+    "avg_branching": 2.090909090909091,
+    "max_branching": 6,
+    "reuse": 0.7916666666666666,
+    "modularity": 0.5
+  },
+  "tree_259": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_260": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.7647058823529411,
+    "modularity": 0.5
+  },
+  "tree_261": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_262": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_263": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.5555555555555556,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_264": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8947368421052632,
+    "modularity": 0.5
+  },
+  "tree_265": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_266": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_267": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_268": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.5555555555555556,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_269": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_270": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 4,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_271": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_272": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.4444444444444444,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.0
+  },
+  "tree_273": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 7,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_274": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_275": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_276": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_277": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_278": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 1.8,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_279": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_280": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 5,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_281": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_282": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 6,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_283": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_284": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_285": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8235294117647058,
+    "modularity": 0.5
+  },
+  "tree_286": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_287": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 4,
+    "reuse": 0.8235294117647058,
+    "modularity": 0.5
+  },
+  "tree_288": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 6,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_289": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_290": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.8333333333333335,
+    "max_branching": 7,
+    "reuse": 0.7222222222222222,
+    "modularity": 0.0
+  },
+  "tree_291": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 1.9,
+    "max_branching": 4,
+    "reuse": 0.95,
+    "modularity": 1.0
+  },
+  "tree_292": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 0.5
+  },
+  "tree_293": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_294": {
+    "depth": 5,
+    "size": 23,
+    "avg_branching": 2.75,
+    "max_branching": 7,
+    "reuse": 0.8260869565217391,
+    "modularity": 0.5
+  },
+  "tree_295": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_296": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_297": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_298": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_299": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 7,
+    "reuse": 0.7777777777777778,
+    "modularity": 0.5
+  },
+  "tree_300": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_301": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_302": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_303": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 7,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_304": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_305": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_306": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_307": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_308": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_309": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 4,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.0
+  },
+  "tree_310": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.5555555555555556,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_311": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.6,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_312": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_313": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_314": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 7,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_315": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_316": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_317": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_318": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 4,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_319": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_320": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_321": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_322": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_323": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_324": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 6,
+    "reuse": 0.8125,
+    "modularity": 0.5
+  },
+  "tree_325": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 5,
+    "reuse": 0.7777777777777778,
+    "modularity": 0.5
+  },
+  "tree_326": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_327": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_328": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_329": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_330": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_331": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 7,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_332": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_333": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 8,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.0
+  },
+  "tree_334": {
+    "depth": 5,
+    "size": 22,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 6,
+    "reuse": 0.9090909090909091,
+    "modularity": 0.5
+  },
+  "tree_335": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_336": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_337": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 7,
+    "reuse": 0.8571428571428571,
+    "modularity": 1.0
+  },
+  "tree_338": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_339": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_340": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 6,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_341": {
+    "depth": 4,
+    "size": 18,
+    "avg_branching": 3.4,
+    "max_branching": 6,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_342": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_343": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 8,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_344": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 4,
+    "reuse": 0.8461538461538461,
+    "modularity": 0.5
+  },
+  "tree_345": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_346": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_347": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.5714285714285714,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_348": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_349": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_350": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_351": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 6,
+    "reuse": 0.7894736842105263,
+    "modularity": 0.5
+  },
+  "tree_352": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 1.8181818181818181,
+    "max_branching": 4,
+    "reuse": 0.9047619047619048,
+    "modularity": 0.5
+  },
+  "tree_353": {
+    "depth": 5,
+    "size": 10,
+    "avg_branching": 1.5,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_354": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8095238095238095,
+    "modularity": 0.5
+  },
+  "tree_355": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 6,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_356": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 4,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_357": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_358": {
+    "depth": 4,
+    "size": 22,
+    "avg_branching": 3.0,
+    "max_branching": 10,
+    "reuse": 0.8181818181818182,
+    "modularity": 0.5
+  },
+  "tree_359": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_360": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 4,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_361": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_362": {
+    "depth": 4,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 6,
+    "reuse": 0.9333333333333333,
+    "modularity": 0.5
+  },
+  "tree_363": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_364": {
+    "depth": 5,
+    "size": 23,
+    "avg_branching": 2.4444444444444446,
+    "max_branching": 4,
+    "reuse": 0.782608695652174,
+    "modularity": 0.0
+  },
+  "tree_365": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_366": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 6,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_367": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_368": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_369": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_370": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.5555555555555556,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_371": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.375,
+    "max_branching": 8,
+    "reuse": 0.9,
+    "modularity": 0.5
+  },
+  "tree_372": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.7777777777777777,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_373": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_374": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_375": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_376": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_377": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.6,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_378": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.5,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_379": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_380": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_381": {
+    "depth": 5,
+    "size": 21,
+    "avg_branching": 2.5,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_382": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_383": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_384": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_385": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_386": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_387": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_388": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 6,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_389": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_390": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_391": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.25,
+    "max_branching": 6,
+    "reuse": 0.8421052631578947,
+    "modularity": 0.5
+  },
+  "tree_392": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_393": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_394": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 4,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_395": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_396": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 7,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_397": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_398": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.5714285714285714,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_399": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8,
+    "modularity": 0.5
+  },
+  "tree_400": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_401": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_402": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_403": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_404": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_405": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_406": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_407": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 4,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_408": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 2.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_409": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_410": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_411": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_412": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 6,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_413": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 7,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_414": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 6,
+    "reuse": 0.8235294117647058,
+    "modularity": 0.5
+  },
+  "tree_415": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_416": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 6,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_417": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_418": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_419": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_420": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8235294117647058,
+    "modularity": 0.5
+  },
+  "tree_421": {
+    "depth": 4,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_422": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.111111111111111,
+    "max_branching": 6,
+    "reuse": 0.85,
+    "modularity": 0.5
+  },
+  "tree_423": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 4,
+    "reuse": 0.875,
+    "modularity": 1.0
+  },
+  "tree_424": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_425": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_426": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_427": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_428": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_429": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_430": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 4,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_431": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_432": {
+    "depth": 4,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_433": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_434": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 2.1666666666666665,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_435": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_436": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_437": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_438": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.375,
+    "max_branching": 5,
+    "reuse": 0.95,
+    "modularity": 1.0
+  },
+  "tree_439": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_440": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_441": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_442": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_443": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_444": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 4,
+    "reuse": 0.8125,
+    "modularity": 0.5
+  },
+  "tree_445": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.8125,
+    "modularity": 0.5
+  },
+  "tree_446": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9230769230769231,
+    "modularity": 0.5
+  },
+  "tree_447": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9473684210526315,
+    "modularity": 1.0
+  },
+  "tree_448": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 5,
+    "reuse": 0.75,
+    "modularity": 0.5
+  },
+  "tree_449": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 6,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_450": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.6666666666666667,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_451": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.5555555555555556,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_452": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_453": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_454": {
+    "depth": 4,
+    "size": 12,
+    "avg_branching": 2.2,
+    "max_branching": 5,
+    "reuse": 0.9166666666666666,
+    "modularity": 0.5
+  },
+  "tree_455": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_456": {
+    "depth": 5,
+    "size": 12,
+    "avg_branching": 1.8333333333333333,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_457": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_458": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 4,
+    "reuse": 0.8571428571428571,
+    "modularity": 0.5
+  },
+  "tree_459": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.7,
+    "max_branching": 5,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_460": {
+    "depth": 5,
+    "size": 20,
+    "avg_branching": 2.111111111111111,
+    "max_branching": 7,
+    "reuse": 0.8,
+    "modularity": 0.5
+  },
+  "tree_461": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 6,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_462": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.4285714285714284,
+    "max_branching": 5,
+    "reuse": 0.8333333333333334,
+    "modularity": 0.5
+  },
+  "tree_463": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.5,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_464": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.3333333333333335,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_465": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 1.8888888888888888,
+    "max_branching": 6,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_466": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.125,
+    "max_branching": 5,
+    "reuse": 0.8888888888888888,
+    "modularity": 1.0
+  },
+  "tree_467": {
+    "depth": 4,
+    "size": 18,
+    "avg_branching": 2.8333333333333335,
+    "max_branching": 7,
+    "reuse": 0.8888888888888888,
+    "modularity": 0.5
+  },
+  "tree_468": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 5,
+    "reuse": 0.8666666666666667,
+    "modularity": 0.5
+  },
+  "tree_469": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 4,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_470": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 5,
+    "reuse": 0.9285714285714286,
+    "modularity": 1.0
+  },
+  "tree_471": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_472": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_473": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.8235294117647058,
+    "modularity": 0.5
+  },
+  "tree_474": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 1.875,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_475": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_476": {
+    "depth": 5,
+    "size": 18,
+    "avg_branching": 2.8333333333333335,
+    "max_branching": 8,
+    "reuse": 0.9444444444444444,
+    "modularity": 1.0
+  },
+  "tree_477": {
+    "depth": 5,
+    "size": 19,
+    "avg_branching": 2.0,
+    "max_branching": 7,
+    "reuse": 0.8947368421052632,
+    "modularity": 1.0
+  },
+  "tree_478": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_479": {
+    "depth": 5,
+    "size": 22,
+    "avg_branching": 2.1,
+    "max_branching": 7,
+    "reuse": 0.8636363636363636,
+    "modularity": 0.5
+  },
+  "tree_480": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.5,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_481": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.142857142857143,
+    "max_branching": 5,
+    "reuse": 0.9375,
+    "modularity": 1.0
+  },
+  "tree_482": {
+    "depth": 4,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 9,
+    "reuse": 0.8125,
+    "modularity": 0.5
+  },
+  "tree_483": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_484": {
+    "depth": 5,
+    "size": 11,
+    "avg_branching": 2.0,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_485": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_486": {
+    "depth": 5,
+    "size": 16,
+    "avg_branching": 2.5,
+    "max_branching": 4,
+    "reuse": 0.875,
+    "modularity": 0.5
+  },
+  "tree_487": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.7142857142857142,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_488": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 1.6,
+    "max_branching": 5,
+    "reuse": 0.9411764705882353,
+    "modularity": 1.0
+  },
+  "tree_489": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 1.5,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_490": {
+    "depth": 4,
+    "size": 13,
+    "avg_branching": 2.4,
+    "max_branching": 6,
+    "reuse": 0.9230769230769231,
+    "modularity": 1.0
+  },
+  "tree_491": {
+    "depth": 5,
+    "size": 15,
+    "avg_branching": 1.75,
+    "max_branching": 4,
+    "reuse": 0.9333333333333333,
+    "modularity": 1.0
+  },
+  "tree_492": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 4,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_493": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_494": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_495": {
+    "depth": 5,
+    "size": 17,
+    "avg_branching": 2.2857142857142856,
+    "max_branching": 8,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_496": {
+    "depth": 4,
+    "size": 17,
+    "avg_branching": 2.6666666666666665,
+    "max_branching": 5,
+    "reuse": 0.8823529411764706,
+    "modularity": 0.5
+  },
+  "tree_497": {
+    "depth": 4,
+    "size": 14,
+    "avg_branching": 1.8571428571428572,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_498": {
+    "depth": 5,
+    "size": 13,
+    "avg_branching": 2.0,
+    "max_branching": 5,
+    "reuse": 1.0,
+    "modularity": 1.0
+  },
+  "tree_499": {
+    "depth": 5,
+    "size": 14,
+    "avg_branching": 1.625,
+    "max_branching": 3,
+    "reuse": 1.0,
+    "modularity": 1.0
+  }
+}
