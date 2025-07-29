@@ -4,16 +4,16 @@
 CURR_DATE_TIME=$(date +%s)
 
 # Training configuration flags
-COMPILE_BATCH_SIZE=256
-COMPILE_BETA_B=0.1
-COMPILE_BETA_Z=0.01
+COMPILE_BATCH_SIZE=64
+COMPILE_BETA_B=1.0
+COMPILE_BETA_Z=0.1
 COMPILE_LR=0.0001
 COMPILE_PRIOR_RATE=10
-COMPILE_TRAIN_STEPS=5000
+COMPILE_TRAIN_STEPS=3000
 HIDDEN_SIZE=256
 
-ENVS="stone_pick_static_pixels_big"
-EXPERIMENT="compile_stone_pick_static_pixels_big_${CURR_DATE_TIME}"
+ENVS="stone_pick_random_pixels_big"
+EXPERIMENT="stone_pick_random_pixels_big"
 COMPILE_MAX_SEGS=8
 COMPILE_SKILLS=5
 
@@ -59,4 +59,4 @@ python main.py \
   --experiment "$EXPERIMENT" \
   --procs "$PROCS"
 
-echo "Training finished expected "
+echo "Training script done. Expected 0.35152"

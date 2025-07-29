@@ -2,7 +2,7 @@
 
 ### MODE & EXPERIMENT ###
 MODE="IL"
-EXPERIMENT="ignore"
+EXPERIMENT="mixed_static_pixels_big"
 ENVS="mixed_static_pixels_big"
 ENV_ARCH="noenv"
 
@@ -79,4 +79,4 @@ python main.py \
   $CUDA_FLAG \
   $MINECRAFT_FLAG
 
-
+echo "Training script done. Expected 0.53"

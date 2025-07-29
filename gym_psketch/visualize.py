@@ -167,7 +167,7 @@ def predicted_data_to_hierarchical_tree(actions, boundaries, binary=False):
         return []
     
     # Convert actions to vocabulary strings
-    action_strs = [ACTION_VOCAB[idx] if idx < len(ACTION_VOCAB) else f"act_{idx}" for idx in actions]
+    action_strs = [ACTION_VOCAB[idx] if idx < len(ACTION_VOCAB) else f"{idx}" for idx in actions]
     
     if len(boundaries) == 0:
         # No boundaries, return flat structure

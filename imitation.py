@@ -399,26 +399,28 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
             depths = np.digitize(depths.cpu().numpy(), np.linspace(0, 1, 5))
             
             # Convert actions to vocabulary strings
-            action_strs = [f"act_{idx}" for idx in actions_cpu.squeeze()]
+            action_strs = [idx for idx in actions_cpu.squeeze()]
             
             # Use distance2ctree with depth information
-            pred_tree = distance2ctree(depths, action_strs, binary=False)
+            # pred_tree = distance2ctree(depths, action_strs, binary=False)
+            pred_tree = predicted_data_to_hierarchical_tree(_action, predicted)
             tree_str = tree_to_str(pred_tree)
+            # print(f"{'Predicted Tree:':20} {tree_str}")
 
-            # Generate tree representation from ground truth data using same approach
-            # For ground truth, we'll use the predicted boundaries to create depth info
-            gt_depths = np.zeros(len(actions_cpu.squeeze()) - 1)
-            for boundary in gt_segments:
-                if boundary < len(gt_depths):
-                    gt_depths[boundary-1] = 1  # High depth at boundaries
+            # # Generate tree representation from ground truth data using same approach
+            # # For ground truth, we'll use the predicted boundaries to create depth info
+            # gt_depths = np.zeros(len(actions_cpu.squeeze()) - 1)
+            # for boundary in gt_segments:
+            #     if boundary < len(gt_depths):
+            #         gt_depths[boundary-1] = 1  # High depth at boundaries
             
-            # Normalize and discretize like the original approach
-            if gt_depths.max() > gt_depths.min():
-                gt_depths = (gt_depths - gt_depths.min()) / (gt_depths.max() - gt_depths.min())
-            gt_depths = np.digitize(gt_depths, np.linspace(0, 1, 5))
+            # # Normalize and discretize like the original approach
+            # if gt_depths.max() > gt_depths.min():
+            #     gt_depths = (gt_depths - gt_depths.min()) / (gt_depths.max() - gt_depths.min())
+            # gt_depths = np.digitize(gt_depths, np.linspace(0, 1, 5))
             
-            gt_tree = distance2ctree(gt_depths, action_strs, binary=False)
-            gt_tree_str = tree_to_str(gt_tree)
+            # gt_tree = distance2ctree(gt_depths, action_strs, binary=False)
+            gt_tree_str = ""
 
             if not FLAGS.debug:
                 print(f"{'Predicted Tree:':20} {tree_str}")

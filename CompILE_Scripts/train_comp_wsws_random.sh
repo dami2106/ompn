@@ -13,16 +13,16 @@ COMPILE_TRAIN_STEPS=3000
 HIDDEN_SIZE=128
 
 ENVS="wsws_random_pixels_big"
-EXPERIMENT="wsws_random_pixels_big_${CURR_DATE_TIME}"
+EXPERIMENT="wsws_random_pixels_big"
 COMPILE_MAX_SEGS=4
 COMPILE_SKILLS=2
 
-STATE_SIZE=512
+STATE_SIZE=650
 ACTION_SIZE=16
 COMPILE_EVAL_FREQ=10
 
 # Misc
-DEBUG=true
+DEBUG=false
 MODE="compile"
 CUDA=true
 PROCS=8
@@ -59,4 +59,4 @@ python main.py \
   --experiment "$EXPERIMENT" \
   --procs "$PROCS"
 
-echo "Training finished expected 0.72932"
+echo "Training script done. Expected 0.75974"

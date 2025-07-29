@@ -44,7 +44,7 @@
 --env_arch=noenv
 --envs=mixed_static_pixels_big
 --eval_episodes=30
---experiment=mixed_static_pixels_big_1
+--experiment=mixed_static_pixels_big
 --height=10
 --hidden_size=128
 --max_steps=64

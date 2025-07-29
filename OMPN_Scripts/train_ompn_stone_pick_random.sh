@@ -79,4 +79,5 @@ python main.py \
   $CUDA_FLAG \
   $MINECRAFT_FLAG
 
+echo "Training script done. Expected 0.24548"
 
