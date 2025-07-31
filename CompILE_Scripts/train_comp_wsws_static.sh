@@ -57,7 +57,8 @@ python main.py \
   --envs "$ENVS" \
   --hidden_size "$HIDDEN_SIZE" \
   --experiment "$EXPERIMENT" \
-  --procs "$PROCS"
+  --procs "$PROCS"\
+  --seed 10
 
 
 echo "Training script done. Expected 0.61800"

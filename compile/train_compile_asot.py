@@ -40,11 +40,7 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 
-# random.seed(0)
-np.random.seed(0)
-torch.manual_seed(0)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(0)
+
 
 def get_subtask_ordering(truths, boundaries):
     segment_labels = []
@@ -60,6 +56,11 @@ def get_subtask_ordering(truths, boundaries):
     return segment_labels
 
 def main(training_folder):
+    # random.seed(0)
+    np.random.seed(FLAGS.SEED)
+    torch.manual_seed(FLAGS.SEED)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(FLAGS.SEED)
     print('Start compile...')
     n_feature, action_size = FLAGS.compile_state_size, FLAGS.compile_action_size
     model = compile.CompILE(vec_size=n_feature,

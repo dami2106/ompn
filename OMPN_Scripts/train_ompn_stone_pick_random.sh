@@ -77,7 +77,8 @@ python main.py \
   --il_lr "$IL_LR" \
   --il_clip "$IL_CLIP" \
   $CUDA_FLAG \
-  $MINECRAFT_FLAG
+  $MINECRAFT_FLAG\
+  --seed 12
 
 echo "Training script done. Expected 0.24548"
 

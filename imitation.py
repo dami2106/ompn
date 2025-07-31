@@ -28,11 +28,7 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 
-random.seed(0)
-np.random.seed(0)
-torch.manual_seed(0)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(0)
+
 
 FLAGS = flags.FLAGS
 
@@ -56,6 +52,8 @@ flags.DEFINE_integer('il_batch_size', default=128,
 flags.DEFINE_integer('il_recurrence', default=30, help='bptt length')
 flags.DEFINE_float('il_lr', default=5e-4, help="Learning rate")
 flags.DEFINE_float('il_clip', default=0.2, help='RNN clip')
+
+
 
 
 def get_subtask_ordering(truths, boundaries):
@@ -526,6 +524,11 @@ def main_loop(bot, dataloader, opt, training_folder, test_dataloader=None):
 
 def run(training_folder):
     print('Start IL...')
+    random.seed(FLAGS.seed)
+    np.random.seed(FLAGS.seed)
+    torch.manual_seed(FLAGS.seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(FLAGS.seed)
     # first_env = gym.make(FLAGS.envs[0])
     # n_feature, action_size = first_env.n_features, first_env.n_actions
     # n_feature, action_size = 650, 18
@@ -551,12 +554,6 @@ def run(training_folder):
     dataloader = Dataloader(FLAGS.envs, FLAGS.il_val_ratio)
     print('Dataloader: {}'.format(dataloader))
 
-    # Set random seeds for reproducibility
-    random.seed(0)
-    np.random.seed(0)
-    torch.manual_seed(0)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(0)
 
     try:
         print('Start training')

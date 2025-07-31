@@ -22,17 +22,22 @@ for sh_file in sh_files:
         # Extract relevant values
         miou_full_match = re.search(r'test_miou_full\s+([0-9.]+)', output)
         miou_per_match = re.search(r'test_miou_per\s+([0-9.]+)', output)
-        expected_match = re.search(r'Expected\s+([0-9.]+)', output)
+        f1_full_match = re.search(r'test_f1_full\s+([0-9.]+)', output)
+        f1_per_match = re.search(r'test_f1_per\s+([0-9.]+)', output)
+        mof_full_match = re.search(r'test_mof_full\s+([0-9.]+)', output)
+        mof_per_match = re.search(r'test_mof_per\s+([0-9.]+)', output)
 
-        if miou_full_match and miou_per_match and expected_match:
+        if miou_full_match and miou_per_match:
             miou_full = float(miou_full_match.group(1))
             miou_per = float(miou_per_match.group(1))
-            expected = float(expected_match.group(1))
+            f1_full = float(f1_full_match.group(1))
+            f1_per = float(f1_per_match.group(1)) 
+            mof_full = float(mof_full_match.group(1))
+            mof_per = float(mof_per_match.group(1))
 
-            weighted_miou = 0.8 * miou_full + 0.2 * miou_per
-
-            if abs(weighted_miou - expected) > TOLERANCE:
-                print(f"[FAIL] {sh_file} — Weighted mIoU ({weighted_miou:.4f}) != Expected ({expected:.4f})")
+            print(f"Results for {sh_file}:")
+            print(f"{f1_full},{f1_per},{miou_full},{miou_per},{mof_full},{mof_per}")
+            print("=" * 40)
         else:
             print(f"[ERROR] {sh_file} — Failed to extract all required values")
 

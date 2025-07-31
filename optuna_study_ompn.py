@@ -14,11 +14,7 @@ import torch
 
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
-random.seed(0)
-np.random.seed(0)
-torch.manual_seed(0)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(0)
+
 
 def save_study_progress(study, save_dir, task):
     """Saves the study results to a CSV file and the study object to a pickle file."""
@@ -135,12 +131,7 @@ if __name__ == "__main__":
     # print(f"Max segments: {args.max_segs}")
     # print(f"Skills: {args.skills}")
 
-    # Set random seeds for reproducibility
-    random.seed(0)
-    np.random.seed(0)
-    torch.manual_seed(0)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(0)
+
 
     study.optimize(
         lambda trial: objective(trial, args),

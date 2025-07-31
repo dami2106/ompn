@@ -18,11 +18,7 @@ import generate_demo as demo
 from taco import train_taco
 from compile import train_compile_asot
 
-random.seed(0)
-# np.random.seed(0)
-torch.manual_seed(0)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(0)
+
 
 FLAGS = flags.FLAGS
 flags.DEFINE_list('envs', default=['makebedfull-v0'], help='List of env to train. Use comma spearated')
@@ -52,6 +48,7 @@ flags.DEFINE_enum('mode', default='IL', enum_values=['IL', 'demo', 'compile',
 flags.DEFINE_string('experiment', default=None, help='Name of experiment')
 flags.DEFINE_bool('cuda', default=True, help='Use cuda')
 flags.DEFINE_integer('procs', default=4, help='Number of process')
+flags.DEFINE_integer('seed', default=0, help='SEED')
 
 
 flags.DEFINE_bool('minecraft', default=False, help='Whether or not to use minecraft loading')
@@ -143,6 +140,11 @@ def main(_):
 
 if __name__ == '__main__':
     FLAGS(sys.argv)
+
+    random.seed(FLAGS.seed)
+    torch.manual_seed(FLAGS.seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(FLAGS.seed)
 
     print("\nFlags:")
     for flag_name in FLAGS:
