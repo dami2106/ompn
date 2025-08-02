@@ -13,7 +13,7 @@ COMPILE_TRAIN_STEPS=5000
 HIDDEN_SIZE=256
 
 ENVS="stone_pick_static_pixels_big"
-EXPERIMENT="stone_pick_static_pixels_big"
+EXPERIMENT="stone_pick_static_pixels_big_42"
 COMPILE_MAX_SEGS=8
 COMPILE_SKILLS=5
 
@@ -58,6 +58,6 @@ python main.py \
   --hidden_size "$HIDDEN_SIZE" \
   --experiment "$EXPERIMENT" \
   --procs "$PROCS"\
-  --seed 10
+  --seed 42
 
 echo "Training script done. Expected 0.27690"

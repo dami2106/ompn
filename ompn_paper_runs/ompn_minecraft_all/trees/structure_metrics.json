@@ -1,0 +1,4002 @@
+{
+  "tree_0": {
+    "depth": 5,
+    "size": 91,
+    "avg_branching": 6.923076923076923,
+    "max_branching": 34,
+    "reuse": 0.6263736263736264,
+    "modularity": 0.0
+  },
+  "tree_1": {
+    "depth": 5,
+    "size": 91,
+    "avg_branching": 5.625,
+    "max_branching": 31,
+    "reuse": 0.5934065934065934,
+    "modularity": 0.0
+  },
+  "tree_2": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 8.142857142857142,
+    "max_branching": 49,
+    "reuse": 0.43478260869565216,
+    "modularity": 0.0
+  },
+  "tree_3": {
+    "depth": 5,
+    "size": 124,
+    "avg_branching": 7.6875,
+    "max_branching": 53,
+    "reuse": 0.45161290322580644,
+    "modularity": 0.0
+  },
+  "tree_4": {
+    "depth": 5,
+    "size": 90,
+    "avg_branching": 6.846153846153846,
+    "max_branching": 36,
+    "reuse": 0.6333333333333333,
+    "modularity": 0.0
+  },
+  "tree_5": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.076923076923077,
+    "max_branching": 49,
+    "reuse": 0.453781512605042,
+    "modularity": 0.0
+  },
+  "tree_6": {
+    "depth": 5,
+    "size": 91,
+    "avg_branching": 6.0,
+    "max_branching": 33,
+    "reuse": 0.6043956043956044,
+    "modularity": 0.0
+  },
+  "tree_7": {
+    "depth": 4,
+    "size": 118,
+    "avg_branching": 11.7,
+    "max_branching": 60,
+    "reuse": 0.5084745762711864,
+    "modularity": 0.0
+  },
+  "tree_8": {
+    "depth": 5,
+    "size": 135,
+    "avg_branching": 7.052631578947368,
+    "max_branching": 59,
+    "reuse": 0.4148148148148148,
+    "modularity": 0.0
+  },
+  "tree_9": {
+    "depth": 4,
+    "size": 108,
+    "avg_branching": 7.642857142857143,
+    "max_branching": 30,
+    "reuse": 0.49074074074074076,
+    "modularity": 0.0
+  },
+  "tree_10": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 8.142857142857142,
+    "max_branching": 48,
+    "reuse": 0.40869565217391307,
+    "modularity": 0.0
+  },
+  "tree_11": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 5.105263157894737,
+    "max_branching": 19,
+    "reuse": 0.5510204081632653,
+    "modularity": 0.0
+  },
+  "tree_12": {
+    "depth": 5,
+    "size": 94,
+    "avg_branching": 7.75,
+    "max_branching": 35,
+    "reuse": 0.5531914893617021,
+    "modularity": 0.0
+  },
+  "tree_13": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 7.8125,
+    "max_branching": 51,
+    "reuse": 0.42857142857142855,
+    "modularity": 0.0
+  },
+  "tree_14": {
+    "depth": 4,
+    "size": 107,
+    "avg_branching": 6.625,
+    "max_branching": 32,
+    "reuse": 0.48598130841121495,
+    "modularity": 0.0
+  },
+  "tree_15": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 8.583333333333334,
+    "max_branching": 51,
+    "reuse": 0.46153846153846156,
+    "modularity": 0.0
+  },
+  "tree_16": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 9.642857142857142,
+    "max_branching": 62,
+    "reuse": 0.4485294117647059,
+    "modularity": 0.0
+  },
+  "tree_17": {
+    "depth": 5,
+    "size": 93,
+    "avg_branching": 6.571428571428571,
+    "max_branching": 35,
+    "reuse": 0.5483870967741935,
+    "modularity": 0.0
+  },
+  "tree_18": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 8.071428571428571,
+    "max_branching": 51,
+    "reuse": 0.42105263157894735,
+    "modularity": 0.0
+  },
+  "tree_19": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 6.733333333333333,
+    "max_branching": 49,
+    "reuse": 0.5686274509803921,
+    "modularity": 0.0
+  },
+  "tree_20": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 6.1875,
+    "max_branching": 38,
+    "reuse": 0.56,
+    "modularity": 0.0
+  },
+  "tree_21": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 9.416666666666666,
+    "max_branching": 32,
+    "reuse": 0.43859649122807015,
+    "modularity": 0.0
+  },
+  "tree_22": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 9.071428571428571,
+    "max_branching": 58,
+    "reuse": 0.375,
+    "modularity": 0.0
+  },
+  "tree_23": {
+    "depth": 5,
+    "size": 124,
+    "avg_branching": 8.2,
+    "max_branching": 60,
+    "reuse": 0.47580645161290325,
+    "modularity": 0.0
+  },
+  "tree_24": {
+    "depth": 4,
+    "size": 113,
+    "avg_branching": 7.466666666666667,
+    "max_branching": 44,
+    "reuse": 0.5309734513274337,
+    "modularity": 0.0
+  },
+  "tree_25": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 7.066666666666666,
+    "max_branching": 30,
+    "reuse": 0.5233644859813084,
+    "modularity": 0.0
+  },
+  "tree_26": {
+    "depth": 4,
+    "size": 114,
+    "avg_branching": 8.692307692307692,
+    "max_branching": 32,
+    "reuse": 0.45614035087719296,
+    "modularity": 0.0
+  },
+  "tree_27": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 8.692307692307692,
+    "max_branching": 45,
+    "reuse": 0.5350877192982456,
+    "modularity": 0.0
+  },
+  "tree_28": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.5,
+    "max_branching": 37,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_29": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 8.76923076923077,
+    "max_branching": 51,
+    "reuse": 0.43478260869565216,
+    "modularity": 0.0
+  },
+  "tree_30": {
+    "depth": 4,
+    "size": 102,
+    "avg_branching": 8.416666666666666,
+    "max_branching": 28,
+    "reuse": 0.38235294117647056,
+    "modularity": 0.0
+  },
+  "tree_31": {
+    "depth": 4,
+    "size": 111,
+    "avg_branching": 10.0,
+    "max_branching": 51,
+    "reuse": 0.45045045045045046,
+    "modularity": 0.0
+  },
+  "tree_32": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 5.619047619047619,
+    "max_branching": 43,
+    "reuse": 0.5546218487394958,
+    "modularity": 0.0
+  },
+  "tree_33": {
+    "depth": 5,
+    "size": 95,
+    "avg_branching": 5.529411764705882,
+    "max_branching": 23,
+    "reuse": 0.5052631578947369,
+    "modularity": 0.0
+  },
+  "tree_34": {
+    "depth": 5,
+    "size": 124,
+    "avg_branching": 7.235294117647059,
+    "max_branching": 31,
+    "reuse": 0.45161290322580644,
+    "modularity": 0.0
+  },
+  "tree_35": {
+    "depth": 5,
+    "size": 96,
+    "avg_branching": 6.333333333333333,
+    "max_branching": 34,
+    "reuse": 0.5729166666666666,
+    "modularity": 0.0
+  },
+  "tree_36": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 8.23076923076923,
+    "max_branching": 41,
+    "reuse": 0.5092592592592593,
+    "modularity": 0.0
+  },
+  "tree_37": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 7.0,
+    "max_branching": 42,
+    "reuse": 0.5486725663716814,
+    "modularity": 0.0
+  },
+  "tree_38": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 6.647058823529412,
+    "max_branching": 25,
+    "reuse": 0.45614035087719296,
+    "modularity": 0.0
+  },
+  "tree_39": {
+    "depth": 5,
+    "size": 132,
+    "avg_branching": 7.277777777777778,
+    "max_branching": 48,
+    "reuse": 0.4166666666666667,
+    "modularity": 0.0
+  },
+  "tree_40": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 8.615384615384615,
+    "max_branching": 51,
+    "reuse": 0.40707964601769914,
+    "modularity": 0.0
+  },
+  "tree_41": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 10.153846153846153,
+    "max_branching": 63,
+    "reuse": 0.43609022556390975,
+    "modularity": 0.0
+  },
+  "tree_42": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 8.692307692307692,
+    "max_branching": 54,
+    "reuse": 0.4298245614035088,
+    "modularity": 0.0
+  },
+  "tree_43": {
+    "depth": 5,
+    "size": 130,
+    "avg_branching": 6.7894736842105265,
+    "max_branching": 55,
+    "reuse": 0.4230769230769231,
+    "modularity": 0.0
+  },
+  "tree_44": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 8.23076923076923,
+    "max_branching": 51,
+    "reuse": 0.5092592592592593,
+    "modularity": 0.0
+  },
+  "tree_45": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.642857142857143,
+    "max_branching": 32,
+    "reuse": 0.46296296296296297,
+    "modularity": 0.0
+  },
+  "tree_46": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 10.454545454545455,
+    "max_branching": 51,
+    "reuse": 0.4051724137931034,
+    "modularity": 0.0
+  },
+  "tree_47": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 6.823529411764706,
+    "max_branching": 30,
+    "reuse": 0.5470085470085471,
+    "modularity": 0.0
+  },
+  "tree_48": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 6.235294117647059,
+    "max_branching": 39,
+    "reuse": 0.5514018691588785,
+    "modularity": 0.0
+  },
+  "tree_49": {
+    "depth": 4,
+    "size": 112,
+    "avg_branching": 9.25,
+    "max_branching": 35,
+    "reuse": 0.4375,
+    "modularity": 0.0
+  },
+  "tree_50": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 6.722222222222222,
+    "max_branching": 31,
+    "reuse": 0.45081967213114754,
+    "modularity": 0.0
+  },
+  "tree_51": {
+    "depth": 5,
+    "size": 124,
+    "avg_branching": 6.15,
+    "max_branching": 62,
+    "reuse": 0.47580645161290325,
+    "modularity": 0.0
+  },
+  "tree_52": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 8.25,
+    "max_branching": 59,
+    "reuse": 0.43609022556390975,
+    "modularity": 0.0
+  },
+  "tree_53": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 6.684210526315789,
+    "max_branching": 38,
+    "reuse": 0.453125,
+    "modularity": 0.0
+  },
+  "tree_54": {
+    "depth": 4,
+    "size": 121,
+    "avg_branching": 8.0,
+    "max_branching": 47,
+    "reuse": 0.5041322314049587,
+    "modularity": 0.0
+  },
+  "tree_55": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 6.9411764705882355,
+    "max_branching": 30,
+    "reuse": 0.42857142857142855,
+    "modularity": 0.0
+  },
+  "tree_56": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.4375,
+    "max_branching": 40,
+    "reuse": 0.4666666666666667,
+    "modularity": 0.0
+  },
+  "tree_57": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 10.416666666666666,
+    "max_branching": 56,
+    "reuse": 0.47619047619047616,
+    "modularity": 0.0
+  },
+  "tree_58": {
+    "depth": 5,
+    "size": 150,
+    "avg_branching": 8.277777777777779,
+    "max_branching": 47,
+    "reuse": 0.4533333333333333,
+    "modularity": 0.0
+  },
+  "tree_59": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 7.928571428571429,
+    "max_branching": 38,
+    "reuse": 0.5357142857142857,
+    "modularity": 0.0
+  },
+  "tree_60": {
+    "depth": 4,
+    "size": 116,
+    "avg_branching": 7.1875,
+    "max_branching": 37,
+    "reuse": 0.5258620689655172,
+    "modularity": 0.0
+  },
+  "tree_61": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 5.666666666666667,
+    "max_branching": 27,
+    "reuse": 0.5242718446601942,
+    "modularity": 0.0
+  },
+  "tree_62": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 6.9375,
+    "max_branching": 38,
+    "reuse": 0.5892857142857143,
+    "modularity": 0.0
+  },
+  "tree_63": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 9.333333333333334,
+    "max_branching": 53,
+    "reuse": 0.5221238938053098,
+    "modularity": 0.0
+  },
+  "tree_64": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 9.333333333333334,
+    "max_branching": 48,
+    "reuse": 0.4690265486725664,
+    "modularity": 0.0
+  },
+  "tree_65": {
+    "depth": 4,
+    "size": 140,
+    "avg_branching": 7.315789473684211,
+    "max_branching": 48,
+    "reuse": 0.4142857142857143,
+    "modularity": 0.0
+  },
+  "tree_66": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 8.076923076923077,
+    "max_branching": 31,
+    "reuse": 0.5094339622641509,
+    "modularity": 0.0
+  },
+  "tree_67": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 8.461538461538462,
+    "max_branching": 50,
+    "reuse": 0.46846846846846846,
+    "modularity": 0.0
+  },
+  "tree_68": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 7.466666666666667,
+    "max_branching": 42,
+    "reuse": 0.49557522123893805,
+    "modularity": 0.0
+  },
+  "tree_69": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 7.846153846153846,
+    "max_branching": 38,
+    "reuse": 0.4854368932038835,
+    "modularity": 0.0
+  },
+  "tree_70": {
+    "depth": 4,
+    "size": 122,
+    "avg_branching": 8.066666666666666,
+    "max_branching": 28,
+    "reuse": 0.4098360655737705,
+    "modularity": 0.0
+  },
+  "tree_71": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.0,
+    "max_branching": 35,
+    "reuse": 0.5083333333333333,
+    "modularity": 0.0
+  },
+  "tree_72": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 5.555555555555555,
+    "max_branching": 39,
+    "reuse": 0.5346534653465347,
+    "modularity": 0.0
+  },
+  "tree_73": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 9.083333333333334,
+    "max_branching": 57,
+    "reuse": 0.43636363636363634,
+    "modularity": 0.0
+  },
+  "tree_74": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 6.0,
+    "max_branching": 44,
+    "reuse": 0.5728155339805825,
+    "modularity": 0.0
+  },
+  "tree_75": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 7.461538461538462,
+    "max_branching": 44,
+    "reuse": 0.4489795918367347,
+    "modularity": 0.0
+  },
+  "tree_76": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 6.529411764705882,
+    "max_branching": 30,
+    "reuse": 0.5089285714285714,
+    "modularity": 0.0
+  },
+  "tree_77": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 10.181818181818182,
+    "max_branching": 50,
+    "reuse": 0.4336283185840708,
+    "modularity": 0.0
+  },
+  "tree_78": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 9.071428571428571,
+    "max_branching": 61,
+    "reuse": 0.4453125,
+    "modularity": 0.0
+  },
+  "tree_79": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 6.8125,
+    "max_branching": 26,
+    "reuse": 0.5454545454545454,
+    "modularity": 0.0
+  },
+  "tree_80": {
+    "depth": 4,
+    "size": 118,
+    "avg_branching": 9.75,
+    "max_branching": 52,
+    "reuse": 0.3983050847457627,
+    "modularity": 0.0
+  },
+  "tree_81": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 7.8125,
+    "max_branching": 45,
+    "reuse": 0.4523809523809524,
+    "modularity": 0.0
+  },
+  "tree_82": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 8.357142857142858,
+    "max_branching": 40,
+    "reuse": 0.4576271186440678,
+    "modularity": 0.0
+  },
+  "tree_83": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 9.0,
+    "max_branching": 34,
+    "reuse": 0.44036697247706424,
+    "modularity": 0.0
+  },
+  "tree_84": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.642857142857143,
+    "max_branching": 35,
+    "reuse": 0.5185185185185185,
+    "modularity": 0.0
+  },
+  "tree_85": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 8.0,
+    "max_branching": 32,
+    "reuse": 0.49586776859504134,
+    "modularity": 0.0
+  },
+  "tree_86": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 9.0,
+    "max_branching": 54,
+    "reuse": 0.35294117647058826,
+    "modularity": 0.0
+  },
+  "tree_87": {
+    "depth": 5,
+    "size": 141,
+    "avg_branching": 10.0,
+    "max_branching": 46,
+    "reuse": 0.3475177304964539,
+    "modularity": 0.0
+  },
+  "tree_88": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 10.153846153846153,
+    "max_branching": 54,
+    "reuse": 0.42857142857142855,
+    "modularity": 0.0
+  },
+  "tree_89": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 8.571428571428571,
+    "max_branching": 56,
+    "reuse": 0.47107438016528924,
+    "modularity": 0.0
+  },
+  "tree_90": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 11.0,
+    "max_branching": 76,
+    "reuse": 0.38345864661654133,
+    "modularity": 0.0
+  },
+  "tree_91": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 9.909090909090908,
+    "max_branching": 56,
+    "reuse": 0.4636363636363636,
+    "modularity": 0.0
+  },
+  "tree_92": {
+    "depth": 5,
+    "size": 131,
+    "avg_branching": 7.222222222222222,
+    "max_branching": 32,
+    "reuse": 0.3816793893129771,
+    "modularity": 0.0
+  },
+  "tree_93": {
+    "depth": 5,
+    "size": 124,
+    "avg_branching": 6.473684210526316,
+    "max_branching": 46,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_94": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 7.615384615384615,
+    "max_branching": 44,
+    "reuse": 0.4,
+    "modularity": 0.0
+  },
+  "tree_95": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 8.0,
+    "max_branching": 54,
+    "reuse": 0.4573643410852713,
+    "modularity": 0.0
+  },
+  "tree_96": {
+    "depth": 4,
+    "size": 79,
+    "avg_branching": 7.8,
+    "max_branching": 35,
+    "reuse": 0.6075949367088608,
+    "modularity": 0.0
+  },
+  "tree_97": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 7.928571428571429,
+    "max_branching": 54,
+    "reuse": 0.42857142857142855,
+    "modularity": 0.0
+  },
+  "tree_98": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 8.818181818181818,
+    "max_branching": 38,
+    "reuse": 0.5204081632653061,
+    "modularity": 0.0
+  },
+  "tree_99": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 7.357142857142857,
+    "max_branching": 39,
+    "reuse": 0.46153846153846156,
+    "modularity": 0.0
+  },
+  "tree_100": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 7.466666666666667,
+    "max_branching": 47,
+    "reuse": 0.4336283185840708,
+    "modularity": 0.0
+  },
+  "tree_101": {
+    "depth": 5,
+    "size": 92,
+    "avg_branching": 7.583333333333333,
+    "max_branching": 38,
+    "reuse": 0.5978260869565217,
+    "modularity": 0.0
+  },
+  "tree_102": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 8.928571428571429,
+    "max_branching": 57,
+    "reuse": 0.36507936507936506,
+    "modularity": 0.0
+  },
+  "tree_103": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.0,
+    "max_branching": 42,
+    "reuse": 0.5094339622641509,
+    "modularity": 0.0
+  },
+  "tree_104": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 8.857142857142858,
+    "max_branching": 57,
+    "reuse": 0.424,
+    "modularity": 0.0
+  },
+  "tree_105": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.076923076923077,
+    "max_branching": 44,
+    "reuse": 0.4117647058823529,
+    "modularity": 0.0
+  },
+  "tree_106": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 8.428571428571429,
+    "max_branching": 41,
+    "reuse": 0.4369747899159664,
+    "modularity": 0.0
+  },
+  "tree_107": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 6.9375,
+    "max_branching": 45,
+    "reuse": 0.5178571428571429,
+    "modularity": 0.0
+  },
+  "tree_108": {
+    "depth": 4,
+    "size": 99,
+    "avg_branching": 9.8,
+    "max_branching": 35,
+    "reuse": 0.45454545454545453,
+    "modularity": 0.0
+  },
+  "tree_109": {
+    "depth": 5,
+    "size": 96,
+    "avg_branching": 5.9375,
+    "max_branching": 35,
+    "reuse": 0.5104166666666666,
+    "modularity": 0.0
+  },
+  "tree_110": {
+    "depth": 5,
+    "size": 127,
+    "avg_branching": 9.0,
+    "max_branching": 43,
+    "reuse": 0.4330708661417323,
+    "modularity": 0.0
+  },
+  "tree_111": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 6.470588235294118,
+    "max_branching": 50,
+    "reuse": 0.4864864864864865,
+    "modularity": 0.0
+  },
+  "tree_112": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 9.583333333333334,
+    "max_branching": 50,
+    "reuse": 0.4051724137931034,
+    "modularity": 0.0
+  },
+  "tree_113": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 11.090909090909092,
+    "max_branching": 53,
+    "reuse": 0.4146341463414634,
+    "modularity": 0.0
+  },
+  "tree_114": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 6.928571428571429,
+    "max_branching": 37,
+    "reuse": 0.5204081632653061,
+    "modularity": 0.0
+  },
+  "tree_115": {
+    "depth": 5,
+    "size": 134,
+    "avg_branching": 8.866666666666667,
+    "max_branching": 56,
+    "reuse": 0.44029850746268656,
+    "modularity": 0.0
+  },
+  "tree_116": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 8.428571428571429,
+    "max_branching": 54,
+    "reuse": 0.46218487394957986,
+    "modularity": 0.0
+  },
+  "tree_117": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 8.0,
+    "max_branching": 43,
+    "reuse": 0.5132743362831859,
+    "modularity": 0.0
+  },
+  "tree_118": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 7.266666666666667,
+    "max_branching": 52,
+    "reuse": 0.42727272727272725,
+    "modularity": 0.0
+  },
+  "tree_119": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 8.357142857142858,
+    "max_branching": 48,
+    "reuse": 0.423728813559322,
+    "modularity": 0.0
+  },
+  "tree_120": {
+    "depth": 5,
+    "size": 139,
+    "avg_branching": 9.2,
+    "max_branching": 43,
+    "reuse": 0.4244604316546763,
+    "modularity": 0.0
+  },
+  "tree_121": {
+    "depth": 5,
+    "size": 84,
+    "avg_branching": 6.384615384615385,
+    "max_branching": 34,
+    "reuse": 0.5952380952380952,
+    "modularity": 0.0
+  },
+  "tree_122": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 6.611111111111111,
+    "max_branching": 45,
+    "reuse": 0.49166666666666664,
+    "modularity": 0.0
+  },
+  "tree_123": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 6.866666666666666,
+    "max_branching": 31,
+    "reuse": 0.49038461538461536,
+    "modularity": 0.0
+  },
+  "tree_124": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 7.8,
+    "max_branching": 37,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_125": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.076923076923077,
+    "max_branching": 65,
+    "reuse": 0.48739495798319327,
+    "modularity": 0.0
+  },
+  "tree_126": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.076923076923077,
+    "max_branching": 54,
+    "reuse": 0.42857142857142855,
+    "modularity": 0.0
+  },
+  "tree_127": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 9.8,
+    "max_branching": 41,
+    "reuse": 0.494949494949495,
+    "modularity": 0.0
+  },
+  "tree_128": {
+    "depth": 5,
+    "size": 135,
+    "avg_branching": 8.375,
+    "max_branching": 42,
+    "reuse": 0.4074074074074074,
+    "modularity": 0.0
+  },
+  "tree_129": {
+    "depth": 5,
+    "size": 151,
+    "avg_branching": 10.0,
+    "max_branching": 48,
+    "reuse": 0.39072847682119205,
+    "modularity": 0.0
+  },
+  "tree_130": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 6.625,
+    "max_branching": 47,
+    "reuse": 0.5981308411214953,
+    "modularity": 0.0
+  },
+  "tree_131": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 7.529411764705882,
+    "max_branching": 48,
+    "reuse": 0.43410852713178294,
+    "modularity": 0.0
+  },
+  "tree_132": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 8.153846153846153,
+    "max_branching": 52,
+    "reuse": 0.5233644859813084,
+    "modularity": 0.0
+  },
+  "tree_133": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 7.117647058823529,
+    "max_branching": 50,
+    "reuse": 0.48360655737704916,
+    "modularity": 0.0
+  },
+  "tree_134": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 8.25,
+    "max_branching": 31,
+    "reuse": 0.54,
+    "modularity": 0.0
+  },
+  "tree_135": {
+    "depth": 5,
+    "size": 95,
+    "avg_branching": 7.230769230769231,
+    "max_branching": 38,
+    "reuse": 0.45263157894736844,
+    "modularity": 0.0
+  },
+  "tree_136": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 9.5,
+    "max_branching": 45,
+    "reuse": 0.43478260869565216,
+    "modularity": 0.0
+  },
+  "tree_137": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 10.083333333333334,
+    "max_branching": 58,
+    "reuse": 0.36885245901639346,
+    "modularity": 0.0
+  },
+  "tree_138": {
+    "depth": 4,
+    "size": 104,
+    "avg_branching": 8.583333333333334,
+    "max_branching": 43,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_139": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 7.0588235294117645,
+    "max_branching": 25,
+    "reuse": 0.4793388429752066,
+    "modularity": 0.0
+  },
+  "tree_140": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 8.153846153846153,
+    "max_branching": 33,
+    "reuse": 0.5046728971962616,
+    "modularity": 0.0
+  },
+  "tree_141": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 7.571428571428571,
+    "max_branching": 50,
+    "reuse": 0.514018691588785,
+    "modularity": 0.0
+  },
+  "tree_142": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 6.8125,
+    "max_branching": 44,
+    "reuse": 0.4818181818181818,
+    "modularity": 0.0
+  },
+  "tree_143": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 6.875,
+    "max_branching": 40,
+    "reuse": 0.4774774774774775,
+    "modularity": 0.0
+  },
+  "tree_144": {
+    "depth": 5,
+    "size": 97,
+    "avg_branching": 5.647058823529412,
+    "max_branching": 29,
+    "reuse": 0.711340206185567,
+    "modularity": 0.0
+  },
+  "tree_145": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 9.916666666666666,
+    "max_branching": 56,
+    "reuse": 0.425,
+    "modularity": 0.0
+  },
+  "tree_146": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 7.428571428571429,
+    "max_branching": 52,
+    "reuse": 0.44761904761904764,
+    "modularity": 0.0
+  },
+  "tree_147": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 7.785714285714286,
+    "max_branching": 31,
+    "reuse": 0.41818181818181815,
+    "modularity": 0.0
+  },
+  "tree_148": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 9.8,
+    "max_branching": 40,
+    "reuse": 0.40404040404040403,
+    "modularity": 0.0
+  },
+  "tree_149": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 8.461538461538462,
+    "max_branching": 49,
+    "reuse": 0.4864864864864865,
+    "modularity": 0.0
+  },
+  "tree_150": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 6.125,
+    "max_branching": 29,
+    "reuse": 0.5757575757575758,
+    "modularity": 0.0
+  },
+  "tree_151": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 6.411764705882353,
+    "max_branching": 34,
+    "reuse": 0.6,
+    "modularity": 0.0
+  },
+  "tree_152": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 9.846153846153847,
+    "max_branching": 62,
+    "reuse": 0.4108527131782946,
+    "modularity": 0.0
+  },
+  "tree_153": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 5.823529411764706,
+    "max_branching": 21,
+    "reuse": 0.58,
+    "modularity": 0.0
+  },
+  "tree_154": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 7.461538461538462,
+    "max_branching": 38,
+    "reuse": 0.47959183673469385,
+    "modularity": 0.0
+  },
+  "tree_155": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 8.0,
+    "max_branching": 62,
+    "reuse": 0.46017699115044247,
+    "modularity": 0.0
+  },
+  "tree_156": {
+    "depth": 5,
+    "size": 137,
+    "avg_branching": 9.066666666666666,
+    "max_branching": 55,
+    "reuse": 0.4306569343065693,
+    "modularity": 0.0
+  },
+  "tree_157": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 9.272727272727273,
+    "max_branching": 44,
+    "reuse": 0.44660194174757284,
+    "modularity": 0.0
+  },
+  "tree_158": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 6.9411764705882355,
+    "max_branching": 41,
+    "reuse": 0.47058823529411764,
+    "modularity": 0.0
+  },
+  "tree_159": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 9.916666666666666,
+    "max_branching": 43,
+    "reuse": 0.35833333333333334,
+    "modularity": 0.0
+  },
+  "tree_160": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 6.947368421052632,
+    "max_branching": 57,
+    "reuse": 0.46616541353383456,
+    "modularity": 0.0
+  },
+  "tree_161": {
+    "depth": 5,
+    "size": 91,
+    "avg_branching": 5.625,
+    "max_branching": 27,
+    "reuse": 0.6153846153846154,
+    "modularity": 0.0
+  },
+  "tree_162": {
+    "depth": 5,
+    "size": 127,
+    "avg_branching": 7.0,
+    "max_branching": 48,
+    "reuse": 0.47244094488188976,
+    "modularity": 0.0
+  },
+  "tree_163": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 7.428571428571429,
+    "max_branching": 33,
+    "reuse": 0.580952380952381,
+    "modularity": 0.0
+  },
+  "tree_164": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 6.9411764705882355,
+    "max_branching": 38,
+    "reuse": 0.4369747899159664,
+    "modularity": 0.0
+  },
+  "tree_165": {
+    "depth": 5,
+    "size": 141,
+    "avg_branching": 8.235294117647058,
+    "max_branching": 38,
+    "reuse": 0.3546099290780142,
+    "modularity": 0.0
+  },
+  "tree_166": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 8.416666666666666,
+    "max_branching": 39,
+    "reuse": 0.4803921568627451,
+    "modularity": 0.0
+  },
+  "tree_167": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 8.357142857142858,
+    "max_branching": 52,
+    "reuse": 0.4745762711864407,
+    "modularity": 0.0
+  },
+  "tree_168": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 8.461538461538462,
+    "max_branching": 49,
+    "reuse": 0.45045045045045046,
+    "modularity": 0.0
+  },
+  "tree_169": {
+    "depth": 4,
+    "size": 128,
+    "avg_branching": 10.583333333333334,
+    "max_branching": 67,
+    "reuse": 0.3671875,
+    "modularity": 0.0
+  },
+  "tree_170": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 6.75,
+    "max_branching": 40,
+    "reuse": 0.5229357798165137,
+    "modularity": 0.0
+  },
+  "tree_171": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 26,
+    "reuse": 0.43243243243243246,
+    "modularity": 0.0
+  },
+  "tree_172": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 6.166666666666667,
+    "max_branching": 27,
+    "reuse": 0.45535714285714285,
+    "modularity": 0.0
+  },
+  "tree_173": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 8.916666666666666,
+    "max_branching": 42,
+    "reuse": 0.5277777777777778,
+    "modularity": 0.0
+  },
+  "tree_174": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 9.333333333333334,
+    "max_branching": 53,
+    "reuse": 0.40707964601769914,
+    "modularity": 0.0
+  },
+  "tree_175": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 6.647058823529412,
+    "max_branching": 34,
+    "reuse": 0.47368421052631576,
+    "modularity": 0.0
+  },
+  "tree_176": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 49,
+    "reuse": 0.43243243243243246,
+    "modularity": 0.0
+  },
+  "tree_177": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 7.769230769230769,
+    "max_branching": 40,
+    "reuse": 0.4215686274509804,
+    "modularity": 0.0
+  },
+  "tree_178": {
+    "depth": 4,
+    "size": 118,
+    "avg_branching": 9.0,
+    "max_branching": 40,
+    "reuse": 0.4576271186440678,
+    "modularity": 0.0
+  },
+  "tree_179": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 7.428571428571429,
+    "max_branching": 24,
+    "reuse": 0.45714285714285713,
+    "modularity": 0.0
+  },
+  "tree_180": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 7.0625,
+    "max_branching": 55,
+    "reuse": 0.4473684210526316,
+    "modularity": 0.0
+  },
+  "tree_181": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 7.6,
+    "max_branching": 55,
+    "reuse": 0.4956521739130435,
+    "modularity": 0.0
+  },
+  "tree_182": {
+    "depth": 4,
+    "size": 91,
+    "avg_branching": 8.181818181818182,
+    "max_branching": 33,
+    "reuse": 0.5604395604395604,
+    "modularity": 0.0
+  },
+  "tree_183": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.933333333333334,
+    "max_branching": 51,
+    "reuse": 0.45,
+    "modularity": 0.0
+  },
+  "tree_184": {
+    "depth": 4,
+    "size": 122,
+    "avg_branching": 11.0,
+    "max_branching": 60,
+    "reuse": 0.4262295081967213,
+    "modularity": 0.0
+  },
+  "tree_185": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 6.764705882352941,
+    "max_branching": 32,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_186": {
+    "depth": 5,
+    "size": 137,
+    "avg_branching": 7.555555555555555,
+    "max_branching": 43,
+    "reuse": 0.4233576642335766,
+    "modularity": 0.0
+  },
+  "tree_187": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.133333333333334,
+    "max_branching": 51,
+    "reuse": 0.42592592592592593,
+    "modularity": 0.0
+  },
+  "tree_188": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.833333333333334,
+    "max_branching": 55,
+    "reuse": 0.40336134453781514,
+    "modularity": 0.0
+  },
+  "tree_189": {
+    "depth": 5,
+    "size": 135,
+    "avg_branching": 6.7,
+    "max_branching": 62,
+    "reuse": 0.45185185185185184,
+    "modularity": 0.0
+  },
+  "tree_190": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 6.0588235294117645,
+    "max_branching": 38,
+    "reuse": 0.6442307692307693,
+    "modularity": 0.0
+  },
+  "tree_191": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 10.909090909090908,
+    "max_branching": 55,
+    "reuse": 0.39669421487603307,
+    "modularity": 0.0
+  },
+  "tree_192": {
+    "depth": 5,
+    "size": 96,
+    "avg_branching": 7.3076923076923075,
+    "max_branching": 37,
+    "reuse": 0.5833333333333334,
+    "modularity": 0.0
+  },
+  "tree_193": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 6.666666666666667,
+    "max_branching": 30,
+    "reuse": 0.5148514851485149,
+    "modularity": 0.5
+  },
+  "tree_194": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 10.583333333333334,
+    "max_branching": 62,
+    "reuse": 0.4140625,
+    "modularity": 0.0
+  },
+  "tree_195": {
+    "depth": 4,
+    "size": 120,
+    "avg_branching": 10.818181818181818,
+    "max_branching": 43,
+    "reuse": 0.39166666666666666,
+    "modularity": 0.0
+  },
+  "tree_196": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 7.928571428571429,
+    "max_branching": 40,
+    "reuse": 0.45535714285714285,
+    "modularity": 0.0
+  },
+  "tree_197": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 7.125,
+    "max_branching": 57,
+    "reuse": 0.4608695652173913,
+    "modularity": 0.0
+  },
+  "tree_198": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 10.384615384615385,
+    "max_branching": 53,
+    "reuse": 0.4264705882352941,
+    "modularity": 0.0
+  },
+  "tree_199": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 7.0,
+    "max_branching": 41,
+    "reuse": 0.4444444444444444,
+    "modularity": 0.0
+  },
+  "tree_200": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 47,
+    "reuse": 0.4594594594594595,
+    "modularity": 0.0
+  },
+  "tree_201": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 8.066666666666666,
+    "max_branching": 39,
+    "reuse": 0.3770491803278688,
+    "modularity": 0.0
+  },
+  "tree_202": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 8.166666666666666,
+    "max_branching": 51,
+    "reuse": 0.48484848484848486,
+    "modularity": 0.0
+  },
+  "tree_203": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 8.307692307692308,
+    "max_branching": 42,
+    "reuse": 0.5688073394495413,
+    "modularity": 0.0
+  },
+  "tree_204": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 8.285714285714286,
+    "max_branching": 60,
+    "reuse": 0.48717948717948717,
+    "modularity": 0.0
+  },
+  "tree_205": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 8.076923076923077,
+    "max_branching": 45,
+    "reuse": 0.4339622641509434,
+    "modularity": 0.0
+  },
+  "tree_206": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 6.666666666666667,
+    "max_branching": 39,
+    "reuse": 0.5619834710743802,
+    "modularity": 0.0
+  },
+  "tree_207": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 7.214285714285714,
+    "max_branching": 30,
+    "reuse": 0.47058823529411764,
+    "modularity": 0.0
+  },
+  "tree_208": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.0,
+    "max_branching": 29,
+    "reuse": 0.45,
+    "modularity": 0.0
+  },
+  "tree_209": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 7.6923076923076925,
+    "max_branching": 40,
+    "reuse": 0.5247524752475248,
+    "modularity": 0.0
+  },
+  "tree_210": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 9.8,
+    "max_branching": 41,
+    "reuse": 0.5050505050505051,
+    "modularity": 0.0
+  },
+  "tree_211": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 31,
+    "reuse": 0.5045045045045045,
+    "modularity": 0.0
+  },
+  "tree_212": {
+    "depth": 4,
+    "size": 101,
+    "avg_branching": 7.6923076923076925,
+    "max_branching": 32,
+    "reuse": 0.5346534653465347,
+    "modularity": 0.0
+  },
+  "tree_213": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 7.428571428571429,
+    "max_branching": 36,
+    "reuse": 0.49523809523809526,
+    "modularity": 0.0
+  },
+  "tree_214": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.076923076923077,
+    "max_branching": 37,
+    "reuse": 0.4369747899159664,
+    "modularity": 0.0
+  },
+  "tree_215": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 8.571428571428571,
+    "max_branching": 56,
+    "reuse": 0.48760330578512395,
+    "modularity": 0.0
+  },
+  "tree_216": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 9.416666666666666,
+    "max_branching": 48,
+    "reuse": 0.4298245614035088,
+    "modularity": 0.0
+  },
+  "tree_217": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 9.642857142857142,
+    "max_branching": 58,
+    "reuse": 0.36764705882352944,
+    "modularity": 0.0
+  },
+  "tree_218": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 6.466666666666667,
+    "max_branching": 38,
+    "reuse": 0.5306122448979592,
+    "modularity": 0.0
+  },
+  "tree_219": {
+    "depth": 5,
+    "size": 127,
+    "avg_branching": 7.0,
+    "max_branching": 59,
+    "reuse": 0.4566929133858268,
+    "modularity": 0.0
+  },
+  "tree_220": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 6.5,
+    "max_branching": 36,
+    "reuse": 0.5428571428571428,
+    "modularity": 0.0
+  },
+  "tree_221": {
+    "depth": 5,
+    "size": 135,
+    "avg_branching": 6.380952380952381,
+    "max_branching": 60,
+    "reuse": 0.4962962962962963,
+    "modularity": 0.0
+  },
+  "tree_222": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 8.75,
+    "max_branching": 42,
+    "reuse": 0.4811320754716981,
+    "modularity": 0.0
+  },
+  "tree_223": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.133333333333334,
+    "max_branching": 36,
+    "reuse": 0.5185185185185185,
+    "modularity": 0.0
+  },
+  "tree_224": {
+    "depth": 4,
+    "size": 99,
+    "avg_branching": 8.166666666666666,
+    "max_branching": 43,
+    "reuse": 0.4444444444444444,
+    "modularity": 0.0
+  },
+  "tree_225": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 7.785714285714286,
+    "max_branching": 41,
+    "reuse": 0.4727272727272727,
+    "modularity": 0.0
+  },
+  "tree_226": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 7.055555555555555,
+    "max_branching": 51,
+    "reuse": 0.453125,
+    "modularity": 0.0
+  },
+  "tree_227": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 7.8,
+    "max_branching": 42,
+    "reuse": 0.4576271186440678,
+    "modularity": 0.0
+  },
+  "tree_228": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 8.928571428571429,
+    "max_branching": 49,
+    "reuse": 0.4603174603174603,
+    "modularity": 0.0
+  },
+  "tree_229": {
+    "depth": 5,
+    "size": 94,
+    "avg_branching": 6.642857142857143,
+    "max_branching": 27,
+    "reuse": 0.5851063829787234,
+    "modularity": 0.0
+  },
+  "tree_230": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 6.421052631578948,
+    "max_branching": 55,
+    "reuse": 0.45528455284552843,
+    "modularity": 0.0
+  },
+  "tree_231": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 7.529411764705882,
+    "max_branching": 46,
+    "reuse": 0.4418604651162791,
+    "modularity": 0.0
+  },
+  "tree_232": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.642857142857143,
+    "max_branching": 46,
+    "reuse": 0.5092592592592593,
+    "modularity": 0.0
+  },
+  "tree_233": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 9.75,
+    "max_branching": 54,
+    "reuse": 0.4491525423728814,
+    "modularity": 0.0
+  },
+  "tree_234": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 9.5,
+    "max_branching": 46,
+    "reuse": 0.4608695652173913,
+    "modularity": 0.0
+  },
+  "tree_235": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 7.176470588235294,
+    "max_branching": 54,
+    "reuse": 0.45528455284552843,
+    "modularity": 0.0
+  },
+  "tree_236": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 8.333333333333334,
+    "max_branching": 48,
+    "reuse": 0.504950495049505,
+    "modularity": 0.0
+  },
+  "tree_237": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 9.307692307692308,
+    "max_branching": 61,
+    "reuse": 0.47540983606557374,
+    "modularity": 0.0
+  },
+  "tree_238": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 7.357142857142857,
+    "max_branching": 29,
+    "reuse": 0.4423076923076923,
+    "modularity": 0.0
+  },
+  "tree_239": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 6.5,
+    "max_branching": 33,
+    "reuse": 0.5254237288135594,
+    "modularity": 0.0
+  },
+  "tree_240": {
+    "depth": 4,
+    "size": 127,
+    "avg_branching": 12.6,
+    "max_branching": 61,
+    "reuse": 0.41732283464566927,
+    "modularity": 0.0
+  },
+  "tree_241": {
+    "depth": 4,
+    "size": 124,
+    "avg_branching": 8.785714285714286,
+    "max_branching": 61,
+    "reuse": 0.3951612903225806,
+    "modularity": 0.0
+  },
+  "tree_242": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 7.714285714285714,
+    "max_branching": 31,
+    "reuse": 0.5229357798165137,
+    "modularity": 0.0
+  },
+  "tree_243": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 8.071428571428571,
+    "max_branching": 49,
+    "reuse": 0.45614035087719296,
+    "modularity": 0.0
+  },
+  "tree_244": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 9.076923076923077,
+    "max_branching": 48,
+    "reuse": 0.42016806722689076,
+    "modularity": 0.0
+  },
+  "tree_245": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 9.416666666666666,
+    "max_branching": 35,
+    "reuse": 0.4473684210526316,
+    "modularity": 0.0
+  },
+  "tree_246": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.857142857142857,
+    "max_branching": 51,
+    "reuse": 0.4774774774774775,
+    "modularity": 0.0
+  },
+  "tree_247": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 5.9411764705882355,
+    "max_branching": 43,
+    "reuse": 0.5392156862745098,
+    "modularity": 0.0
+  },
+  "tree_248": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 7.285714285714286,
+    "max_branching": 45,
+    "reuse": 0.5242718446601942,
+    "modularity": 0.0
+  },
+  "tree_249": {
+    "depth": 5,
+    "size": 143,
+    "avg_branching": 8.352941176470589,
+    "max_branching": 37,
+    "reuse": 0.46853146853146854,
+    "modularity": 0.0
+  },
+  "tree_250": {
+    "depth": 4,
+    "size": 107,
+    "avg_branching": 8.833333333333334,
+    "max_branching": 58,
+    "reuse": 0.4205607476635514,
+    "modularity": 0.0
+  },
+  "tree_251": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 5.526315789473684,
+    "max_branching": 27,
+    "reuse": 0.5471698113207547,
+    "modularity": 0.0
+  },
+  "tree_252": {
+    "depth": 5,
+    "size": 89,
+    "avg_branching": 5.176470588235294,
+    "max_branching": 33,
+    "reuse": 0.6741573033707865,
+    "modularity": 0.0
+  },
+  "tree_253": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 7.0,
+    "max_branching": 45,
+    "reuse": 0.504424778761062,
+    "modularity": 0.0
+  },
+  "tree_254": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 42,
+    "reuse": 0.4954954954954955,
+    "modularity": 0.0
+  },
+  "tree_255": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 8.533333333333333,
+    "max_branching": 44,
+    "reuse": 0.4263565891472868,
+    "modularity": 0.0
+  },
+  "tree_256": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 7.0,
+    "max_branching": 39,
+    "reuse": 0.47474747474747475,
+    "modularity": 0.0
+  },
+  "tree_257": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 8.5,
+    "max_branching": 49,
+    "reuse": 0.375,
+    "modularity": 0.0
+  },
+  "tree_258": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 6.0,
+    "max_branching": 28,
+    "reuse": 0.5922330097087378,
+    "modularity": 0.0
+  },
+  "tree_259": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 8.76923076923077,
+    "max_branching": 54,
+    "reuse": 0.45217391304347826,
+    "modularity": 0.0
+  },
+  "tree_260": {
+    "depth": 5,
+    "size": 137,
+    "avg_branching": 9.066666666666666,
+    "max_branching": 69,
+    "reuse": 0.34306569343065696,
+    "modularity": 0.0
+  },
+  "tree_261": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 6.75,
+    "max_branching": 39,
+    "reuse": 0.5137614678899083,
+    "modularity": 0.0
+  },
+  "tree_262": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 6.666666666666667,
+    "max_branching": 33,
+    "reuse": 0.5206611570247934,
+    "modularity": 0.0
+  },
+  "tree_263": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 7.8,
+    "max_branching": 48,
+    "reuse": 0.4830508474576271,
+    "modularity": 0.0
+  },
+  "tree_264": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 7.5625,
+    "max_branching": 61,
+    "reuse": 0.47540983606557374,
+    "modularity": 0.0
+  },
+  "tree_265": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 9.083333333333334,
+    "max_branching": 51,
+    "reuse": 0.45454545454545453,
+    "modularity": 0.0
+  },
+  "tree_266": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 7.923076923076923,
+    "max_branching": 46,
+    "reuse": 0.46153846153846156,
+    "modularity": 0.0
+  },
+  "tree_267": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 6.647058823529412,
+    "max_branching": 41,
+    "reuse": 0.43859649122807015,
+    "modularity": 0.0
+  },
+  "tree_268": {
+    "depth": 5,
+    "size": 94,
+    "avg_branching": 6.642857142857143,
+    "max_branching": 28,
+    "reuse": 0.5425531914893617,
+    "modularity": 0.0
+  },
+  "tree_269": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 8.923076923076923,
+    "max_branching": 48,
+    "reuse": 0.46153846153846156,
+    "modularity": 0.0
+  },
+  "tree_270": {
+    "depth": 4,
+    "size": 107,
+    "avg_branching": 8.833333333333334,
+    "max_branching": 37,
+    "reuse": 0.5046728971962616,
+    "modularity": 0.0
+  },
+  "tree_271": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 8.25,
+    "max_branching": 59,
+    "reuse": 0.44360902255639095,
+    "modularity": 0.0
+  },
+  "tree_272": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 6.8125,
+    "max_branching": 39,
+    "reuse": 0.4909090909090909,
+    "modularity": 0.0
+  },
+  "tree_273": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 9.538461538461538,
+    "max_branching": 53,
+    "reuse": 0.424,
+    "modularity": 0.0
+  },
+  "tree_274": {
+    "depth": 5,
+    "size": 97,
+    "avg_branching": 7.384615384615385,
+    "max_branching": 39,
+    "reuse": 0.4536082474226804,
+    "modularity": 0.0
+  },
+  "tree_275": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 6.866666666666666,
+    "max_branching": 22,
+    "reuse": 0.5480769230769231,
+    "modularity": 0.0
+  },
+  "tree_276": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 7.466666666666667,
+    "max_branching": 44,
+    "reuse": 0.46017699115044247,
+    "modularity": 0.0
+  },
+  "tree_277": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 6.777777777777778,
+    "max_branching": 39,
+    "reuse": 0.4146341463414634,
+    "modularity": 0.0
+  },
+  "tree_278": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 8.5,
+    "max_branching": 40,
+    "reuse": 0.4368932038834951,
+    "modularity": 0.0
+  },
+  "tree_279": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 5.9411764705882355,
+    "max_branching": 43,
+    "reuse": 0.5490196078431373,
+    "modularity": 0.0
+  },
+  "tree_280": {
+    "depth": 5,
+    "size": 138,
+    "avg_branching": 8.5625,
+    "max_branching": 59,
+    "reuse": 0.4420289855072464,
+    "modularity": 0.0
+  },
+  "tree_281": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 12.4,
+    "max_branching": 56,
+    "reuse": 0.448,
+    "modularity": 0.0
+  },
+  "tree_282": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 7.615384615384615,
+    "max_branching": 42,
+    "reuse": 0.55,
+    "modularity": 0.0
+  },
+  "tree_283": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 8.642857142857142,
+    "max_branching": 49,
+    "reuse": 0.4262295081967213,
+    "modularity": 0.0
+  },
+  "tree_284": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 6.875,
+    "max_branching": 30,
+    "reuse": 0.4864864864864865,
+    "modularity": 0.0
+  },
+  "tree_285": {
+    "depth": 5,
+    "size": 81,
+    "avg_branching": 6.666666666666667,
+    "max_branching": 21,
+    "reuse": 0.49382716049382713,
+    "modularity": 0.0
+  },
+  "tree_286": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 9.909090909090908,
+    "max_branching": 48,
+    "reuse": 0.42727272727272725,
+    "modularity": 0.0
+  },
+  "tree_287": {
+    "depth": 5,
+    "size": 132,
+    "avg_branching": 8.1875,
+    "max_branching": 54,
+    "reuse": 0.4090909090909091,
+    "modularity": 0.0
+  },
+  "tree_288": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 6.866666666666666,
+    "max_branching": 37,
+    "reuse": 0.5769230769230769,
+    "modularity": 0.0
+  },
+  "tree_289": {
+    "depth": 5,
+    "size": 96,
+    "avg_branching": 5.9375,
+    "max_branching": 38,
+    "reuse": 0.625,
+    "modularity": 0.0
+  },
+  "tree_290": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 7.785714285714286,
+    "max_branching": 48,
+    "reuse": 0.509090909090909,
+    "modularity": 0.0
+  },
+  "tree_291": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 5.882352941176471,
+    "max_branching": 24,
+    "reuse": 0.5148514851485149,
+    "modularity": 0.0
+  },
+  "tree_292": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 8.214285714285714,
+    "max_branching": 49,
+    "reuse": 0.5344827586206896,
+    "modularity": 0.0
+  },
+  "tree_293": {
+    "depth": 5,
+    "size": 98,
+    "avg_branching": 8.083333333333334,
+    "max_branching": 37,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_294": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 8.461538461538462,
+    "max_branching": 45,
+    "reuse": 0.45045045045045046,
+    "modularity": 0.0
+  },
+  "tree_295": {
+    "depth": 5,
+    "size": 133,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 50,
+    "reuse": 0.41353383458646614,
+    "modularity": 0.0
+  },
+  "tree_296": {
+    "depth": 4,
+    "size": 116,
+    "avg_branching": 10.454545454545455,
+    "max_branching": 48,
+    "reuse": 0.4396551724137931,
+    "modularity": 0.0
+  },
+  "tree_297": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.4375,
+    "max_branching": 56,
+    "reuse": 0.5416666666666666,
+    "modularity": 0.0
+  },
+  "tree_298": {
+    "depth": 5,
+    "size": 127,
+    "avg_branching": 9.0,
+    "max_branching": 56,
+    "reuse": 0.4015748031496063,
+    "modularity": 0.0
+  },
+  "tree_299": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 7.470588235294118,
+    "max_branching": 43,
+    "reuse": 0.4765625,
+    "modularity": 0.0
+  },
+  "tree_300": {
+    "depth": 4,
+    "size": 102,
+    "avg_branching": 7.769230769230769,
+    "max_branching": 46,
+    "reuse": 0.46078431372549017,
+    "modularity": 0.0
+  },
+  "tree_301": {
+    "depth": 5,
+    "size": 95,
+    "avg_branching": 8.545454545454545,
+    "max_branching": 45,
+    "reuse": 0.5052631578947369,
+    "modularity": 0.0
+  },
+  "tree_302": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 7.357142857142857,
+    "max_branching": 44,
+    "reuse": 0.5673076923076923,
+    "modularity": 0.0
+  },
+  "tree_303": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.5,
+    "max_branching": 48,
+    "reuse": 0.49056603773584906,
+    "modularity": 0.0
+  },
+  "tree_304": {
+    "depth": 5,
+    "size": 88,
+    "avg_branching": 5.4375,
+    "max_branching": 33,
+    "reuse": 0.4772727272727273,
+    "modularity": 0.0
+  },
+  "tree_305": {
+    "depth": 5,
+    "size": 134,
+    "avg_branching": 8.3125,
+    "max_branching": 52,
+    "reuse": 0.4253731343283582,
+    "modularity": 0.0
+  },
+  "tree_306": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 7.846153846153846,
+    "max_branching": 40,
+    "reuse": 0.46601941747572817,
+    "modularity": 0.0
+  },
+  "tree_307": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 5.944444444444445,
+    "max_branching": 27,
+    "reuse": 0.46296296296296297,
+    "modularity": 0.0
+  },
+  "tree_308": {
+    "depth": 5,
+    "size": 90,
+    "avg_branching": 8.090909090909092,
+    "max_branching": 37,
+    "reuse": 0.45555555555555555,
+    "modularity": 0.0
+  },
+  "tree_309": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 6.3125,
+    "max_branching": 41,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_310": {
+    "depth": 4,
+    "size": 115,
+    "avg_branching": 11.4,
+    "max_branching": 61,
+    "reuse": 0.5217391304347826,
+    "modularity": 0.0
+  },
+  "tree_311": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 6.533333333333333,
+    "max_branching": 46,
+    "reuse": 0.5252525252525253,
+    "modularity": 0.0
+  },
+  "tree_312": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 7.666666666666667,
+    "max_branching": 45,
+    "reuse": 0.5172413793103449,
+    "modularity": 0.0
+  },
+  "tree_313": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 9.0,
+    "max_branching": 39,
+    "reuse": 0.46,
+    "modularity": 0.0
+  },
+  "tree_314": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 6.166666666666667,
+    "max_branching": 47,
+    "reuse": 0.4375,
+    "modularity": 0.0
+  },
+  "tree_315": {
+    "depth": 4,
+    "size": 96,
+    "avg_branching": 8.636363636363637,
+    "max_branching": 48,
+    "reuse": 0.5416666666666666,
+    "modularity": 0.0
+  },
+  "tree_316": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 7.285714285714286,
+    "max_branching": 57,
+    "reuse": 0.44660194174757284,
+    "modularity": 0.0
+  },
+  "tree_317": {
+    "depth": 5,
+    "size": 82,
+    "avg_branching": 5.4,
+    "max_branching": 28,
+    "reuse": 0.7073170731707317,
+    "modularity": 0.0
+  },
+  "tree_318": {
+    "depth": 4,
+    "size": 115,
+    "avg_branching": 8.142857142857142,
+    "max_branching": 44,
+    "reuse": 0.45217391304347826,
+    "modularity": 0.0
+  },
+  "tree_319": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 7.214285714285714,
+    "max_branching": 45,
+    "reuse": 0.6176470588235294,
+    "modularity": 0.0
+  },
+  "tree_320": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 8.133333333333333,
+    "max_branching": 54,
+    "reuse": 0.44715447154471544,
+    "modularity": 0.0
+  },
+  "tree_321": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 7.666666666666667,
+    "max_branching": 48,
+    "reuse": 0.4224137931034483,
+    "modularity": 0.0
+  },
+  "tree_322": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.5,
+    "max_branching": 41,
+    "reuse": 0.49056603773584906,
+    "modularity": 0.0
+  },
+  "tree_323": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 7.714285714285714,
+    "max_branching": 44,
+    "reuse": 0.44036697247706424,
+    "modularity": 0.0
+  },
+  "tree_324": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 7.8,
+    "max_branching": 54,
+    "reuse": 0.4406779661016949,
+    "modularity": 0.0
+  },
+  "tree_325": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 6.764705882352941,
+    "max_branching": 51,
+    "reuse": 0.43103448275862066,
+    "modularity": 0.0
+  },
+  "tree_326": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 7.470588235294118,
+    "max_branching": 52,
+    "reuse": 0.546875,
+    "modularity": 0.0
+  },
+  "tree_327": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 40,
+    "reuse": 0.4864864864864865,
+    "modularity": 0.0
+  },
+  "tree_328": {
+    "depth": 4,
+    "size": 122,
+    "avg_branching": 9.307692307692308,
+    "max_branching": 49,
+    "reuse": 0.4672131147540984,
+    "modularity": 0.0
+  },
+  "tree_329": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 7.352941176470588,
+    "max_branching": 49,
+    "reuse": 0.4603174603174603,
+    "modularity": 0.0
+  },
+  "tree_330": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 7.214285714285714,
+    "max_branching": 44,
+    "reuse": 0.5196078431372549,
+    "modularity": 0.0
+  },
+  "tree_331": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 8.0,
+    "max_branching": 59,
+    "reuse": 0.46017699115044247,
+    "modularity": 0.0
+  },
+  "tree_332": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 6.75,
+    "max_branching": 42,
+    "reuse": 0.5321100917431193,
+    "modularity": 0.0
+  },
+  "tree_333": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 8.533333333333333,
+    "max_branching": 54,
+    "reuse": 0.3798449612403101,
+    "modularity": 0.0
+  },
+  "tree_334": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.0,
+    "max_branching": 32,
+    "reuse": 0.4811320754716981,
+    "modularity": 0.0
+  },
+  "tree_335": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 10.090909090909092,
+    "max_branching": 43,
+    "reuse": 0.36607142857142855,
+    "modularity": 0.0
+  },
+  "tree_336": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 7.733333333333333,
+    "max_branching": 55,
+    "reuse": 0.4358974358974359,
+    "modularity": 0.0
+  },
+  "tree_337": {
+    "depth": 4,
+    "size": 100,
+    "avg_branching": 7.615384615384615,
+    "max_branching": 38,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_338": {
+    "depth": 5,
+    "size": 135,
+    "avg_branching": 9.571428571428571,
+    "max_branching": 60,
+    "reuse": 0.37777777777777777,
+    "modularity": 0.0
+  },
+  "tree_339": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.642857142857143,
+    "max_branching": 44,
+    "reuse": 0.5092592592592593,
+    "modularity": 0.0
+  },
+  "tree_340": {
+    "depth": 5,
+    "size": 97,
+    "avg_branching": 6.4,
+    "max_branching": 38,
+    "reuse": 0.6288659793814433,
+    "modularity": 0.0
+  },
+  "tree_341": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 7.266666666666667,
+    "max_branching": 36,
+    "reuse": 0.44545454545454544,
+    "modularity": 0.0
+  },
+  "tree_342": {
+    "depth": 5,
+    "size": 143,
+    "avg_branching": 10.142857142857142,
+    "max_branching": 68,
+    "reuse": 0.46153846153846156,
+    "modularity": 0.0
+  },
+  "tree_343": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 7.5,
+    "max_branching": 53,
+    "reuse": 0.5206611570247934,
+    "modularity": 0.0
+  },
+  "tree_344": {
+    "depth": 5,
+    "size": 130,
+    "avg_branching": 8.6,
+    "max_branching": 53,
+    "reuse": 0.5461538461538461,
+    "modularity": 0.0
+  },
+  "tree_345": {
+    "depth": 5,
+    "size": 95,
+    "avg_branching": 7.230769230769231,
+    "max_branching": 41,
+    "reuse": 0.6,
+    "modularity": 0.0
+  },
+  "tree_346": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.0,
+    "max_branching": 33,
+    "reuse": 0.4166666666666667,
+    "modularity": 0.0
+  },
+  "tree_347": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 8.428571428571429,
+    "max_branching": 38,
+    "reuse": 0.4369747899159664,
+    "modularity": 0.0
+  },
+  "tree_348": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 9.384615384615385,
+    "max_branching": 56,
+    "reuse": 0.42276422764227645,
+    "modularity": 0.0
+  },
+  "tree_349": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 7.571428571428571,
+    "max_branching": 45,
+    "reuse": 0.5046728971962616,
+    "modularity": 0.0
+  },
+  "tree_350": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 9.75,
+    "max_branching": 43,
+    "reuse": 0.4406779661016949,
+    "modularity": 0.0
+  },
+  "tree_351": {
+    "depth": 4,
+    "size": 116,
+    "avg_branching": 8.214285714285714,
+    "max_branching": 53,
+    "reuse": 0.47413793103448276,
+    "modularity": 0.0
+  },
+  "tree_352": {
+    "depth": 4,
+    "size": 120,
+    "avg_branching": 7.933333333333334,
+    "max_branching": 37,
+    "reuse": 0.4083333333333333,
+    "modularity": 0.0
+  },
+  "tree_353": {
+    "depth": 5,
+    "size": 85,
+    "avg_branching": 6.461538461538462,
+    "max_branching": 24,
+    "reuse": 0.5411764705882353,
+    "modularity": 0.0
+  },
+  "tree_354": {
+    "depth": 5,
+    "size": 87,
+    "avg_branching": 5.733333333333333,
+    "max_branching": 31,
+    "reuse": 0.7011494252873564,
+    "modularity": 0.0
+  },
+  "tree_355": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 8.428571428571429,
+    "max_branching": 59,
+    "reuse": 0.4789915966386555,
+    "modularity": 0.0
+  },
+  "tree_356": {
+    "depth": 5,
+    "size": 130,
+    "avg_branching": 10.75,
+    "max_branching": 62,
+    "reuse": 0.36923076923076925,
+    "modularity": 0.0
+  },
+  "tree_357": {
+    "depth": 5,
+    "size": 97,
+    "avg_branching": 8.0,
+    "max_branching": 51,
+    "reuse": 0.5463917525773195,
+    "modularity": 0.0
+  },
+  "tree_358": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 7.176470588235294,
+    "max_branching": 45,
+    "reuse": 0.5691056910569106,
+    "modularity": 0.0
+  },
+  "tree_359": {
+    "depth": 5,
+    "size": 95,
+    "avg_branching": 6.266666666666667,
+    "max_branching": 29,
+    "reuse": 0.5578947368421052,
+    "modularity": 0.0
+  },
+  "tree_360": {
+    "depth": 4,
+    "size": 97,
+    "avg_branching": 8.0,
+    "max_branching": 45,
+    "reuse": 0.4845360824742268,
+    "modularity": 0.0
+  },
+  "tree_361": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 8.857142857142858,
+    "max_branching": 38,
+    "reuse": 0.384,
+    "modularity": 0.0
+  },
+  "tree_362": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 9.142857142857142,
+    "max_branching": 51,
+    "reuse": 0.4108527131782946,
+    "modularity": 0.0
+  },
+  "tree_363": {
+    "depth": 5,
+    "size": 93,
+    "avg_branching": 6.133333333333334,
+    "max_branching": 38,
+    "reuse": 0.5591397849462365,
+    "modularity": 0.0
+  },
+  "tree_364": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 6.888888888888889,
+    "max_branching": 26,
+    "reuse": 0.408,
+    "modularity": 0.0
+  },
+  "tree_365": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 8.857142857142858,
+    "max_branching": 34,
+    "reuse": 0.408,
+    "modularity": 0.0
+  },
+  "tree_366": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 7.1875,
+    "max_branching": 41,
+    "reuse": 0.4827586206896552,
+    "modularity": 0.0
+  },
+  "tree_367": {
+    "depth": 4,
+    "size": 95,
+    "avg_branching": 9.4,
+    "max_branching": 41,
+    "reuse": 0.5263157894736842,
+    "modularity": 0.0
+  },
+  "tree_368": {
+    "depth": 5,
+    "size": 127,
+    "avg_branching": 9.0,
+    "max_branching": 57,
+    "reuse": 0.4015748031496063,
+    "modularity": 0.0
+  },
+  "tree_369": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 8.0,
+    "max_branching": 47,
+    "reuse": 0.4778761061946903,
+    "modularity": 0.0
+  },
+  "tree_370": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 5.947368421052632,
+    "max_branching": 29,
+    "reuse": 0.5526315789473685,
+    "modularity": 0.0
+  },
+  "tree_371": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 5.555555555555555,
+    "max_branching": 29,
+    "reuse": 0.5148514851485149,
+    "modularity": 0.0
+  },
+  "tree_372": {
+    "depth": 5,
+    "size": 147,
+    "avg_branching": 7.3,
+    "max_branching": 42,
+    "reuse": 0.42857142857142855,
+    "modularity": 0.0
+  },
+  "tree_373": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 10.818181818181818,
+    "max_branching": 59,
+    "reuse": 0.4083333333333333,
+    "modularity": 0.0
+  },
+  "tree_374": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 6.705882352941177,
+    "max_branching": 46,
+    "reuse": 0.46956521739130436,
+    "modularity": 0.0
+  },
+  "tree_375": {
+    "depth": 5,
+    "size": 103,
+    "avg_branching": 7.846153846153846,
+    "max_branching": 41,
+    "reuse": 0.5533980582524272,
+    "modularity": 0.0
+  },
+  "tree_376": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 7.615384615384615,
+    "max_branching": 23,
+    "reuse": 0.57,
+    "modularity": 0.0
+  },
+  "tree_377": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.133333333333334,
+    "max_branching": 38,
+    "reuse": 0.5277777777777778,
+    "modularity": 0.0
+  },
+  "tree_378": {
+    "depth": 5,
+    "size": 132,
+    "avg_branching": 8.1875,
+    "max_branching": 40,
+    "reuse": 0.42424242424242425,
+    "modularity": 0.0
+  },
+  "tree_379": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 7.538461538461538,
+    "max_branching": 40,
+    "reuse": 0.5353535353535354,
+    "modularity": 0.0
+  },
+  "tree_380": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 5.882352941176471,
+    "max_branching": 35,
+    "reuse": 0.6138613861386139,
+    "modularity": 0.0
+  },
+  "tree_381": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 7.714285714285714,
+    "max_branching": 48,
+    "reuse": 0.44036697247706424,
+    "modularity": 0.0
+  },
+  "tree_382": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 7.533333333333333,
+    "max_branching": 52,
+    "reuse": 0.49122807017543857,
+    "modularity": 0.0
+  },
+  "tree_383": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 5.05,
+    "max_branching": 34,
+    "reuse": 0.6176470588235294,
+    "modularity": 0.0
+  },
+  "tree_384": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 6.933333333333334,
+    "max_branching": 49,
+    "reuse": 0.4666666666666667,
+    "modularity": 0.0
+  },
+  "tree_385": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 9.666666666666666,
+    "max_branching": 58,
+    "reuse": 0.4017094017094017,
+    "modularity": 0.0
+  },
+  "tree_386": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.133333333333334,
+    "max_branching": 39,
+    "reuse": 0.6018518518518519,
+    "modularity": 0.0
+  },
+  "tree_387": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 6.588235294117647,
+    "max_branching": 42,
+    "reuse": 0.5575221238938053,
+    "modularity": 0.0
+  },
+  "tree_388": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 7.066666666666666,
+    "max_branching": 44,
+    "reuse": 0.5514018691588785,
+    "modularity": 0.0
+  },
+  "tree_389": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 6.470588235294118,
+    "max_branching": 32,
+    "reuse": 0.45045045045045046,
+    "modularity": 0.0
+  },
+  "tree_390": {
+    "depth": 5,
+    "size": 93,
+    "avg_branching": 6.133333333333334,
+    "max_branching": 26,
+    "reuse": 0.5053763440860215,
+    "modularity": 0.0
+  },
+  "tree_391": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 7.866666666666666,
+    "max_branching": 51,
+    "reuse": 0.44537815126050423,
+    "modularity": 0.0
+  },
+  "tree_392": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.933333333333334,
+    "max_branching": 33,
+    "reuse": 0.4,
+    "modularity": 0.0
+  },
+  "tree_393": {
+    "depth": 5,
+    "size": 120,
+    "avg_branching": 7.933333333333334,
+    "max_branching": 49,
+    "reuse": 0.4666666666666667,
+    "modularity": 0.0
+  },
+  "tree_394": {
+    "depth": 4,
+    "size": 123,
+    "avg_branching": 8.133333333333333,
+    "max_branching": 38,
+    "reuse": 0.45528455284552843,
+    "modularity": 0.0
+  },
+  "tree_395": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.333333333333333,
+    "max_branching": 42,
+    "reuse": 0.5135135135135135,
+    "modularity": 0.0
+  },
+  "tree_396": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 5.631578947368421,
+    "max_branching": 43,
+    "reuse": 0.5555555555555556,
+    "modularity": 0.0
+  },
+  "tree_397": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 7.857142857142857,
+    "max_branching": 36,
+    "reuse": 0.4864864864864865,
+    "modularity": 0.0
+  },
+  "tree_398": {
+    "depth": 5,
+    "size": 94,
+    "avg_branching": 6.642857142857143,
+    "max_branching": 29,
+    "reuse": 0.5319148936170213,
+    "modularity": 0.0
+  },
+  "tree_399": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 9.642857142857142,
+    "max_branching": 69,
+    "reuse": 0.4117647058823529,
+    "modularity": 0.0
+  },
+  "tree_400": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.5,
+    "max_branching": 42,
+    "reuse": 0.5566037735849056,
+    "modularity": 0.0
+  },
+  "tree_401": {
+    "depth": 5,
+    "size": 128,
+    "avg_branching": 8.466666666666667,
+    "max_branching": 58,
+    "reuse": 0.4140625,
+    "modularity": 0.0
+  },
+  "tree_402": {
+    "depth": 4,
+    "size": 134,
+    "avg_branching": 9.5,
+    "max_branching": 63,
+    "reuse": 0.3880597014925373,
+    "modularity": 0.0
+  },
+  "tree_403": {
+    "depth": 5,
+    "size": 137,
+    "avg_branching": 9.714285714285714,
+    "max_branching": 45,
+    "reuse": 0.43795620437956206,
+    "modularity": 0.0
+  },
+  "tree_404": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 8.071428571428571,
+    "max_branching": 57,
+    "reuse": 0.4649122807017544,
+    "modularity": 0.0
+  },
+  "tree_405": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 7.923076923076923,
+    "max_branching": 40,
+    "reuse": 0.4519230769230769,
+    "modularity": 0.0
+  },
+  "tree_406": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 7.923076923076923,
+    "max_branching": 42,
+    "reuse": 0.4519230769230769,
+    "modularity": 0.0
+  },
+  "tree_407": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 6.8125,
+    "max_branching": 52,
+    "reuse": 0.5363636363636364,
+    "modularity": 0.0
+  },
+  "tree_408": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 6.3125,
+    "max_branching": 36,
+    "reuse": 0.5784313725490197,
+    "modularity": 0.0
+  },
+  "tree_409": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 6.5625,
+    "max_branching": 28,
+    "reuse": 0.4811320754716981,
+    "modularity": 0.0
+  },
+  "tree_410": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 6.0588235294117645,
+    "max_branching": 27,
+    "reuse": 0.5384615384615384,
+    "modularity": 0.0
+  },
+  "tree_411": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 8.133333333333333,
+    "max_branching": 52,
+    "reuse": 0.4065040650406504,
+    "modularity": 0.0
+  },
+  "tree_412": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 7.294117647058823,
+    "max_branching": 39,
+    "reuse": 0.464,
+    "modularity": 0.0
+  },
+  "tree_413": {
+    "depth": 5,
+    "size": 127,
+    "avg_branching": 11.454545454545455,
+    "max_branching": 58,
+    "reuse": 0.3779527559055118,
+    "modularity": 0.0
+  },
+  "tree_414": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 7.133333333333334,
+    "max_branching": 31,
+    "reuse": 0.5462962962962963,
+    "modularity": 0.0
+  },
+  "tree_415": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 9.25,
+    "max_branching": 52,
+    "reuse": 0.4642857142857143,
+    "modularity": 0.0
+  },
+  "tree_416": {
+    "depth": 5,
+    "size": 130,
+    "avg_branching": 7.588235294117647,
+    "max_branching": 31,
+    "reuse": 0.3923076923076923,
+    "modularity": 0.0
+  },
+  "tree_417": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 8.333333333333334,
+    "max_branching": 28,
+    "reuse": 0.5247524752475248,
+    "modularity": 0.0
+  },
+  "tree_418": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 7.714285714285714,
+    "max_branching": 43,
+    "reuse": 0.44954128440366975,
+    "modularity": 0.0
+  },
+  "tree_419": {
+    "depth": 5,
+    "size": 90,
+    "avg_branching": 5.235294117647059,
+    "max_branching": 28,
+    "reuse": 0.6333333333333333,
+    "modularity": 0.0
+  },
+  "tree_420": {
+    "depth": 5,
+    "size": 129,
+    "avg_branching": 9.846153846153847,
+    "max_branching": 61,
+    "reuse": 0.3643410852713178,
+    "modularity": 0.0
+  },
+  "tree_421": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 9.909090909090908,
+    "max_branching": 44,
+    "reuse": 0.5272727272727272,
+    "modularity": 0.0
+  },
+  "tree_422": {
+    "depth": 5,
+    "size": 135,
+    "avg_branching": 7.882352941176471,
+    "max_branching": 43,
+    "reuse": 0.45185185185185184,
+    "modularity": 0.0
+  },
+  "tree_423": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.0,
+    "max_branching": 29,
+    "reuse": 0.5188679245283019,
+    "modularity": 0.0
+  },
+  "tree_424": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 10.083333333333334,
+    "max_branching": 68,
+    "reuse": 0.3770491803278688,
+    "modularity": 0.0
+  },
+  "tree_425": {
+    "depth": 5,
+    "size": 115,
+    "avg_branching": 6.333333333333333,
+    "max_branching": 44,
+    "reuse": 0.5478260869565217,
+    "modularity": 0.0
+  },
+  "tree_426": {
+    "depth": 4,
+    "size": 116,
+    "avg_branching": 9.583333333333334,
+    "max_branching": 55,
+    "reuse": 0.5948275862068966,
+    "modularity": 0.0
+  },
+  "tree_427": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 6.6875,
+    "max_branching": 44,
+    "reuse": 0.48148148148148145,
+    "modularity": 0.0
+  },
+  "tree_428": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 7.428571428571429,
+    "max_branching": 43,
+    "reuse": 0.4666666666666667,
+    "modularity": 0.0
+  },
+  "tree_429": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 7.928571428571429,
+    "max_branching": 24,
+    "reuse": 0.4375,
+    "modularity": 0.0
+  },
+  "tree_430": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 7.733333333333333,
+    "max_branching": 46,
+    "reuse": 0.452991452991453,
+    "modularity": 0.0
+  },
+  "tree_431": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 7.4,
+    "max_branching": 45,
+    "reuse": 0.4642857142857143,
+    "modularity": 0.0
+  },
+  "tree_432": {
+    "depth": 4,
+    "size": 114,
+    "avg_branching": 10.272727272727273,
+    "max_branching": 54,
+    "reuse": 0.35964912280701755,
+    "modularity": 0.0
+  },
+  "tree_433": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 10.0,
+    "max_branching": 53,
+    "reuse": 0.4462809917355372,
+    "modularity": 0.0
+  },
+  "tree_434": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 6.944444444444445,
+    "max_branching": 50,
+    "reuse": 0.5079365079365079,
+    "modularity": 0.0
+  },
+  "tree_435": {
+    "depth": 5,
+    "size": 91,
+    "avg_branching": 6.0,
+    "max_branching": 29,
+    "reuse": 0.5824175824175825,
+    "modularity": 0.0
+  },
+  "tree_436": {
+    "depth": 5,
+    "size": 101,
+    "avg_branching": 6.666666666666667,
+    "max_branching": 36,
+    "reuse": 0.6138613861386139,
+    "modularity": 0.0
+  },
+  "tree_437": {
+    "depth": 4,
+    "size": 119,
+    "avg_branching": 9.833333333333334,
+    "max_branching": 32,
+    "reuse": 0.44537815126050423,
+    "modularity": 0.0
+  },
+  "tree_438": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 6.764705882352941,
+    "max_branching": 21,
+    "reuse": 0.47413793103448276,
+    "modularity": 0.0
+  },
+  "tree_439": {
+    "depth": 5,
+    "size": 97,
+    "avg_branching": 7.384615384615385,
+    "max_branching": 36,
+    "reuse": 0.5257731958762887,
+    "modularity": 0.0
+  },
+  "tree_440": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 8.384615384615385,
+    "max_branching": 53,
+    "reuse": 0.43636363636363634,
+    "modularity": 0.0
+  },
+  "tree_441": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 7.533333333333333,
+    "max_branching": 44,
+    "reuse": 0.4649122807017544,
+    "modularity": 0.0
+  },
+  "tree_442": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 7.2,
+    "max_branching": 31,
+    "reuse": 0.5229357798165137,
+    "modularity": 0.0
+  },
+  "tree_443": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 7.5,
+    "max_branching": 48,
+    "reuse": 0.5188679245283019,
+    "modularity": 0.0
+  },
+  "tree_444": {
+    "depth": 5,
+    "size": 122,
+    "avg_branching": 8.066666666666666,
+    "max_branching": 51,
+    "reuse": 0.5245901639344263,
+    "modularity": 0.0
+  },
+  "tree_445": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 8.25,
+    "max_branching": 34,
+    "reuse": 0.51,
+    "modularity": 0.0
+  },
+  "tree_446": {
+    "depth": 5,
+    "size": 123,
+    "avg_branching": 8.133333333333333,
+    "max_branching": 66,
+    "reuse": 0.45528455284552843,
+    "modularity": 0.0
+  },
+  "tree_447": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 7.428571428571429,
+    "max_branching": 37,
+    "reuse": 0.47619047619047616,
+    "modularity": 0.0
+  },
+  "tree_448": {
+    "depth": 5,
+    "size": 118,
+    "avg_branching": 7.8,
+    "max_branching": 42,
+    "reuse": 0.4915254237288136,
+    "modularity": 0.0
+  },
+  "tree_449": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 6.9375,
+    "max_branching": 33,
+    "reuse": 0.6517857142857143,
+    "modularity": 0.0
+  },
+  "tree_450": {
+    "depth": 5,
+    "size": 132,
+    "avg_branching": 9.357142857142858,
+    "max_branching": 61,
+    "reuse": 0.4696969696969697,
+    "modularity": 0.0
+  },
+  "tree_451": {
+    "depth": 4,
+    "size": 93,
+    "avg_branching": 7.076923076923077,
+    "max_branching": 41,
+    "reuse": 0.4838709677419355,
+    "modularity": 0.0
+  },
+  "tree_452": {
+    "depth": 5,
+    "size": 83,
+    "avg_branching": 5.466666666666667,
+    "max_branching": 27,
+    "reuse": 0.6626506024096386,
+    "modularity": 0.0
+  },
+  "tree_453": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 5.9411764705882355,
+    "max_branching": 37,
+    "reuse": 0.5098039215686274,
+    "modularity": 0.0
+  },
+  "tree_454": {
+    "depth": 4,
+    "size": 107,
+    "avg_branching": 8.153846153846153,
+    "max_branching": 34,
+    "reuse": 0.5327102803738317,
+    "modularity": 0.0
+  },
+  "tree_455": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 7.1875,
+    "max_branching": 49,
+    "reuse": 0.4051724137931034,
+    "modularity": 0.0
+  },
+  "tree_456": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 7.769230769230769,
+    "max_branching": 42,
+    "reuse": 0.5,
+    "modularity": 0.0
+  },
+  "tree_457": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 5.2105263157894735,
+    "max_branching": 29,
+    "reuse": 0.61,
+    "modularity": 0.0
+  },
+  "tree_458": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 9.583333333333334,
+    "max_branching": 43,
+    "reuse": 0.43103448275862066,
+    "modularity": 0.0
+  },
+  "tree_459": {
+    "depth": 5,
+    "size": 121,
+    "avg_branching": 8.571428571428571,
+    "max_branching": 39,
+    "reuse": 0.4132231404958678,
+    "modularity": 0.0
+  },
+  "tree_460": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 8.307692307692308,
+    "max_branching": 42,
+    "reuse": 0.48623853211009177,
+    "modularity": 0.0
+  },
+  "tree_461": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 7.5,
+    "max_branching": 46,
+    "reuse": 0.4632352941176471,
+    "modularity": 0.0
+  },
+  "tree_462": {
+    "depth": 5,
+    "size": 145,
+    "avg_branching": 7.578947368421052,
+    "max_branching": 52,
+    "reuse": 0.496551724137931,
+    "modularity": 0.0
+  },
+  "tree_463": {
+    "depth": 5,
+    "size": 105,
+    "avg_branching": 6.933333333333334,
+    "max_branching": 40,
+    "reuse": 0.47619047619047616,
+    "modularity": 0.0
+  },
+  "tree_464": {
+    "depth": 5,
+    "size": 111,
+    "avg_branching": 6.875,
+    "max_branching": 49,
+    "reuse": 0.43243243243243246,
+    "modularity": 0.0
+  },
+  "tree_465": {
+    "depth": 5,
+    "size": 93,
+    "avg_branching": 7.076923076923077,
+    "max_branching": 35,
+    "reuse": 0.5376344086021505,
+    "modularity": 0.0
+  },
+  "tree_466": {
+    "depth": 5,
+    "size": 125,
+    "avg_branching": 6.888888888888889,
+    "max_branching": 60,
+    "reuse": 0.416,
+    "modularity": 0.0
+  },
+  "tree_467": {
+    "depth": 5,
+    "size": 114,
+    "avg_branching": 6.647058823529412,
+    "max_branching": 39,
+    "reuse": 0.4824561403508772,
+    "modularity": 0.0
+  },
+  "tree_468": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 7.1875,
+    "max_branching": 37,
+    "reuse": 0.45689655172413796,
+    "modularity": 0.0
+  },
+  "tree_469": {
+    "depth": 5,
+    "size": 99,
+    "avg_branching": 7.0,
+    "max_branching": 45,
+    "reuse": 0.45454545454545453,
+    "modularity": 0.0
+  },
+  "tree_470": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 6.8125,
+    "max_branching": 37,
+    "reuse": 0.4727272727272727,
+    "modularity": 0.0
+  },
+  "tree_471": {
+    "depth": 5,
+    "size": 126,
+    "avg_branching": 7.352941176470588,
+    "max_branching": 57,
+    "reuse": 0.3968253968253968,
+    "modularity": 0.0
+  },
+  "tree_472": {
+    "depth": 5,
+    "size": 93,
+    "avg_branching": 6.133333333333334,
+    "max_branching": 22,
+    "reuse": 0.6344086021505376,
+    "modularity": 0.0
+  },
+  "tree_473": {
+    "depth": 5,
+    "size": 92,
+    "avg_branching": 7.0,
+    "max_branching": 33,
+    "reuse": 0.5217391304347826,
+    "modularity": 0.0
+  },
+  "tree_474": {
+    "depth": 5,
+    "size": 117,
+    "avg_branching": 9.666666666666666,
+    "max_branching": 44,
+    "reuse": 0.4444444444444444,
+    "modularity": 0.0
+  },
+  "tree_475": {
+    "depth": 4,
+    "size": 94,
+    "avg_branching": 7.75,
+    "max_branching": 30,
+    "reuse": 0.4787234042553192,
+    "modularity": 0.0
+  },
+  "tree_476": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 6.75,
+    "max_branching": 34,
+    "reuse": 0.47706422018348627,
+    "modularity": 0.0
+  },
+  "tree_477": {
+    "depth": 5,
+    "size": 100,
+    "avg_branching": 9.0,
+    "max_branching": 39,
+    "reuse": 0.55,
+    "modularity": 0.0
+  },
+  "tree_478": {
+    "depth": 5,
+    "size": 110,
+    "avg_branching": 7.266666666666667,
+    "max_branching": 36,
+    "reuse": 0.39090909090909093,
+    "modularity": 0.0
+  },
+  "tree_479": {
+    "depth": 5,
+    "size": 108,
+    "avg_branching": 8.23076923076923,
+    "max_branching": 52,
+    "reuse": 0.39814814814814814,
+    "modularity": 0.0
+  },
+  "tree_480": {
+    "depth": 5,
+    "size": 107,
+    "avg_branching": 8.153846153846153,
+    "max_branching": 41,
+    "reuse": 0.4766355140186916,
+    "modularity": 0.0
+  },
+  "tree_481": {
+    "depth": 5,
+    "size": 151,
+    "avg_branching": 10.714285714285714,
+    "max_branching": 63,
+    "reuse": 0.3509933774834437,
+    "modularity": 0.0
+  },
+  "tree_482": {
+    "depth": 5,
+    "size": 106,
+    "avg_branching": 8.75,
+    "max_branching": 40,
+    "reuse": 0.5094339622641509,
+    "modularity": 0.0
+  },
+  "tree_483": {
+    "depth": 5,
+    "size": 102,
+    "avg_branching": 6.3125,
+    "max_branching": 32,
+    "reuse": 0.45098039215686275,
+    "modularity": 0.0
+  },
+  "tree_484": {
+    "depth": 5,
+    "size": 142,
+    "avg_branching": 10.846153846153847,
+    "max_branching": 84,
+    "reuse": 0.34507042253521125,
+    "modularity": 0.0
+  },
+  "tree_485": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 8.214285714285714,
+    "max_branching": 51,
+    "reuse": 0.4396551724137931,
+    "modularity": 0.0
+  },
+  "tree_486": {
+    "depth": 4,
+    "size": 101,
+    "avg_branching": 7.6923076923076925,
+    "max_branching": 47,
+    "reuse": 0.4752475247524752,
+    "modularity": 0.0
+  },
+  "tree_487": {
+    "depth": 5,
+    "size": 112,
+    "avg_branching": 7.4,
+    "max_branching": 47,
+    "reuse": 0.5267857142857143,
+    "modularity": 0.0
+  },
+  "tree_488": {
+    "depth": 4,
+    "size": 118,
+    "avg_branching": 7.8,
+    "max_branching": 55,
+    "reuse": 0.4745762711864407,
+    "modularity": 0.0
+  },
+  "tree_489": {
+    "depth": 5,
+    "size": 116,
+    "avg_branching": 9.583333333333334,
+    "max_branching": 53,
+    "reuse": 0.47413793103448276,
+    "modularity": 0.0
+  },
+  "tree_490": {
+    "depth": 5,
+    "size": 113,
+    "avg_branching": 9.333333333333334,
+    "max_branching": 53,
+    "reuse": 0.39823008849557523,
+    "modularity": 0.0
+  },
+  "tree_491": {
+    "depth": 4,
+    "size": 140,
+    "avg_branching": 9.928571428571429,
+    "max_branching": 52,
+    "reuse": 0.4357142857142857,
+    "modularity": 0.0
+  },
+  "tree_492": {
+    "depth": 5,
+    "size": 95,
+    "avg_branching": 7.230769230769231,
+    "max_branching": 39,
+    "reuse": 0.5473684210526316,
+    "modularity": 0.0
+  },
+  "tree_493": {
+    "depth": 5,
+    "size": 104,
+    "avg_branching": 6.866666666666666,
+    "max_branching": 41,
+    "reuse": 0.5192307692307693,
+    "modularity": 0.0
+  },
+  "tree_494": {
+    "depth": 5,
+    "size": 141,
+    "avg_branching": 10.76923076923077,
+    "max_branching": 58,
+    "reuse": 0.41843971631205673,
+    "modularity": 0.0
+  },
+  "tree_495": {
+    "depth": 5,
+    "size": 124,
+    "avg_branching": 8.2,
+    "max_branching": 47,
+    "reuse": 0.4435483870967742,
+    "modularity": 0.0
+  },
+  "tree_496": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 7.866666666666666,
+    "max_branching": 46,
+    "reuse": 0.5294117647058824,
+    "modularity": 0.0
+  },
+  "tree_497": {
+    "depth": 5,
+    "size": 119,
+    "avg_branching": 11.8,
+    "max_branching": 66,
+    "reuse": 0.35294117647058826,
+    "modularity": 0.0
+  },
+  "tree_498": {
+    "depth": 5,
+    "size": 109,
+    "avg_branching": 9.0,
+    "max_branching": 53,
+    "reuse": 0.42201834862385323,
+    "modularity": 0.0
+  },
+  "tree_499": {
+    "depth": 5,
+    "size": 136,
+    "avg_branching": 10.384615384615385,
+    "max_branching": 56,
+    "reuse": 0.39705882352941174,
+    "modularity": 0.0
+  }
+}
